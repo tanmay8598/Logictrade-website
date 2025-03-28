@@ -4,7 +4,6 @@ import { jwtDecode } from "jwt-decode";
 import AuthContext from "@/auth/context";
 import Footer from "@/components/Footer/Footer";
 import ScrollToTop from "./../ScrollToTop/ScrollToTop";
-import DesktopNav from "@/components/Navbar/DesktopNav";
 import Navbar from "./../Navbar/Navbar";
 
 const ClientOnly = ({ children }) => {

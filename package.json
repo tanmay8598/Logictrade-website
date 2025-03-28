@@ -14,6 +14,7 @@
     "apisauce": "^3.1.1",
     "framer-motion": "^12.6.1",
     "jwt-decode": "^4.0.0",
+    "lucide-react": "^0.484.0",
     "next": "15.2.4",
     "postcss": "^8.5.3",
     "react": "^19.0.0",

@@ -1,6 +1,12 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Poppins } from "next/font/google";
 import "./globals.css";
 import ClientOnly from "./../components/ClientsOnly/ClientsOnly";
+
+const poppins = Poppins({
+  variable: "--font-poppins",
+  subsets: ["latin"],
+  weight: ["400", "900"],
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,7 +26,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`bg-black ${geistSans.variable} ${geistMono.variable}`}>
+      <body
+        className={`bg-black ${poppins.variable} ${geistSans.variable} ${geistMono.variable}`}
+      >
         <ClientOnly>{children}</ClientOnly>
       </body>
     </html>
