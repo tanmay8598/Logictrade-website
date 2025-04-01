@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const calculators = [
   {
-    title: "Fixed deposits",
+    title: "Fixed deposit",
     description: "Quickly discover your Fixed deposit maturity returns.",
     icon: "💰",
   },
@@ -15,7 +15,7 @@ const calculators = [
     icon: "☕",
   },
   {
-    title: "Mutual Fund Returns",
+    title: "Mutual Fund",
     description:
       "Discover your savings goal or the total you can grow with your SIP.",
     icon: "💵",
