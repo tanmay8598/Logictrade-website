@@ -64,7 +64,7 @@ function TraderNeeds() {
   return (
     <div className="py-16 px-4 sm:px-6 lg:px-8 bg-black ">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl font-extrabold text-center text-white sm:text-4xl mb-12">
+        <h2 className="text-2xl md:text-3xl font-extrabold text-center text-white sm:text-4xl mb-12">
           Everything A Trader Needs
         </h2>
 
@@ -103,9 +103,9 @@ function TraderNeeds() {
               </div>
 
               <div
-                className={`w-full lg:w-1/2 flex flex-col items-center lg:items-start ${
-                  index % 2 !== 0 ? "lg:pl-8" : "lg:pr-8"
-                }`}
+                className={`w-full lg:w-1/2 flex flex-col items-center  ${
+                  index % 2 !== 0 ? "lg:pl-20" : "lg:pr-44"
+                } ${index % 2 !== 0 ? "lg:items-center" : "lg:items-end"}`}
               >
                 <div className="max-w-md text-center lg:text-left">
                   <h3 className="text-3xl font-bold text-yellow-400 mb-6">
@@ -135,7 +135,9 @@ function TraderNeeds() {
                             />
                           </svg>
                         </div>
-                        <span className="text-white text-lg">{point}</span>
+                        <span className="text-white text-md md:text-lg">
+                          {point}
+                        </span>
                       </motion.li>
                     ))}
                   </ul>

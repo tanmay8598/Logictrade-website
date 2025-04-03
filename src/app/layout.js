@@ -26,9 +26,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`bg-black ${poppins.variable} ${geistSans.variable} ${geistMono.variable}`}
-      >
+      <body className={`bg-black ${poppins.variable} `}>
         <ClientOnly>{children}</ClientOnly>
       </body>
     </html>

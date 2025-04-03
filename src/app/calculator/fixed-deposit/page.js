@@ -13,6 +13,7 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
+import Loader from "./../../../components/Loader/Loader";
 
 ChartJS.register(
   CategoryScale,
@@ -31,13 +32,9 @@ const CalculatorPage = () => {
   const [investmentAmount, setInvestmentAmount] = useState(300000);
   const [rateOfInterest, setRateOfInterest] = useState(6.5);
   const [timePeriod, setTimePeriod] = useState(5);
-  const [totalValue, setTotalValue] = useState(414126);
-  const [totalReturn, setTotalReturn] = useState(114126);
+  const [totalValue, setTotalValue] = useState(0);
+  const [totalReturn, setTotalReturn] = useState(0);
   const [chartData, setChartData] = useState({});
-
-  console.log(calculatorType);
-
-  console.log(totalValue, totalReturn);
 
   const calculatorTypes = [
     {
@@ -85,52 +82,49 @@ const CalculatorPage = () => {
     },
   ];
 
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   useEffect(() => {
     calculateReturns();
-  }, [investmentAmount, rateOfInterest, timePeriod, calculatorType]);
+  }, [investmentAmount, rateOfInterest, timePeriod, calculatorType, loading]);
 
   const calculateReturns = () => {
-    const months = timePeriod * 12;
-    const monthlyRate = rateOfInterest / 12 / 100;
+    const n = 4;
+    const maturityAmount =
+      investmentAmount *
+      Math.pow(1 + rateOfInterest / (n * 100), n * timePeriod);
 
-    if (calculatorType === "sip") {
-      const futureValue =
-        investmentAmount *
-        (((Math.pow(1 + monthlyRate, months) - 1) / monthlyRate) *
-          (1 + monthlyRate));
-      setTotalValue(Math.round(futureValue));
-      setTotalReturn(Math.round(futureValue - investmentAmount * months));
-    } else {
-      const futureValue =
-        investmentAmount * Math.pow(1 + rateOfInterest / 100, timePeriod);
-      setTotalValue(Math.round(futureValue));
-      setTotalReturn(Math.round(futureValue - investmentAmount));
-    }
+    setTotalValue(Math.round(maturityAmount));
+    setTotalReturn(Math.round(maturityAmount - investmentAmount));
 
     generateChartData();
   };
 
   const generateChartData = () => {
-    const years = Array.from({ length: timePeriod + 1 }, (_, i) => i);
-    const values = years.map((year) => {
-      if (calculatorType === "sip") {
-        const months = year * 12;
-        const monthlyRate = rateOfInterest / 12 / 100;
-        return (
-          investmentAmount *
-          (((Math.pow(1 + monthlyRate, months) - 1) / monthlyRate) *
-            (1 + monthlyRate))
-        );
-      } else {
-        return investmentAmount * Math.pow(1 + rateOfInterest / 100, year);
-      }
+    const n = 4;
+    const quarters = Array.from({ length: timePeriod * 4 + 1 }, (_, i) => i);
+    const values = quarters.map((quarter) => {
+      return (
+        investmentAmount * Math.pow(1 + rateOfInterest / (n * 100), quarter)
+      );
     });
 
     setChartData({
-      labels: years.map((y) => `${y} Y`),
+      labels: quarters.map((q) => {
+        if (q % 4 === 0) return `${q / 4} Y`;
+        return "";
+      }),
       datasets: [
         {
-          label: "Investment Growth",
+          label: "FD Growth",
           data: values,
           borderColor: "rgb(75, 192, 192)",
           backgroundColor: "rgba(75, 192, 192, 0.2)",
@@ -156,9 +150,13 @@ const CalculatorPage = () => {
     router.push(`/calculator/${encodeURIComponent(slug)}`);
   };
 
+  if (loading) {
+    return <Loader />;
+  }
+
   return (
     <div className="min-h-screen bg-black p-4 md:p-8">
-      <div className="max-w-7xl mx-auto ">
+      <div className="max-w-7xl mx-auto">
         <div className="flex flex-row my-18 mb-4 space-x-2 text-gray-400">
           <Link className="hover:text-white" href={`/`}>
             Home
@@ -172,13 +170,13 @@ const CalculatorPage = () => {
         </div>
 
         <div className="flex flex-col md:flex-row gap-6">
-          <div className="w-full md:w-1/4 bg-gray-900 rounded-lg shadow p-4 border border-gray-700 h-fit">
+          <div className="w-full md:w-1/2 lg:w-1/4 bg-gray-900 rounded-lg shadow p-4 border border-gray-700 h-fit">
             <ul className="space-y-2">
               {calculatorTypes.map((type) => (
                 <li key={type.id}>
                   <button
                     onClick={() => handleCalculatorChange(type)}
-                    className={`w-full text-left text-sm md:text px-4 py-2 rounded-md transition-colors font-bold ${
+                    className={`w-full cursor-pointer text-left text-sm md:text px-4 py-2 rounded-md transition-colors font-bold ${
                       calculatorType === type.name
                         ? " text-white"
                         : " text-gray-500 hover:text-gray-700"
@@ -194,107 +192,157 @@ const CalculatorPage = () => {
             </ul>
           </div>
 
-          <div className="w-full ">
+          <div className="w-full">
             <h1 className="text-lg lg:text-3xl font-bold text-white mb-8">
-              <span className="text-xs lg:text-xl  bg-gray-900 border border-gray-700 p-2 rounded-sm">
+              <span className="text-xs lg:text-xl bg-gray-900 border border-gray-700 p-2 rounded-sm">
                 {calculatorIcon}
               </span>{" "}
               {calculatorType} Calculator
             </h1>
 
-            <div className="w-full flex flex-col md:flex-row gap-6 ">
-              <div className="w-full md:w-2/4 bg-gray-900 rounded-lg shadow p-6 border border-gray-700 h-fit">
+            <div className="w-full flex flex-col lg:flex-row gap-6">
+              <div className="w-full lg:w-2/4 bg-gray-900 rounded-lg shadow p-6 border border-gray-700 h-fit">
                 <div className="space-y-6">
                   <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-1">
-                      Total Investment
-                    </label>
-                    <div className="flex items-center">
-                      <span className="mr-2 text-white">₹</span>
-                      <input
-                        type="range"
-                        min="5000"
-                        max="10000000"
-                        step="10000"
-                        value={investmentAmount}
-                        onChange={(e) =>
-                          setInvestmentAmount(parseInt(e.target.value))
-                        }
-                        className="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer"
-                      />
+                    <div className="flex flex-row justify-between items-center mb-2">
+                      <label className="block text-sm font-medium text-gray-300">
+                        Total Investment
+                      </label>
+                      <div className="flex items-center space-x-2">
+                        <span className="text-white">₹</span>
+                        <input
+                          type="text"
+                          value={investmentAmount.toLocaleString("en-IN")}
+                          onChange={(e) => {
+                            const value = e.target.value.replace(/\D/g, "");
+                            if (value === "") {
+                              setInvestmentAmount(0);
+                            } else {
+                              const numValue = parseInt(value, 10);
+                              if (!isNaN(numValue)) {
+                                setInvestmentAmount(
+                                  Math.min(10000000, Math.max(5000, numValue))
+                                );
+                              }
+                            }
+                          }}
+                          className="bg-gray-800 text-white px-2 py-1 w-32 text-right rounded border border-gray-600 focus:outline-none"
+                        />
+                      </div>
                     </div>
-                    <div className="mt-2 text-right">
-                      <span className="text-lg font-semibold text-white">
-                        {formatCurrency(investmentAmount)}
-                      </span>
-                    </div>
+                    <input
+                      type="range"
+                      min="5000"
+                      max="10000000"
+                      step="1000"
+                      value={investmentAmount}
+                      onChange={(e) =>
+                        setInvestmentAmount(parseInt(e.target.value))
+                      }
+                      className="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer"
+                    />
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-1">
-                      Rate of Interest (p.a)
-                    </label>
-                    <div className="flex items-center">
-                      <input
-                        type="range"
-                        min="1"
-                        max="15"
-                        step="0.1"
-                        value={rateOfInterest}
-                        onChange={(e) =>
-                          setRateOfInterest(parseFloat(e.target.value))
-                        }
-                        className="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer"
-                      />
-                      <span className="ml-2 w-12 text-white">
-                        {rateOfInterest}%
-                      </span>
+                    <div className="flex flex-row justify-between items-center mb-2">
+                      <label className="block text-sm font-medium text-gray-300">
+                        Rate of Interest (p.a)
+                      </label>
+                      <div className="flex items-center space-x-2">
+                        <input
+                          type="text"
+                          value={rateOfInterest}
+                          onChange={(e) => {
+                            const value = e.target.value.replace(
+                              /[^0-9.]/g,
+                              ""
+                            );
+                            if (value === "") {
+                              setRateOfInterest(1);
+                            } else {
+                              const numValue = parseFloat(value);
+                              if (!isNaN(numValue)) {
+                                setRateOfInterest(
+                                  Math.min(15, Math.max(1, numValue))
+                                );
+                              }
+                            }
+                          }}
+                          className="bg-gray-800 text-white px-2 py-1 w-16 text-right rounded border border-gray-600 focus:outline-none"
+                        />
+                        <span className="text-white">%</span>
+                      </div>
                     </div>
+                    <input
+                      type="range"
+                      min="1"
+                      max="15"
+                      step="0.1"
+                      value={rateOfInterest}
+                      onChange={(e) =>
+                        setRateOfInterest(parseFloat(e.target.value))
+                      }
+                      className="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer"
+                    />
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-1">
-                      Time Period (years)
-                    </label>
-                    <div className="flex items-center">
-                      <input
-                        type="range"
-                        min="1"
-                        max="25"
-                        step="1"
-                        value={timePeriod}
-                        onChange={(e) =>
-                          setTimePeriod(parseInt(e.target.value))
-                        }
-                        className="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer"
-                      />
-                      <span className="ml-2 w-8 text-white">{timePeriod}</span>
+                    <div className="flex flex-row justify-between items-center mb-2">
+                      <label className="block text-sm font-medium text-gray-300">
+                        Time Period (years)
+                      </label>
+                      <div className="flex items-center space-x-2">
+                        <input
+                          type="text"
+                          value={timePeriod}
+                          onChange={(e) => {
+                            const value = e.target.value.replace(/\D/g, "");
+                            if (value === "") {
+                              setTimePeriod(1);
+                            } else {
+                              const numValue = parseInt(value, 10);
+                              if (!isNaN(numValue)) {
+                                setTimePeriod(
+                                  Math.min(25, Math.max(1, numValue))
+                                );
+                              }
+                            }
+                          }}
+                          className="bg-gray-800 text-white px-2 py-1 w-16 text-right rounded border border-gray-600 focus:outline-none"
+                        />
+                        <span className="text-white">Y</span>
+                      </div>
                     </div>
+                    <input
+                      type="range"
+                      min="1"
+                      max="25"
+                      step="1"
+                      value={timePeriod}
+                      onChange={(e) => setTimePeriod(parseInt(e.target.value))}
+                      className="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer"
+                    />
                   </div>
                 </div>
               </div>
 
-              <div className="w-full md:w-2/4 bg-gray-900 rounded-lg shadow p-4 border border-gray-700 h-fit">
+              <div className="w-full lg:w-2/4 bg-gray-900 rounded-lg shadow p-4 border border-gray-700 h-fit">
                 <div className="bg-purple-900 p-4 rounded-lg border border-purple-700">
-                  <div className="text-sm text-gray-300">Total Value</div>
-                  <div className="text-2xl font-bold text-white">
+                  <div className="text-sm text-gray-300">Maturity Value</div>
+                  <div className="text-lg lg:text-2xl font-bold text-white">
                     {formatCurrency(totalValue)}
                   </div>
                 </div>
                 <div className="mt-4 grid grid-cols-2 gap-4">
                   <div className="bg-blue-900 p-4 rounded-lg border border-blue-700">
                     <div className="text-sm text-gray-300">Invested Amount</div>
-                    <div className="text-xl font-bold text-white">
-                      {formatCurrency(
-                        calculatorType === "sip"
-                          ? investmentAmount * timePeriod * 12
-                          : investmentAmount
-                      )}
+                    <div className="text-sm lg:text-xl font-bold text-white">
+                      {formatCurrency(investmentAmount)}
                     </div>
                   </div>
                   <div className="bg-green-900 p-4 rounded-lg border border-green-700">
                     <div className="text-sm text-gray-300">Est. Returns</div>
-                    <div className="text-xl font-bold text-white">
+                    <div className="text-sm lg:text-xl font-bold text-white">
                       {formatCurrency(totalReturn)}
                     </div>
                   </div>
@@ -359,15 +407,15 @@ const CalculatorPage = () => {
             What is a Fixed Deposit Calculator?
           </h2>
           <p className="text-gray-300">
-            A Fixed Deposit (FD) calculator is an online tool that helps
-            investors estimate the future value of their lump sum investments or
-            SIP investments based on expected returns.
+            A Fixed Deposit (FD) calculator helps you estimate the maturity
+            amount of your fixed deposit investment based on the principal
+            amount, interest rate, and tenure. It uses the compound interest
+            formula to calculate the returns you can expect at maturity.
           </p>
           <p className="text-gray-300 mt-2">
-            A mutual fund is a professionally managed investment fund that pools
-            money from many investors to purchase securities. Mutual funds are a
-            popular choice for investors because they offer professional
-            management, diversification, and liquidity.
+            Fixed deposits are one of the safest investment options that offer
+            guaranteed returns. The interest rate is fixed at the time of
+            investment and remains constant throughout the tenure.
           </p>
         </div>
       </div>

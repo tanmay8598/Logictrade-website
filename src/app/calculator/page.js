@@ -1,7 +1,8 @@
 "use client";
 import CalculatorTypesCard from "@/components/Cards/CalculatorTypesCard";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import Loader from "./../../components/Loader/Loader";
 
 const calculators = [
   {
@@ -108,6 +109,19 @@ const CalculatorsGrid = () => {
 };
 
 const Calculators = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return <Loader />;
+  }
   return (
     <section className="bg-black text-white py-12 text-center mx-4 lg:mx-0">
       <motion.h2

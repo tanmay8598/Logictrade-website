@@ -3,6 +3,7 @@ import Link from "next/link";
 import { FiMenu, FiX } from "react-icons/fi";
 import Image from "next/image";
 import { FaWallet } from "react-icons/fa";
+import { MdInstallMobile } from "react-icons/md";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -71,7 +72,7 @@ const Navbar = () => {
                 <div className="mr-3">
                   <Image
                     src="/round.png"
-                    alt="TradeFinder Logo"
+                    alt="TradeLogic Logo"
                     width={40}
                     height={40}
                     className="object-contain"
@@ -80,47 +81,41 @@ const Navbar = () => {
                 <span className="text-2xl font-bold">
                   <span className="text-yellow-500">T</span>
                   <span className="text-white">rade</span>
-                  <span className="text-yellow-500">F</span>
-                  <span className="text-white">inder</span>
+                  <span className="text-yellow-500">L</span>
+                  <span className="text-white">ogic</span>
                 </span>
               </Link>
             </div>
 
             <div className="hidden lg:flex items-center space-x-6">
               <Link
-                href="/blog"
-                className="text-white hover:text-yellow-500 transition"
-              >
-                Blog
-              </Link>
-              <Link
-                href="/updates"
-                className="text-white hover:text-yellow-500 transition"
-              >
-                Updates
-              </Link>
-              <Link
                 href="/calculator"
                 className="text-white hover:text-yellow-500 transition"
               >
                 Calculator
               </Link>
-
               <Link
-                href="/login"
-                className="px-4 py-2 text-white hover:text-yellow-500 transition"
+                href="/about-us"
+                className="text-white hover:text-yellow-500 transition"
               >
-                Login
+                About Us
               </Link>
 
               <Link
-                href="/buy-now"
+                href="/contact-us"
+                className=" py-2 text-white hover:text-yellow-500 transition"
+              >
+                Contact Us
+              </Link>
+
+              <Link
+                href="/"
                 className="flex items-center px-6 py-2 border-2 border-yellow-400 text-white rounded-full transition font-medium"
               >
                 <div className="bg-blue-500 p-2 rounded-full flex items-center justify-center">
-                  <FaWallet className="text-white text-xl" />
+                  <MdInstallMobile className="text-white text-xl" />
                 </div>
-                <span className="ml-3 text-lg font-semibold">Buy Now</span>
+                <span className="ml-3 text-lg font-semibold">Download App</span>
               </Link>
             </div>
 
@@ -158,7 +153,7 @@ const Navbar = () => {
             <div className="mr-3">
               <Image
                 src="/round.png"
-                alt="TradeFinder Logo"
+                alt="TradeLogic Logo"
                 width={40}
                 height={40}
                 className="object-contain"
@@ -167,8 +162,8 @@ const Navbar = () => {
             <span className="text-2xl font-bold">
               <span className="text-yellow-500">T</span>
               <span className="text-white">rade</span>
-              <span className="text-yellow-500">F</span>
-              <span className="text-white">inder</span>
+              <span className="text-yellow-500">L</span>
+              <span className="text-white">ogic</span>
             </span>
           </Link>
           <button
@@ -183,32 +178,12 @@ const Navbar = () => {
         <div className="overflow-y-auto h-full">
           <div className="flex flex-col space-y-4 p-4">
             <Link
-              href="/buy-now"
-              className="text-yellow-400 hover:text-yellow-500 py-3 transition border-b border-gray-700 flex items-center gap-3"
+              href="/"
+              className="text-yellow-400 hover:text-yellow-500 py-3 transition border-b border-gray-700 flex items-center gap-1"
               onClick={closeMobileMenu}
             >
-              Buy Now <FaWallet className="ml-1 text-lg text-yellow-400" />
-            </Link>
-            <Link
-              href="/login"
-              className="text-white hover:text-yellow-500 py-3 transition border-b border-gray-700"
-              onClick={closeMobileMenu}
-            >
-              Login Now
-            </Link>
-            <Link
-              href="/blog"
-              className="text-white hover:text-yellow-500 py-3 transition border-b border-gray-700"
-              onClick={closeMobileMenu}
-            >
-              Blog
-            </Link>
-            <Link
-              href="/updates"
-              className="text-white hover:text-yellow-500 py-3 transition border-b border-gray-700"
-              onClick={closeMobileMenu}
-            >
-              Updates
+              Download App{" "}
+              <MdInstallMobile className=" text-lg text-yellow-400" />
             </Link>
             <Link
               href="/calculator"
@@ -216,6 +191,21 @@ const Navbar = () => {
               onClick={closeMobileMenu}
             >
               Calculator
+            </Link>
+
+            <Link
+              href="/about-us"
+              className="text-white hover:text-yellow-500 py-3 transition border-b border-gray-700"
+              onClick={closeMobileMenu}
+            >
+              About Us
+            </Link>
+            <Link
+              href="/contact-us"
+              className="text-white hover:text-yellow-500 py-3 transition border-b border-gray-700"
+              onClick={closeMobileMenu}
+            >
+              Contact Us
             </Link>
           </div>
         </div>

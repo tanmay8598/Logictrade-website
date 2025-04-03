@@ -3,6 +3,8 @@ import Image from "next/image";
 import React from "react";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
+import { MdInstallMobile } from "react-icons/md";
 
 const MobileHero = () => {
   const texts = ["No.1", "Only"];
@@ -158,24 +160,19 @@ const MobileHero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.4, duration: 0.8 }}
-            className="mt-8 flex justify-center md:justify-start gap-4"
+            className="mt-8 flex justify-center md:justify-start "
           >
-            <button
-              className="relative bg-amber-300 hover:bg-amber-400 text-black font-bold px-6 py-3 rounded-lg flex items-center gap-2 
-                  shadow-[0_0_15px_2px_rgba(251,191,36,0.7)] hover:shadow-[0_0_20px_4px_rgba(251,191,36,0.8)] 
-                  transition-all duration-300 transform hover:scale-105"
+            <Link
+              href="/"
+              className="flex items-center px-6 py-2 border-2 border-yellow-400 text-white rounded-full transition font-medium"
             >
-              Login Now
-              <span className="absolute inset-0 rounded-lg border-2 border-transparent group-hover:border-amber-400 transition-all"></span>
-            </button>
-
-            <button
-              className="bg-transparent text-white font-bold px-6 py-3 rounded-lg flex items-center 
-                  border-2 border-gray-300 hover:border-amber-400 hover:text-amber-400
-                  transition-all duration-300 transform hover:scale-105"
-            >
-              Buy Now
-            </button>
+              <div className="bg-yellow-500 p-2 rounded-full flex items-center justify-center">
+                <MdInstallMobile className="text-white text-xl" />
+              </div>
+              <span className="ml-3 text-lg font-semibold">
+                Download App Now
+              </span>
+            </Link>
           </motion.div>
         </motion.div>
       </div>

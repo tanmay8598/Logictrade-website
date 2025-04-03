@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { Bar } from "react-chartjs-2";
 import { useRouter } from "next/navigation";
+import Loader from "./../../../components/Loader/Loader";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -23,6 +24,7 @@ ChartJS.register(
 );
 
 const CalculatorPage = () => {
+  const [loading, setLoading] = useState(true);
   const router = useRouter();
   const [calculatorType, setCalculatorType] = useState("SIP");
   const [calculatorIcon, setCalculatorIcon] = useState("☕");
@@ -32,6 +34,8 @@ const CalculatorPage = () => {
   const [totalValue, setTotalValue] = useState(645462);
   const [totalReturn, setTotalReturn] = useState(545462);
   const [chartData, setChartData] = useState({});
+
+  console.log(investmentAmount);
 
   const calculatorTypes = [
     {
@@ -80,8 +84,16 @@ const CalculatorPage = () => {
   ];
 
   useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
     calculateReturns();
-  }, [investmentAmount, rateOfInterest, timePeriod, calculatorType]);
+  }, [investmentAmount, rateOfInterest, timePeriod, calculatorType, loading]);
 
   const calculateReturns = () => {
     const months = timePeriod * 12;
@@ -159,6 +171,10 @@ const CalculatorPage = () => {
     router.push(`/calculator/${encodeURIComponent(slug)}`);
   };
 
+  if (loading) {
+    return <Loader />;
+  }
+
   return (
     <div className="min-h-screen bg-black p-4 md:p-8">
       <div className="max-w-7xl mx-auto">
@@ -175,13 +191,13 @@ const CalculatorPage = () => {
         </div>
 
         <div className="flex flex-col md:flex-row gap-6">
-          <div className="w-full md:w-1/4 bg-gray-900 rounded-lg shadow p-4 border border-gray-700 h-fit">
+          <div className="w-full md:w-1/2 lg:w-1/4 bg-gray-900 rounded-lg shadow p-4 border border-gray-700 h-fit">
             <ul className="space-y-2">
               {calculatorTypes.map((type) => (
                 <li key={type.id}>
                   <button
                     onClick={() => handleCalculatorChange(type)}
-                    className={`w-full text-left text-sm px-4 py-2 rounded-md transition-colors font-bold ${
+                    className={`w-full cursor-pointer text-left text-sm px-4 py-2 rounded-md transition-colors font-bold ${
                       calculatorType === type.name
                         ? "text-white bg-gray-800"
                         : "text-gray-400 hover:text-white hover:bg-gray-800"
@@ -203,12 +219,12 @@ const CalculatorPage = () => {
               {calculatorType} Calculator
             </h1>
 
-            <div className="w-full flex flex-col md:flex-row gap-6">
-              <div className="w-full md:w-2/4 bg-gray-900 rounded-lg shadow p-6 border border-gray-700 h-fit">
-                <div className="space-y-6">
-                  <div>
+            <div className="w-full flex flex-col lg:flex-row gap-6">
+              <div className="w-full lg:w-2/4 bg-gray-900 rounded-lg shadow p-6 border border-gray-700 h-fit">
+                <div className="space-y-10">
+                  {/* <div>
                     <label className="block text-sm font-medium text-gray-300 mb-1">
-                      Total Investment
+                      Monthly Investment
                     </label>
                     <div className="flex items-center">
                       <span className="mr-2 text-white">₹</span>
@@ -229,63 +245,192 @@ const CalculatorPage = () => {
                         {formatCurrency(investmentAmount)}
                       </span>
                     </div>
+                  </div> */}
+
+                  {/* 
+                        <div>
+                          <label className="block text-sm font-medium text-gray-300 mb-1">
+                            Rate of Interest (p.a)
+                          </label>
+                          <div className="flex items-center">
+                            <input
+                              type="range"
+                              min="1"
+                              max="30"
+                              step="0.1"
+                              value={rateOfInterest}
+                              onChange={(e) =>
+                                setRateOfInterest(parseFloat(e.target.value))
+                              }
+                              className="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer"
+                            />
+                            <span className="ml-2 w-12 text-white">
+                              {rateOfInterest}%
+                            </span>
+                          </div>
+                        </div> */}
+                  {/* 
+                        <div>
+                          <label className="block text-sm font-medium text-gray-300 mb-1">
+                            Time Period (years)
+                          </label>
+                          <div className="flex items-center">
+                            <input
+                              type="range"
+                              min="5"
+                              max="40"
+                              step="1"
+                              value={timePeriod}
+                              onChange={(e) =>
+                                setTimePeriod(parseInt(e.target.value))
+                              }
+                              className="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer"
+                            />
+                            <span className="ml-2 w-8 text-white">{timePeriod}</span>
+                          </div>
+                        </div> */}
+                  <div>
+                    <div className="flex flex-row justify-between items-center">
+                      <label className="block text-sm font-medium text-gray-300 mb-1">
+                        Monthly Investment
+                      </label>
+                      <div className="flex items-center space-x-2">
+                        <input
+                          type="text"
+                          value={formatCurrency(investmentAmount)}
+                          onChange={(e) => {
+                            const rawValue = e.target.value.replace(
+                              /[^0-9]/g,
+                              ""
+                            );
+
+                            if (rawValue === "" || !isNaN(rawValue)) {
+                              const numValue =
+                                rawValue === "" ? 0 : parseInt(rawValue, 10);
+
+                              if (numValue >= 100 && numValue <= 1000000) {
+                                setInvestmentAmount(numValue);
+                              }
+                            }
+                          }}
+                          className="bg-gray-800 text-white px-2 py-1 w-28 text-right rounded border border-gray-600 focus:outline-none"
+                        />
+                      </div>
+                    </div>
+
+                    <input
+                      type="range"
+                      min="100"
+                      max="1000000"
+                      step="1000"
+                      value={investmentAmount}
+                      onChange={(e) =>
+                        setInvestmentAmount(parseInt(e.target.value))
+                      }
+                      className="w-full h-2 bg-green-500 rounded-lg appearance-none cursor-pointer mt-2"
+                    />
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-1">
-                      Rate of Interest (p.a)
-                    </label>
-                    <div className="flex items-center">
-                      <input
-                        type="range"
-                        min="1"
-                        max="30"
-                        step="0.1"
-                        value={rateOfInterest}
-                        onChange={(e) =>
-                          setRateOfInterest(parseFloat(e.target.value))
-                        }
-                        className="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer"
-                      />
-                      <span className="ml-2 w-12 text-white">
-                        {rateOfInterest}%
-                      </span>
-                    </div>
-                  </div>
+                    <div className="flex flex-row justify-between items-center">
+                      <label className="block text-sm font-medium text-gray-300 mb-1">
+                        Expected return rate (p.a)
+                      </label>
+                      <div className="flex flex-row items-center">
+                        <input
+                          type="text"
+                          value={rateOfInterest}
+                          onChange={(e) => {
+                            const value = e.target.value.replace(
+                              /[^0-9.]/g,
+                              ""
+                            );
 
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-1">
-                      Time Period (years)
-                    </label>
-                    <div className="flex items-center">
-                      <input
-                        type="range"
-                        min="5"
-                        max="30"
-                        step="1"
-                        value={timePeriod}
-                        onChange={(e) =>
-                          setTimePeriod(parseInt(e.target.value))
-                        }
-                        className="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer"
-                      />
-                      <span className="ml-2 w-8 text-white">{timePeriod}</span>
+                            const numValue = parseFloat(value);
+
+                            if (!isNaN(numValue)) {
+                              if (numValue < 1) {
+                                setRateOfInterest(1);
+                              } else if (numValue > 30) {
+                                setRateOfInterest(30);
+                              } else {
+                                setRateOfInterest(numValue);
+                              }
+                            } else if (value === "") {
+                              setRateOfInterest(1);
+                            }
+                          }}
+                          className="bg-gray-800 text-white px-2 py-1 w-16 text-right rounded border border-gray-600 focus:outline-none"
+                        />
+                        <span className="text-white text-md ml-1">%</span>
+                      </div>
                     </div>
+                    <input
+                      type="range"
+                      min="1"
+                      max="30"
+                      step="0.1"
+                      value={rateOfInterest}
+                      onChange={(e) =>
+                        setRateOfInterest(parseFloat(e.target.value))
+                      }
+                      className="w-full h-2 bg-green-500 rounded-lg appearance-none cursor-pointer mt-2"
+                    />
+                  </div>
+                  <div>
+                    <div className="flex flex-row justify-between items-center">
+                      <label className="block text-sm font-medium text-gray-300 mb-1">
+                        Time Period
+                      </label>
+                      <div className="flex items-center space-x-2">
+                        <input
+                          type="text"
+                          value={timePeriod}
+                          onChange={(e) => {
+                            const digitsOnly = e.target.value.replace(
+                              /\D/g,
+                              ""
+                            );
+
+                            let numValue =
+                              digitsOnly === "" ? 1 : parseInt(digitsOnly, 10);
+
+                            numValue = Math.max(1, Math.min(40, numValue));
+
+                            setTimePeriod(numValue);
+                          }}
+                          onBlur={() => {
+                            if (timePeriod < 1) setTimePeriod(1);
+                          }}
+                          className="bg-gray-800 text-white px-2 py-1 w-16 text-right rounded border border-gray-600 focus:outline-none"
+                        />
+                        <span className="text-white">Y</span>
+                      </div>
+                    </div>
+                    <input
+                      type="range"
+                      min="1"
+                      max="40"
+                      step="1"
+                      value={timePeriod}
+                      onChange={(e) => setTimePeriod(parseInt(e.target.value))}
+                      className="w-full h-2 bg-green-500 rounded-lg appearance-none cursor-pointer mt-2"
+                    />
                   </div>
                 </div>
               </div>
 
-              <div className="w-full md:w-2/4 bg-gray-900 rounded-lg shadow p-4 border border-gray-700 h-fit">
+              <div className="w-full lg:w-2/4 bg-gray-900 rounded-lg shadow p-4 border border-gray-700 h-fit">
                 <div className="bg-purple-900 p-4 rounded-lg border border-purple-700">
                   <div className="text-sm text-gray-300">Total Value</div>
-                  <div className="text-2xl font-bold text-white">
+                  <div className="text-lg lg:text-2xl font-bold text-white">
                     {formatCurrency(totalValue)}
                   </div>
                 </div>
                 <div className="mt-4 grid grid-cols-2 gap-4">
                   <div className="bg-blue-900 p-4 rounded-lg border border-blue-700">
                     <div className="text-sm text-gray-300">Invested Amount</div>
-                    <div className="text-xl font-bold text-white">
+                    <div className="text-sm lg:text-xl font-bold text-white">
                       {formatCurrency(
                         calculatorType === "SIP"
                           ? investmentAmount * timePeriod * 12
@@ -295,7 +440,7 @@ const CalculatorPage = () => {
                   </div>
                   <div className="bg-green-900 p-4 rounded-lg border border-green-700">
                     <div className="text-sm text-gray-300">Est. Returns</div>
-                    <div className="text-xl font-bold text-white">
+                    <div className="text-sm lg:text-xl font-bold text-white">
                       {formatCurrency(totalReturn)}
                     </div>
                   </div>

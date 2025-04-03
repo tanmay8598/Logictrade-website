@@ -51,21 +51,21 @@ const Hero = () => {
             </li>
           </ul>
           <div className="mt-8 flex justify-center md:justify-start gap-4">
-            <button
+            {/* <button
               className="relative bg-amber-300 hover:bg-amber-400 text-black font-bold px-6 py-3 rounded-lg flex items-center gap-2 
                     shadow-[0_0_15px_2px_rgba(251,191,36,0.7)] hover:shadow-[0_0_20px_4px_rgba(251,191,36,0.8)] 
                     transition-all duration-300 transform hover:scale-105"
             >
               Login Now
               <span className="absolute inset-0 rounded-lg border-2 border-transparent group-hover:border-amber-400 transition-all"></span>
-            </button>
+            </button> */}
 
             <button
-              className="bg-transparent text-white font-bold px-6 py-3 rounded-lg flex items-center 
+              className="bg-transparent cursor-pointer text-white font-bold px-6 py-3 rounded-lg flex items-center 
                     border-2 border-gray-300 hover:border-amber-400 hover:text-amber-400
                     transition-all duration-300 transform hover:scale-105"
             >
-              Buy Now
+              Download Trade Logic App Now
             </button>
           </div>
         </div>
