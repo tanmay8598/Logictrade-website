@@ -2,60 +2,61 @@ import React from "react";
 
 const features = [
   {
-    title: "Trading Journal",
-    description: "Record trades, improve & became profitable.",
+    title: "Trade Tracker",
+    description:
+      "Log your trades, analyze performance, and refine your strategy.",
     icon: "📖",
   },
   {
-    title: "Market Pulse",
-    description: "Find hot stocks in Live Market",
+    title: "Trend Radar",
+    description: "Discover high-momentum stocks in real-time.",
     icon: "❤️",
   },
   {
-    title: "FII-DII Data",
-    description: "Insights into FIIs and DIIs positioning.",
+    title: "Smart Money Flow",
+    description: "Track institutional (FII/DII) activity and positioning.",
     icon: "📊",
   },
   {
-    title: "Watchlist",
-    description: "Monitor stocks with custom watchlist.",
+    title: "Stock Scanner",
+    description: "Create and track personalized stock lists.",
     icon: "📋",
   },
   {
-    title: "Calendar",
-    description: "Use calendar to spot market volatility.",
+    title: "Event Tracker",
+    description: "Anticipate market moves with key date alerts.",
     icon: "📅",
   },
   {
-    title: "Calculator",
-    description: "Manage risk & position with our custom calculators.",
+    title: "Risk Toolkit",
+    description: "Optimize trades with position-sizing calculators.",
     icon: "🧮",
   },
   {
-    title: "Trade Tutor",
-    description: "A complete guide & tutorial of all TradeFinder features.",
+    title: "Learning Hub",
+    description: "Master trading with step-by-step guides.",
     icon: "🎥",
   },
   {
-    title: "Games",
-    description: "Real-world trading simulation toolkit.",
+    title: "Trading Simulator",
+    description: "Practice strategies in risk-free scenarios.",
     icon: "🎮",
   },
   {
-    title: "Index Mover",
-    description: "See which stocks move the index.",
+    title: "Market Drivers",
+    description: "Identify stocks impacting major indices.",
     icon: "📈",
   },
 ];
 
 const WhyChoose = () => {
   const mobileFeatures = features.filter(
-    (feature) => feature.title !== "Watchlist"
+    (feature) => feature.title !== "Market Drivers"
   );
   return (
     <div className="bg-black text-white py-10">
       <div className="text-center mb-8">
-        <h2 className="text-3xl font-bold">Why Choose TradeFinder?</h2>
+        <h2 className="text-3xl font-bold">Why Traders Trust Trade Logic</h2>
       </div>
 
       <div className="container mx-auto px-5">

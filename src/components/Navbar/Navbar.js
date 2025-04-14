@@ -71,7 +71,7 @@ const Navbar = () => {
               >
                 <div className="mr-3">
                   <Image
-                    src="/round.png"
+                    src="/logo.png"
                     alt="TradeLogic Logo"
                     width={40}
                     height={40}
@@ -79,10 +79,10 @@ const Navbar = () => {
                   />
                 </div>
                 <span className="text-2xl font-bold">
-                  <span className="text-yellow-500">T</span>
-                  <span className="text-white">rade</span>
-                  <span className="text-yellow-500">L</span>
+                  <span className="text-[rgba(0,50,127,1)]">L</span>
                   <span className="text-white">ogic</span>
+                  <span className="text-[rgba(0,50,127,1)]">T</span>
+                  <span className="text-white">rade</span>
                 </span>
               </Link>
             </div>
@@ -110,9 +110,9 @@ const Navbar = () => {
 
               <Link
                 href="/"
-                className="flex items-center px-6 py-2 border-2 border-yellow-400 text-white rounded-full transition font-medium"
+                className="flex items-center px-6 py-2 border-2 border-[rgba(0,50,127,1)] text-white rounded-full transition font-medium"
               >
-                <div className="bg-blue-500 p-2 rounded-full flex items-center justify-center">
+                <div className="bg-[rgba(0,50,127,1)] p-2 rounded-full flex items-center justify-center">
                   <MdInstallMobile className="text-white text-xl" />
                 </div>
                 <span className="ml-3 text-lg font-semibold">Download App</span>
@@ -152,7 +152,7 @@ const Navbar = () => {
           >
             <div className="mr-3">
               <Image
-                src="/round.png"
+                src="/logo.png"
                 alt="TradeLogic Logo"
                 width={40}
                 height={40}
@@ -160,10 +160,10 @@ const Navbar = () => {
               />
             </div>
             <span className="text-2xl font-bold">
-              <span className="text-yellow-500">T</span>
-              <span className="text-white">rade</span>
-              <span className="text-yellow-500">L</span>
+              <span className="text-[rgba(0,50,127,1)]">L</span>
               <span className="text-white">ogic</span>
+              <span className="text-[rgba(0,50,127,1)]">T</span>
+              <span className="text-white">rade</span>
             </span>
           </Link>
           <button
@@ -179,11 +179,11 @@ const Navbar = () => {
           <div className="flex flex-col space-y-4 p-4">
             <Link
               href="/"
-              className="text-yellow-400 hover:text-yellow-500 py-3 transition border-b border-gray-700 flex items-center gap-1"
+              className="text-[rgba(0,50,127,1)] hover:text-yellow-500 py-3 transition border-b border-gray-700 flex items-center gap-1"
               onClick={closeMobileMenu}
             >
               Download App{" "}
-              <MdInstallMobile className=" text-lg text-yellow-400" />
+              <MdInstallMobile className=" text-lg text-[rgba(0,50,127,1)]" />
             </Link>
             <Link
               href="/calculator"

@@ -7,45 +7,45 @@ function TraderNeeds() {
   const features = [
     {
       id: 1,
-      title: "Option Apex",
+      title: "Options Pro",
       points: [
-        "Real-time options chain analysis",
-        "Advanced risk management tools",
-        "Customizable trading workflows",
-        "Integrated news and sentiment analysis",
+        "Live options market analytics",
+        "Smart position sizing calculators",
+        "Personalized trade setups",
+        "Real-time news & market mood insights",
       ],
       image: "/apex.png",
     },
     {
       id: 2,
-      title: "Chart Master",
+      title: "Technical Analyzer",
       points: [
-        "100+ technical indicators",
-        "Multiple chart types and timeframes",
-        "Custom drawing tools",
-        "Backtesting capabilities",
+        "150+ market indicators",
+        "Flexible charting systems",
+        "Advanced annotation toolkit",
+        "Historical strategy testing",
       ],
       image: "/clock.png",
     },
     {
       id: 3,
-      title: "Trade Alerts",
+      title: "Smart Notifications",
       points: [
-        "Custom alert conditions",
-        "Push notifications",
-        "Email/SMS alerts",
-        "AI-powered signal detection",
+        "Customizable trigger settings",
+        "Instant mobile alerts",
+        "Multi-channel notifications",
+        "AI-driven opportunity scanner",
       ],
       image: "/insider.png",
     },
     {
       id: 4,
-      title: "Portfolio Tracker",
+      title: "Wealth Manager",
       points: [
-        "Real-time performance tracking",
-        "Risk exposure analysis",
-        "Tax optimization tools",
-        "Multi-exchange integration",
+        "Live portfolio monitoring",
+        "Position risk assessment",
+        "Tax-efficient planning",
+        "Cross-platform sync",
       ],
       image: "/swing.png",
     },
@@ -65,7 +65,7 @@ function TraderNeeds() {
     <div className="py-16 px-4 sm:px-6 lg:px-8 bg-black ">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-2xl md:text-3xl font-extrabold text-center text-white sm:text-4xl mb-12">
-          Everything A Trader Needs
+          All a Trader Requires
         </h2>
 
         <div className="space-y-16" ref={ref}>

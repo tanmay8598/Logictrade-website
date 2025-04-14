@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Hero = () => {
-  const texts = ["No.1", "Only"];
+  const texts = ["Leading", "No.1"];
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -20,7 +20,7 @@ const Hero = () => {
     <div className="hidden md:block">
       <div className="bg-black text-white pt-16 px-6 md:px-12 lg:px-24 flex flex-col md:flex-row items-center justify-evenly">
         <div className="text-center mt-2 md:text-left max-w-lg">
-          <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold flex items-center flex-wrap">
+          <h1 className="text-4xl md:text-3xl lg:text-7xl font-bold flex items-center flex-wrap">
             India's{" "}
             <AnimatePresence mode="wait">
               <motion.span
@@ -34,20 +34,20 @@ const Hero = () => {
                 {texts[index]}
               </motion.span>
             </AnimatePresence>{" "}
-            Trade Finder
+            Trade Logic
           </h1>
           <ul className="mt-6 space-y-2 text-lg">
             <li className="flex items-center gap-3">
-              <span className="text-yellow-400">🏅</span> Find Best Trades In
-              Live Market
+              <span className="text-yellow-400">🏅</span> Discover Top Trades in
+              Real-Time
             </li>
             <li className="flex items-center gap-3">
-              <span className="text-red-400">🎯</span> Accurately Enter & Exit
-              Trade
+              <span className="text-red-400">🎯</span> Precision Trade Entry &
+              Exit
             </li>
             <li className="flex items-center gap-3">
-              <span className="text-blue-400">✔️</span> Use Small Capital
-              Efficiently
+              <span className="text-blue-400">✔️</span> Maximize Small Capital
+              Gains
             </li>
           </ul>
           <div className="mt-8 flex justify-center md:justify-start gap-4">

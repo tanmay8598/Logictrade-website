@@ -5,35 +5,34 @@ import { ChevronUp, ChevronDown } from "lucide-react";
 
 const faqs = [
   {
-    question: "Is TradeFinder available on mobile devices?",
+    question: "Can I access Trade Logic on my phone or tablet?",
     answer:
-      "Yes, TradeFinder is fully responsive and works seamlessly on mobile devices.",
+      "Absolutely! Trade Logic is mobile-optimized and works perfectly across all devices.",
   },
   {
-    question: "Does TradeFinder offer educational resources for beginners?",
+    question: "Does Trade Logic provide learning materials for new traders?",
     answer:
-      "Yes, we provide tutorials, articles, and videos to help beginners.",
+      "Yes, we offer step-by-step guides, market insights, and video tutorials tailored for beginners.",
   },
   {
-    question: "What is TradeFinder?",
+    question: "What exactly is Trade Logic?",
     answer:
-      "TradeFinder is a platform that helps users find and analyze trade opportunities.",
+      "Trade Logic is an intelligent trading platform designed to identify and evaluate market opportunities with precision.",
   },
   {
-    question: "Who can use TradeFinder?",
+    question: "Is Trade Logic suitable for all skill levels?",
     answer:
-      "Anyone interested in trading, from beginners to experienced traders.",
+      "Whether you're just starting or are a seasoned trader, Trade Logic adapts to your experience level.",
   },
   {
-    question:
-      "How does TradeFinder differentiate itself from other trading platforms?",
+    question: "What makes Trade Logic unique compared to other platforms?",
     answer:
-      "TradeFinder offers AI-driven insights, real-time data, and a user-friendly experience.",
+      "Trade Logic combines real-time analytics, AI-powered signals, and an intuitive interface for smarter trading decisions.",
   },
   {
-    question: "Are there any additional costs or fees for using TradeFinder?",
+    question: "Are there hidden charges or subscription tiers?",
     answer:
-      "TradeFinder has a free version with premium plans for advanced features.",
+      "Trade Logic offers a free starter plan with optional premium upgrades for advanced tools.",
   },
 ];
 
@@ -51,20 +50,25 @@ export default function FrequentlyAsked() {
       </h2>
       <div className="space-y-4">
         {faqs.map((faq, index) => (
-          <div key={index} className="bg-gray-900 rounded-lg shadow-md">
+          <div
+            key={index}
+            className="bg-gray-900 rounded-lg shadow-md overflow-hidden"
+          >
             <button
-              className="w-full flex justify-between items-center p-4 text-white font-semibold text-lg focus:outline-none text-left"
+              className="w-full flex justify-between items-center p-4 md:p-6 text-white font-semibold text-lg focus:outline-none text-left gap-2"
               onClick={() => toggleFAQ(index)}
             >
-              {index + 1}. {faq.question}
+              <span className="flex-1">
+                {index + 1}. {faq.question}
+              </span>
               {openIndex === index ? (
-                <ChevronUp size={20} />
+                <ChevronUp size={20} className="flex-shrink-0" />
               ) : (
-                <ChevronDown size={20} />
+                <ChevronDown size={20} className="flex-shrink-0" />
               )}
             </button>
             {openIndex === index && (
-              <div className="p-4 bg-gray-800 text-gray-300 transition-all duration-300 text-left">
+              <div className="p-4 bg-gray-800 text-gray-300 border-[0.3px] rounded-sm border-gray-600 transition-all duration-300 text-left">
                 {faq.answer}
               </div>
             )}

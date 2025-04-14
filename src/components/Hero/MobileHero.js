@@ -7,7 +7,7 @@ import Link from "next/link";
 import { MdInstallMobile } from "react-icons/md";
 
 const MobileHero = () => {
-  const texts = ["No.1", "Only"];
+  const texts = ["Leading", "No.1"];
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -104,7 +104,7 @@ const MobileHero = () => {
         >
           <h1 className="text-2xl md:text-5xl lg:text-7xl font-bold flex items-center justify-center flex-wrap">
             India's{" "}
-            <span className="inline-flex min-w-[80px] justify-center">
+            <span className="inline-flex min-w-[110px] justify-center">
               <AnimatePresence mode="wait">
                 <motion.span
                   key={texts[index]}
@@ -118,7 +118,7 @@ const MobileHero = () => {
                 </motion.span>
               </AnimatePresence>
             </span>{" "}
-            Trade Finder
+            Trade Logic
           </h1>
 
           <motion.ul
@@ -133,8 +133,8 @@ const MobileHero = () => {
               transition={{ delay: 1.1 }}
               className="flex items-center gap-3"
             >
-              <span className="text-yellow-400">🏅</span> Find Best Trades In
-              Live Market
+              <span className="text-yellow-400">🏅</span> Discover Top Trades in
+              Real-Time
             </motion.li>
             <motion.li
               initial={{ x: -20 }}
@@ -142,8 +142,8 @@ const MobileHero = () => {
               transition={{ delay: 1.2 }}
               className="flex items-center gap-3"
             >
-              <span className="text-red-400">🎯</span> Accurately Enter & Exit
-              Trade
+              <span className="text-red-400">🎯</span> Precision Trade Entry &
+              Exit
             </motion.li>
             <motion.li
               initial={{ x: -20 }}
@@ -151,8 +151,8 @@ const MobileHero = () => {
               transition={{ delay: 1.3 }}
               className="flex items-center gap-3"
             >
-              <span className="text-blue-400">✔️</span> Use Small Capital
-              Efficiently
+              <span className="text-blue-400">✔️</span> Maximize Small Capital
+              Gains
             </motion.li>
           </motion.ul>
 

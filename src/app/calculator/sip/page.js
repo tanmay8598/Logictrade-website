@@ -35,8 +35,6 @@ const CalculatorPage = () => {
   const [totalReturn, setTotalReturn] = useState(545462);
   const [chartData, setChartData] = useState({});
 
-  console.log(investmentAmount);
-
   const calculatorTypes = [
     {
       id: 1,
@@ -212,8 +210,8 @@ const CalculatorPage = () => {
           </div>
 
           <div className="w-full">
-            <h1 className="text-3xl font-bold text-white mb-8">
-              <span className="text-xl bg-gray-900 border border-gray-700 p-2 rounded-sm">
+            <h1 className="text-lg lg:text-3xl font-bold text-white mb-8">
+              <span className="text-xs lg:text-xl bg-gray-900 border border-gray-700 p-2 rounded-sm">
                 {calculatorIcon}
               </span>{" "}
               {calculatorType} Calculator
@@ -222,73 +220,6 @@ const CalculatorPage = () => {
             <div className="w-full flex flex-col lg:flex-row gap-6">
               <div className="w-full lg:w-2/4 bg-gray-900 rounded-lg shadow p-6 border border-gray-700 h-fit">
                 <div className="space-y-10">
-                  {/* <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-1">
-                      Monthly Investment
-                    </label>
-                    <div className="flex items-center">
-                      <span className="mr-2 text-white">₹</span>
-                      <input
-                        type="range"
-                        min="100"
-                        max="1000000"
-                        step="1000"
-                        value={investmentAmount}
-                        onChange={(e) =>
-                          setInvestmentAmount(parseInt(e.target.value))
-                        }
-                        className="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer"
-                      />
-                    </div>
-                    <div className="mt-2 text-right">
-                      <span className="text-lg font-semibold text-white">
-                        {formatCurrency(investmentAmount)}
-                      </span>
-                    </div>
-                  </div> */}
-
-                  {/* 
-                        <div>
-                          <label className="block text-sm font-medium text-gray-300 mb-1">
-                            Rate of Interest (p.a)
-                          </label>
-                          <div className="flex items-center">
-                            <input
-                              type="range"
-                              min="1"
-                              max="30"
-                              step="0.1"
-                              value={rateOfInterest}
-                              onChange={(e) =>
-                                setRateOfInterest(parseFloat(e.target.value))
-                              }
-                              className="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer"
-                            />
-                            <span className="ml-2 w-12 text-white">
-                              {rateOfInterest}%
-                            </span>
-                          </div>
-                        </div> */}
-                  {/* 
-                        <div>
-                          <label className="block text-sm font-medium text-gray-300 mb-1">
-                            Time Period (years)
-                          </label>
-                          <div className="flex items-center">
-                            <input
-                              type="range"
-                              min="5"
-                              max="40"
-                              step="1"
-                              value={timePeriod}
-                              onChange={(e) =>
-                                setTimePeriod(parseInt(e.target.value))
-                              }
-                              className="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer"
-                            />
-                            <span className="ml-2 w-8 text-white">{timePeriod}</span>
-                          </div>
-                        </div> */}
                   <div>
                     <div className="flex flex-row justify-between items-center">
                       <label className="block text-sm font-medium text-gray-300 mb-1">

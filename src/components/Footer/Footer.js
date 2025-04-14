@@ -11,16 +11,16 @@ const Footer = () => {
         <div className="space-y-4">
           <div className="flex items-center gap-2">
             <Image
-              src="/round.png"
+              src="/logo.png"
               alt="TradeLogic Logo"
               width={60}
               height={60}
             />
             <span className="text-2xl font-bold">
-              <span className="text-yellow-500">T</span>
-              <span className="text-white">rade</span>
-              <span className="text-yellow-500">L</span>
+              <span className="text-[rgba(0,50,127,1)]">L</span>
               <span className="text-white">ogic</span>
+              <span className="text-[rgba(0,50,127,1)]">T</span>
+              <span className="text-white">rade</span>
             </span>
           </div>
           <p className="flex items-start gap-2">
@@ -30,7 +30,7 @@ const Footer = () => {
             <FaPhoneAlt /> +91 9090909090
           </p>
           <p className="flex items-center gap-2">
-            <FaEnvelope /> upTradeLogic909090@gmail.com
+            <FaEnvelope /> @LogicTrade9090@gmail.com
           </p>
         </div>
 
@@ -73,7 +73,9 @@ const Footer = () => {
         </div>
 
         <div className="space-y-4">
-          <h3 className="text-lg font-semibold">Join the community</h3>
+          <h3 className="text-lg font-semibold">
+            Grow With Our Trading Community
+          </h3>
           <div className="flex gap-4">
             <a
               href="#"
@@ -89,56 +91,57 @@ const Footer = () => {
             </a>
           </div>
           <p className="text-gray-400 text-xs">
-            TradeLogic has partnered with TradingView for a Charting solution
+            Logic Trade now integrates TradingView's advanced charting
+            technology
           </p>
         </div>
       </div>
 
       <div className="container mx-auto px-6 lg:px-16 pb-6 space-y-4">
-        <h2 className="text-lg font-bold">About TradeLogic</h2>
+        <h2 className="text-lg font-bold">About Logic Trade</h2>
         <p className="text-gray-400">
-          We are forever bullish on India and are much confident that India will
-          become $20 trillion Economy in next 20 years. We believe that stock
-          market offers the best wealth creation platform for all of India's
-          traders and investors.
+          We're committed to India's financial growth journey, with confidence
+          that our markets will be among the world's most significant wealth
+          creators. The stock market remains the most powerful vehicle for
+          disciplined investors and traders to build long-term prosperity.
         </p>
 
         <div className="mt-4">
           <h3 className="font-semibold text-gray-300 mb-2">
-            We are doing so by giving you access to not just one but 6 products
-            within the TradeLogic ecosystem:
+            Our ecosystem provides six specialized tools designed for modern
+            market participants:
           </h3>
           <ul className="space-y-3 text-gray-400 list-disc pl-5">
             <li>
-              <span className="font-medium">Option Clock:</span> It lets you
-              select a particular time frame within the market day and reveals
-              the exact moves made by major players in the options market.
+              <span className="font-medium">Options Analyzer:</span> Identify
+              institutional activity patterns within specific market hours to
+              align with smart money flow.
             </li>
           </ul>
         </div>
 
         <p className="text-gray-400">
-          TradeLogic is growing rapidly because of the love we receive from
-          SuperTraders and Investors who acknowledge that the platform is
-          innovating for them, building super useful features that help them to
-          trade accurately in stock market to trading F&O like a pro and much
-          more.
+          Logic Trade's rapid adoption stems from our community of serious
+          traders who recognize our platform's cutting-edge capabilities. We
+          continuously develop proprietary tools that transform complex market
+          data into actionable insights, helping traders navigate equities and
+          derivatives with professional precision.
         </p>
 
         <div className="mt-4 p-4 bg-gray-900 rounded-lg">
           <p className="text-gray-300 text-sm">
-            <span className="font-semibold">Note:</span> As a policy we do not
-            give stock tips or recommendations and have not authorized anyone to
-            give this on behalf of us. If you know anyone claiming to be a part
-            of TradeLogic or our associate companies or partners and offering
-            such services, please report us on supt.TradeLogic@gmail.com
+            <span className="font-semibold">Important:</span> We maintain a
+            strict no-tip policy and don't provide stock recommendations. No
+            individual or entity is authorized to offer such services
+            representing Logic Trade. Please report any such claims immediately
+            to support@logictrade.com.
           </p>
         </div>
       </div>
 
       <div className="container mx-auto px-6 lg:px-16">
         <div className="border-t border-gray-700 pt-6 pb-4 flex flex-col md:flex-row items-center justify-between text-sm text-gray-500">
-          <p>© {new Date().getFullYear()} TradeLogic. All Rights Reserved</p>
+          <p>© {new Date().getFullYear()} Logic Trade. All Rights Reserved</p>
           <p className="flex items-center gap-1 mt-2 md:mt-0">
             Made with <span className="text-red-500">❤️</span> in 🇮🇳
           </p>

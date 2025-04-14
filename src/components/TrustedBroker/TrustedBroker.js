@@ -12,14 +12,14 @@ const brokers = [
 
 export default function TrustedBrokers() {
   return (
-    <section className="flex flex-col md:flex-row items-center justify-evenly bg-black text-white p-10 md:p-20">
-      <div className="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
-        <h2 className="text-2xl md:text-5xl font-bold leading-tight">
-          We work with India’s most trusted brokers
+    <section className="flex flex-col md:flex-row items-center justify-evenly bg-black text-white p-10 md:p-20 mb-10 md:mb-0">
+      <div className="md:w-1/2 text-center md:text-left mb-20 md:mb-0">
+        <h2 className="text-xl md:text-3xl font-bold leading-tight">
+          Trade Safely with Our Verified Broker Network
         </h2>
       </div>
 
-      <div className="relative w-[250px] h-[250px] md:w-[350px] md:h-[350px] flex items-center justify-center">
+      <div className="relative w-[200px] h-[200px] md:w-[350px] md:h-[350px] flex items-center justify-center">
         <motion.div
           className="absolute w-full h-full rounded-full "
           animate={{ rotate: 360 }}
