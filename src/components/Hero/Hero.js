@@ -17,7 +17,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="hidden md:block">
+    <div className="hidden md:block md:mt-10 lg:mt-16">
       <div className="bg-black text-white pt-16 px-6 md:px-12 lg:px-24 flex flex-col md:flex-row items-center justify-evenly">
         <div className="text-center mt-2 md:text-left max-w-lg">
           <h1 className="text-4xl md:text-3xl lg:text-7xl font-bold flex items-center flex-wrap">
@@ -34,7 +34,7 @@ const Hero = () => {
                 {texts[index]}
               </motion.span>
             </AnimatePresence>{" "}
-            Trade Logic
+            Trade Explorer
           </h1>
           <ul className="mt-6 space-y-2 text-lg">
             <li className="flex items-center gap-3">
@@ -51,21 +51,12 @@ const Hero = () => {
             </li>
           </ul>
           <div className="mt-8 flex justify-center md:justify-start gap-4">
-            {/* <button
-              className="relative bg-amber-300 hover:bg-amber-400 text-black font-bold px-6 py-3 rounded-lg flex items-center gap-2 
-                    shadow-[0_0_15px_2px_rgba(251,191,36,0.7)] hover:shadow-[0_0_20px_4px_rgba(251,191,36,0.8)] 
-                    transition-all duration-300 transform hover:scale-105"
-            >
-              Login Now
-              <span className="absolute inset-0 rounded-lg border-2 border-transparent group-hover:border-amber-400 transition-all"></span>
-            </button> */}
-
             <button
               className="bg-transparent cursor-pointer text-white font-bold px-6 py-3 rounded-lg flex items-center 
                     border-2 border-gray-300 hover:border-amber-400 hover:text-amber-400
                     transition-all duration-300 transform hover:scale-105"
             >
-              Download Trade Logic App Now
+              Download Logic Trade App Now
             </button>
           </div>
         </div>

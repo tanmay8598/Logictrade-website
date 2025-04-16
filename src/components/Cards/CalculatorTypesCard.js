@@ -11,7 +11,7 @@ const CalculatorTypesCard = ({ title, description, icon }) => {
           <span className="text-2xl text-yellow-500">{icon}</span>
           <h3 className="text-lg text-left font-semibold">{title}</h3>
         </div>
-        <p className="text-sm  text-left text-gray-400 mt-2 pb-2 ">
+        <p className="text-sm   lg:h-[40px]  text-left text-gray-400 mt-2 pb-2 ">
           {description}
         </p>
         <div className="flex flex-row justify-between items-center  w-full border-t border-gray-50">

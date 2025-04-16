@@ -24,7 +24,6 @@ ChartJS.register(
 );
 
 const CalculatorPage = () => {
-  const [loading, setLoading] = useState(true);
   const router = useRouter();
   const [calculatorType, setCalculatorType] = useState("Recurring Deposit");
   const [calculatorIcon, setCalculatorIcon] = useState("🔥");
@@ -82,16 +81,8 @@ const CalculatorPage = () => {
   ];
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 1000);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  useEffect(() => {
     calculateReturns();
-  }, [monthlyDeposit, rateOfInterest, timePeriod, calculatorType, loading]);
+  }, [monthlyDeposit, rateOfInterest, timePeriod, calculatorType]);
 
   const calculateReturns = () => {
     const months = timePeriod * 12;
@@ -157,10 +148,6 @@ const CalculatorPage = () => {
     const slug = type.name.toLowerCase().replace(/\s+/g, "-");
     router.push(`/calculator/${encodeURIComponent(slug)}`);
   };
-
-  if (loading) {
-    return <Loader />;
-  }
 
   return (
     <div className="min-h-screen bg-black p-4 md:p-8">
@@ -419,30 +406,148 @@ const CalculatorPage = () => {
           </div>
         </div>
 
-        <div className="mt-8 bg-gray-900 rounded-lg shadow p-6 border border-gray-700">
+        <div className="mt-8 lg:mt-2 w-full lg:w-[50%] mx-auto lg:ml-66 p-6">
           <h2 className="text-xl font-semibold mb-4 text-white">
-            How Recurring Deposit Calculator Works
+            What is an RD (Recurring Deposit)?
           </h2>
-          <p className="text-gray-300">
-            This calculator helps you estimate the maturity amount of your
-            Recurring Deposit (RD) based on monthly deposits, interest rate, and
-            tenure. RDs typically offer compound interest with quarterly
-            compounding in most Indian banks.
+          <p className="text-gray-500">
+            A Recurring Deposit (RD) is a fixed-income investment option offered
+            by banks and financial institutions. It allows individuals to
+            deposit a fixed amount monthly for a predetermined period while
+            earning stable returns at a fixed interest rate.
           </p>
-          <p className="text-gray-300 mt-2">
-            Current RD interest rates in India range between 5-7% p.a. for most
-            banks. The calculator uses the standard RD formula that accounts for
-            quarterly compounding of interest.
-          </p>
+
           <h3 className="text-lg font-semibold mt-4 text-white">
-            Key Benefits:
+            Key features of an RD account:
           </h3>
-          <ul className="list-disc pl-5 text-gray-300 mt-2 space-y-1">
-            <li>Plan your savings with fixed monthly deposits</li>
-            <li>Compare returns across different tenures and interest rates</li>
-            <li>Understand how compounding grows your money in RDs</li>
-            <li>Visualize your RD growth over time</li>
+          <ul className="list-disc pl-5 text-gray-500 mt-2 space-y-1">
+            <li>Fixed monthly deposits for a chosen tenure.</li>
+            <li>Guaranteed returns with a fixed interest rate.</li>
+            <li>
+              Interest is compounded quarterly or annually to maximize earnings.
+            </li>
+            <li>Ideal for conservative investors and disciplined savers.</li>
+            <li>
+              At the end of the RD tenure, the total invested amount +
+              accumulated interest is paid to the depositor, ensuring steady
+              financial growth.
+            </li>
           </ul>
+
+          <h3 className="text-lg font-semibold mt-4 text-white">
+            How Can an RD Calculator Help You?
+          </h3>
+          <ul className="list-disc pl-5 text-gray-500 mt-2 space-y-1">
+            <li>
+              <strong>Instant Maturity Calculation:</strong> Get accurate
+              results in seconds.
+            </li>
+            <li>
+              <strong>Investment & Interest Breakdown:</strong> View total
+              invested amount vs total interest earned.
+            </li>
+            <li>
+              <strong>Senior Citizen Benefit:</strong> Calculate higher RD
+              returns for senior citizens, as they often receive higher RD
+              interest rates.
+            </li>
+            <li>
+              <strong>Compare RD Options:</strong> Analyze different banks’ RD
+              interest rates and tenures to choose the best investment.
+            </li>
+          </ul>
+
+          <h3 className="text-lg font-semibold mt-4 text-white">
+            RD Calculation Formula (with Example)
+          </h3>
+          <p className="text-gray-500 mt-2">
+            There are two methods to calculate RD maturity:
+          </p>
+          <ul className="list-disc pl-5 text-gray-500 mt-2 space-y-1">
+            <li>Simple Interest Method</li>
+            <li>Compound Interest Method (most commonly used by banks)</li>
+          </ul>
+
+          <p className="text-gray-500 mt-2">
+            <strong>RD Maturity Calculation Formula:</strong> M = P*(1+R/N)
+            <sup>Nt</sup>
+          </p>
+          <p className="text-gray-500 mt-1">
+            Where -
+            <br /> M = Maturity Amount
+            <br /> P = Monthly Investment Amount
+            <br /> R = Annual Interest Rate (as a decimal)
+            <br /> t = Investment Tenure (in years)
+            <br /> N = Compounding Frequency (usually 4 for quarterly
+            compounding)
+          </p>
+          <p className="text-gray-500 mt-2">
+            This is the standard formula used in the calculation of the RD
+            maturity amount, regardless of the sum invested or tenure. All you
+            need to do is put in the variables.
+          </p>
+
+          <h3 className="text-lg font-semibold mt-4 text-white">
+            Example Calculation
+          </h3>
+          <p className="text-gray-500 mt-2">
+            Assume you deposit Rs 5,000 per month in an RD account for 1 year at
+            an 8% annual interest rate.
+          </p>
+          <p className="text-gray-500 mt-2">
+            The final maturity amount on this particular deposit is calculated
+            with the following formula:
+          </p>
+          <ul className="list-disc pl-5 text-gray-500 mt-2 space-y-1">
+            <li>A = P*(1+R/N)^(Nt) = 5000*(1+0.0825/4)^(4×12/12) = 5425.44</li>
+            <li>= 5000*(1+0.0825/4)^(4×11/12) = 5388.64</li>
+            <li>= 5000*(1+0.0825/4)^(4×1/12) = 5034.14</li>
+          </ul>
+          <p className="text-gray-500 mt-2">
+            By taking the sum of the series, the total maturity value = Rs
+            62,730.85
+          </p>
+          <p className="text-gray-500 mt-2">
+            Solving this equation manually is no mean task. An RD calculator, on
+            the other hand, will provide you with the exact number in a few
+            seconds.
+          </p>
+
+          <h3 className="text-lg font-semibold mt-4 text-white">
+            Advantages of Using Liquide’s Online RD Calculator
+          </h3>
+          <ul className="list-disc pl-5 text-gray-500 mt-2 space-y-1">
+            <li>
+              <strong>Time-Saving:</strong> Eliminates manual calculations and
+              gives instant results.
+            </li>
+            <li>
+              <strong>100% Accurate:</strong> Ensures error-free and precise
+              maturity calculations.
+            </li>
+            <li>
+              <strong>Free & Unlimited Use:</strong> Compare multiple RD plans
+              without any cost.
+            </li>
+            <li>
+              <strong>Compare Investment Options:</strong> Evaluate various
+              deposit schemes before making an informed decision.
+            </li>
+          </ul>
+
+          <h3 className="text-lg font-semibold mt-4 text-white">
+            Plan Your RD Investments Today!
+          </h3>
+          <p className="text-gray-500 mt-2">
+            Use the LogicTrade RD Calculator to find the best Recurring Deposit
+            plan for your financial goals. Whether you're saving for a future
+            purchase, retirement, or emergency fund, RDs provide safe and
+            guaranteed returns.
+          </p>
+          <p className="text-gray-500 mt-2 font-medium">
+            Start planning now with LogicTrade's RD Calculator and make smart
+            investment decisions!
+          </p>
         </div>
       </div>
     </div>

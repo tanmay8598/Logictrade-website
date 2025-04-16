@@ -24,7 +24,7 @@ ChartJS.register(
 );
 
 const CalculatorPage = () => {
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
   const router = useRouter();
   const [calculatorType, setCalculatorType] = useState("SIP");
   const [calculatorIcon, setCalculatorIcon] = useState("☕");
@@ -81,17 +81,17 @@ const CalculatorPage = () => {
     },
   ];
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 1000);
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setLoading(false);
+  //   }, 1000);
 
-    return () => clearTimeout(timer);
-  }, []);
+  //   return () => clearTimeout(timer);
+  // }, []);
 
   useEffect(() => {
     calculateReturns();
-  }, [investmentAmount, rateOfInterest, timePeriod, calculatorType, loading]);
+  }, [investmentAmount, rateOfInterest, timePeriod, calculatorType]);
 
   const calculateReturns = () => {
     const months = timePeriod * 12;
@@ -169,9 +169,9 @@ const CalculatorPage = () => {
     router.push(`/calculator/${encodeURIComponent(slug)}`);
   };
 
-  if (loading) {
-    return <Loader />;
-  }
+  // if (loading) {
+  //   return <Loader />;
+  // }
 
   return (
     <div className="min-h-screen bg-black p-4 md:p-8">
@@ -253,7 +253,7 @@ const CalculatorPage = () => {
                       type="range"
                       min="100"
                       max="1000000"
-                      step="1000"
+                      step="100"
                       value={investmentAmount}
                       onChange={(e) =>
                         setInvestmentAmount(parseInt(e.target.value))
@@ -439,20 +439,148 @@ const CalculatorPage = () => {
           </div>
         </div>
 
-        <div className="mt-8 bg-gray-900 rounded-lg shadow p-6 border border-gray-700">
+        <div className="mt-8 lg:mt-2 w-full lg:w-[50%] mx-auto lg:ml-66 p-6">
           <h2 className="text-xl font-semibold mb-4 text-white">
             What is a SIP Calculator?
           </h2>
-          <p className="text-gray-300">
-            A SIP calculator is an online tool that helps investors estimate the
-            future value of their lump sum investments or SIP investments based
-            on expected returns.
+          <p className="text-gray-500">
+            A SIP calculator is a free online tool that helps investors estimate
+            potential returns on their Systematic Investment Plan (SIP)
+            investments in mutual funds. SIP investing has become one of the
+            most preferred investment strategies, especially among millennials
+            and first-time investors, due to its disciplined approach and
+            compounding benefits.
           </p>
-          <p className="text-gray-300 mt-2">
-            A mutual fund is a professionally managed investment fund that pools
-            money from many investors to purchase securities. Mutual funds are a
-            popular choice for investors because they offer professional
-            management, diversification, and liquidity.
+
+          <h3 className="text-lg font-semibold mt-4 text-white">
+            Why use a SIP calculator?
+          </h3>
+          <ul className="list-disc pl-5 text-gray-500 mt-2 space-y-1">
+            <li>
+              Get an estimated maturity amount for your monthly SIP investment.
+            </li>
+            <li>
+              Understand the impact of compound interest on your investments.
+            </li>
+            <li>Plan your mutual fund investment strategy efficiently.</li>
+          </ul>
+          <p className="text-gray-500 mt-2">
+            While a SIP return calculator provides an approximate return value,
+            actual returns depend on factors such as market conditions, expense
+            ratio, and exit load.
+          </p>
+
+          <h3 className="text-lg font-semibold mt-4 text-white">
+            How Does a SIP Return Calculator Help You?
+          </h3>
+          <p className="text-gray-500 mt-2">
+            A SIP investment calculator simplifies investment planning by
+            offering a clear projection of your investment growth over time.
+          </p>
+
+          <h3 className="text-lg font-semibold mt-4 text-white">
+            Key Benefits of Using a SIP Calculator Online:
+          </h3>
+          <ul className="list-disc pl-5 text-gray-500 mt-2 space-y-1">
+            <li>
+              Helps determine the ideal investment amount to reach your
+              financial goals.
+            </li>
+            <li>
+              Shows the total invested amount and estimated returns on
+              investment.
+            </li>
+            <li>
+              Enables comparison between different SIP plans and mutual funds.
+            </li>
+          </ul>
+
+          <h3 className="text-lg font-semibold mt-4 text-white">
+            How do SIP Calculators work?
+          </h3>
+          <p className="text-gray-500 mt-2">
+            A SIP plan calculator works on the following formula:
+            <br />
+            <strong>
+              M = ₹1,000 × (&#123;1 + 0.01&#125; ^ 12 – 1) / 0.01 × (1 + 0.01)
+            </strong>
+          </p>
+          <p className="text-gray-500 mt-2">
+            Where –
+            <br /> M is the amount you receive upon maturity (Maturity Amount)
+            <br /> P is the amount you invest at regular intervals (Monthly SIP
+            Investment)
+            <br /> n is the number of payments you have made (Number of SIP
+            Payments)
+            <br /> i is the periodic rate of interest (Periodic Interest Rate)
+          </p>
+
+          <h3 className="text-lg font-semibold mt-4 text-white">
+            Example Calculation
+          </h3>
+          <p className="text-gray-500 mt-2">
+            If you invest Rs 1,000 per month for 12 months at an expected return
+            of 12% per annum:
+            <br />
+            Monthly rate of return = 12% ÷ 12 = 1% (0.01)
+            <br />
+            M = ₹1,000 × (&#123;1 + 0.01&#125; ^ 12 – 1) / 0.01 × (1 + 0.01)
+            <br />
+            Approximate maturity amount = ₹12,809
+          </p>
+          <p className="text-gray-500 mt-2">
+            Since mutual fund investments are subject to market fluctuations,
+            actual returns may vary.
+          </p>
+
+          <h3 className="text-lg font-semibold mt-4 text-white">
+            Why Use Liquide’s SIP Investment Calculator?
+          </h3>
+          <p className="text-gray-500 mt-2">
+            Liquide's SIP Calculator is a powerful tool that helps investors
+            make informed decisions about their mutual fund SIPs.
+          </p>
+
+          <h3 className="text-lg font-semibold mt-4 text-white">
+            Key Features of Liquide's SIP Calculator:
+          </h3>
+          <ul className="list-disc pl-5 text-gray-500 mt-2 space-y-1">
+            <li>
+              <strong>Instant & Accurate SIP Return Estimates:</strong> Get
+              quick and reliable projections of your investment’s future value.
+            </li>
+            <li>
+              <strong>User-Friendly & Free:</strong> Our online SIP calculator
+              is easy to use and provides unlimited calculations.
+            </li>
+            <li>
+              <strong>Plan Your Investments Better:</strong> Determine the best
+              SIP plan based on your financial goals.
+            </li>
+            <li>
+              <strong>Compare & Find the Best Mutual Funds:</strong> Get
+              recommendations for top-performing mutual funds.
+            </li>
+            <li>
+              <strong>Inflation-Adjusted Returns:</strong> Unlike most SIP
+              calculators, our tool helps you plan for inflation and adjust your
+              investment strategy accordingly.
+            </li>
+          </ul>
+
+          <h3 className="text-lg font-semibold mt-4 text-white">
+            Start Your SIP Investment Today!
+          </h3>
+          <p className="text-gray-500 mt-2">
+            Use LogicTrade's SIP calculator to plan your mutual fund investments
+            effectively and achieve your long-term wealth-building goals.
+            Whether you're investing for retirement, a child's education, or
+            financial independence, SIPs offer a disciplined and rewarding
+            approach.
+          </p>
+          <p className="text-gray-500 mt-2 font-medium">
+            Try the LogicTrade SIP Calculator now and make smart investment
+            decisions!
           </p>
         </div>
       </div>

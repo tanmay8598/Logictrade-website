@@ -24,7 +24,7 @@ ChartJS.register(
 );
 
 const CalculatorPage = () => {
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
   const router = useRouter();
   const [calculatorType, setCalculatorType] = useState("Mutual Fund Returns");
   const [calculatorIcon, setCalculatorIcon] = useState("💵");
@@ -81,17 +81,17 @@ const CalculatorPage = () => {
     },
   ];
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 1000);
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setLoading(false);
+  //   }, 1000);
 
-    return () => clearTimeout(timer);
-  }, []);
+  //   return () => clearTimeout(timer);
+  // }, []);
 
   useEffect(() => {
     calculateReturns();
-  }, [investmentAmount, rateOfInterest, timePeriod, calculatorType, loading]);
+  }, [investmentAmount, rateOfInterest, timePeriod, calculatorType]);
 
   const calculateReturns = () => {
     const futureValue =
@@ -147,9 +147,9 @@ const CalculatorPage = () => {
     router.push(`/calculator/${encodeURIComponent(slug)}`);
   };
 
-  if (loading) {
-    return <Loader />;
-  }
+  // if (loading) {
+  //   return <Loader />;
+  // }
 
   return (
     <div className="min-h-screen bg-black p-4 md:p-8">
@@ -174,7 +174,7 @@ const CalculatorPage = () => {
                   <button
                     onClick={() => handleCalculatorChange(type)}
                     className={`w-full cursor-pointer text-left text-sm px-4 py-2 rounded-md transition-colors font-bold ${
-                      calculatorType === type.name
+                      calculatorType === type.name + " Returns"
                         ? "text-white bg-gray-800"
                         : "text-gray-400 hover:text-white hover:bg-gray-800"
                     }`}
@@ -406,31 +406,123 @@ const CalculatorPage = () => {
           </div>
         </div>
 
-        <div className="mt-8 bg-gray-900 rounded-lg shadow p-6 border border-gray-700">
+        <div className="mt-8 lg:mt-2 w-full lg:w-[50%] mx-auto lg:ml-66 p-6">
           <h2 className="text-xl font-semibold mb-4 text-white">
-            How Mutual Fund Returns Calculator Works
+            What is a Mutual Fund Calculator?
           </h2>
-          <p className="text-gray-300">
-            This calculator helps you estimate the future value of a lump sum
-            investment in mutual funds based on expected annual returns. It uses
-            the power of compounding to project your investment growth over
-            time.
+          <p className="text-gray-500">
+            A Mutual Fund (MF) calculator is an online tool that helps investors
+            estimate the future value of their lump sum investments or SIP
+            investments based on expected returns.
           </p>
-          <p className="text-gray-300 mt-2">
-            Mutual funds typically offer returns between 10-15% annually for
-            equity funds and 6-8% for debt funds over long periods. However,
-            past performance doesn't guarantee future returns, and actual
-            results may vary.
+          <p className="text-gray-500 mt-2">
+            A mutual fund is a professionally managed investment fund that pools
+            money from multiple investors to invest in stocks, bonds, and other
+            securities. Whether you invest a lump sum or choose a Systematic
+            Investment Plan (SIP), understanding potential returns is crucial to
+            making informed financial decisions.
           </p>
+
           <h3 className="text-lg font-semibold mt-4 text-white">
-            Key Benefits:
+            How to Calculate Mutual Fund Returns?
           </h3>
-          <ul className="list-disc pl-5 text-gray-300 mt-2 space-y-1">
-            <li>Visualize how compounding grows your investment</li>
-            <li>Compare different investment amounts and time horizons</li>
-            <li>Plan your financial goals with realistic projections</li>
-            <li>Understand the relationship between risk and return</li>
+          <p className="text-gray-500 mt-2">
+            If you invest Rs 100 in a mutual fund with an expected return of 12%
+            per annum for 5 years, your investment will grow to Rs 176.23. This
+            growth follows the compound interest formula, where returns
+            accumulate over time without withdrawals.
+          </p>
+          <p className="text-gray-500 mt-2">
+            <strong>
+              The formula used in our mutual fund investment calculator is:
+            </strong>{" "}
+            A = P(1+i)<sup>n</sup>
+          </p>
+          <p className="text-gray-500 mt-1">
+            Where -
+            <br /> A = Maturity amount
+            <br /> P = Initial investment (Principal)
+            <br /> i = Assumed annual rate of return (as a decimal)
+            <br /> n = Number of years of investment
+          </p>
+
+          <h3 className="text-lg font-semibold mt-4 text-white">
+            Example Calculation
+          </h3>
+          <p className="text-gray-500 mt-2">
+            If P = Rs 10,000, i = 12% (0.12), and n = 10 years,
+          </p>
+          <p className="text-gray-500 mt-2">
+            A = 10,000 (1 + 0.12)<sup>10</sup> = Rs 31,058
+          </p>
+          <p className="text-gray-500 mt-2">
+            Thus, your investment of Rs 10,000 will grow to Rs 31,058 in 10
+            years with a 12% annual return.
+          </p>
+
+          <h3 className="text-lg font-semibold mt-4 text-white">
+            How Can Liquide’s Mutual Fund Calculator Help You?
+          </h3>
+          <ul className="list-disc pl-5 text-gray-500 mt-2 space-y-1">
+            <li>
+              <strong>Estimate Your Mutual Fund Returns:</strong> Quickly
+              calculate the future value of your lump sum or SIP investment.
+            </li>
+            <li>
+              <strong>Plan Your Investments:</strong> Determine the right
+              investment amount to achieve your financial goals.
+            </li>
+            <li>
+              <strong>Compare Different Mutual Funds:</strong> Evaluate
+              potential returns from various mutual fund schemes in India.
+            </li>
+            <li>
+              <strong>Understand Your Growth Potential:</strong> See how
+              compounding works over different investment durations and return
+              rates.
+            </li>
           </ul>
+
+          <h3 className="text-lg font-semibold mt-4 text-white">
+            Advantages of Using an Online Mutual Fund Calculator
+          </h3>
+          <ul className="list-disc pl-5 text-gray-500 mt-2 space-y-1">
+            <li>
+              <strong>Easy to Use:</strong> Simply enter your investment amount,
+              tenure, and expected return rate, and get instant results.
+            </li>
+            <li>
+              <strong>Saves Time:</strong> No need for manual calculations; get
+              results within seconds.
+            </li>
+            <li>
+              <strong>Compare SIP vs Lump Sum Investments:</strong> Assess the
+              growth potential of SIP vs lump sum investments to make better
+              decisions.
+            </li>
+            <li>
+              <strong>Set Realistic Financial Goals:</strong> Plan your
+              investment strategy based on expected returns and your risk
+              appetite.
+            </li>
+            <li>
+              <strong>Completely Free & Unlimited Use:</strong> Use the Liquide
+              Mutual Fund Calculator any number of times, for free!
+            </li>
+          </ul>
+
+          <h3 className="text-lg font-semibold mt-4 text-white">
+            Start Planning Your Mutual Fund Investments Today!
+          </h3>
+          <p className="text-gray-500 mt-2">
+            Whether you're investing for wealth creation, retirement, or child’s
+            education, understanding your mutual fund returns is key to making
+            the right decisions.
+          </p>
+          <p className="text-gray-500 mt-2 font-medium">
+            Use Liquide’s Mutual Fund Returns Calculator to estimate your
+            returns instantly and make informed investment choices!
+          </p>
         </div>
       </div>
     </div>

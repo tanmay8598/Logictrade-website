@@ -23,7 +23,7 @@ const MobileHero = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="md:hidden"
+      className="md:hidden mt-10"
     >
       <div className="bg-black text-white px-6 flex flex-col md:flex-row items-center justify-center">
         <motion.div
@@ -118,7 +118,7 @@ const MobileHero = () => {
                 </motion.span>
               </AnimatePresence>
             </span>{" "}
-            Trade Logic
+            Trade Explorer
           </h1>
 
           <motion.ul

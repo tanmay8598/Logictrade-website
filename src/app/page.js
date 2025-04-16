@@ -28,7 +28,7 @@ export default function Home() {
   }
   return (
     <div>
-      <TradingTicker />
+      {/* <TradingTicker /> */}
       <Hero />
       <MobileHero />
       <TraderNeeds />

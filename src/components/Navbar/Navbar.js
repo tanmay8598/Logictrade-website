@@ -92,7 +92,7 @@ const Navbar = () => {
                 href="/calculator"
                 className="text-white hover:text-yellow-500 transition"
               >
-                Calculator
+                Calculators
               </Link>
               <Link
                 href="/about-us"
@@ -190,7 +190,7 @@ const Navbar = () => {
               className="text-white hover:text-yellow-500 py-3 transition border-b border-gray-700"
               onClick={closeMobileMenu}
             >
-              Calculator
+              Calculators
             </Link>
 
             <Link

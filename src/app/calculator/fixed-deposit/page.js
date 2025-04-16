@@ -82,19 +82,19 @@ const CalculatorPage = () => {
     },
   ];
 
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 1000);
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setLoading(false);
+  //   }, 1000);
 
-    return () => clearTimeout(timer);
-  }, []);
+  //   return () => clearTimeout(timer);
+  // }, []);
 
   useEffect(() => {
     calculateReturns();
-  }, [investmentAmount, rateOfInterest, timePeriod, calculatorType, loading]);
+  }, [investmentAmount, rateOfInterest, timePeriod, calculatorType]);
 
   const calculateReturns = () => {
     const n = 4;
@@ -150,9 +150,9 @@ const CalculatorPage = () => {
     router.push(`/calculator/${encodeURIComponent(slug)}`);
   };
 
-  if (loading) {
-    return <Loader />;
-  }
+  // if (loading) {
+  //   return <Loader />;
+  // }
 
   return (
     <div className="min-h-screen bg-black p-4 md:p-8">
@@ -178,8 +178,8 @@ const CalculatorPage = () => {
                     onClick={() => handleCalculatorChange(type)}
                     className={`w-full cursor-pointer text-left text-sm md:text px-4 py-2 rounded-md transition-colors font-bold ${
                       calculatorType === type.name
-                        ? " text-white"
-                        : " text-gray-500 hover:text-gray-700"
+                        ? " text-white bg-gray-800"
+                        : " text-gray-400 hover:text-white hover:bg-gray-800"
                     }`}
                   >
                     <span className="text-xl text-yellow-500 hover:text-gray-700">
@@ -402,20 +402,142 @@ const CalculatorPage = () => {
           </div>
         </div>
 
-        <div className="mt-8 bg-gray-900 rounded-lg shadow p-6 border border-gray-700">
+        <div className="mt-8 lg:mt-2 w-full lg:w-[50%] mx-auto lg:ml-66 p-6">
           <h2 className="text-xl font-semibold mb-4 text-white">
-            What is a Fixed Deposit Calculator?
+            What is an FD (Fixed Deposit) Calculator?
           </h2>
-          <p className="text-gray-300">
-            A Fixed Deposit (FD) calculator helps you estimate the maturity
-            amount of your fixed deposit investment based on the principal
-            amount, interest rate, and tenure. It uses the compound interest
-            formula to calculate the returns you can expect at maturity.
+          <p className="text-gray-500">
+            A Fixed Deposit (FD) calculator is a free online tool that helps you
+            calculate fixed deposit interest and maturity amount with ease. By
+            entering your investment amount, FD interest rate and tenure, you
+            can get an instant estimate of your returns on fixed deposits. This
+            eliminates the need for manual calculations, making investment
+            planning faster and more accurate.
           </p>
-          <p className="text-gray-300 mt-2">
-            Fixed deposits are one of the safest investment options that offer
-            guaranteed returns. The interest rate is fixed at the time of
-            investment and remains constant throughout the tenure.
+
+          <h3 className="text-lg font-semibold mt-4 text-white">
+            Why use an FD Calculator?
+          </h3>
+          <ul className="list-disc pl-5 text-gray-500 mt-2 space-y-1">
+            <li>
+              <strong>Instant FD Interest Calculation:</strong> Get accurate
+              results in seconds without manual effort.
+            </li>
+            <li>
+              <strong>Compare Fixed Deposit Rates:</strong> Check and compare FD
+              returns across different banks and tenures.
+            </li>
+            <li>
+              <strong>Plan Your Investments:</strong> Choose the best fixed
+              deposit plan based on your financial goals.
+            </li>
+            <li>
+              <strong>Risk-Free Investment Growth:</strong> FDs are a safe
+              investment option with guaranteed returns.
+            </li>
+          </ul>
+
+          <p className="text-gray-500 mt-2">
+            Using an online FD calculator helps you make informed decisions,
+            ensuring you maximize your returns while securing your savings. Try
+            the best FD calculator today to plan your fixed deposit investments
+            efficiently!
+          </p>
+
+          <h3 className="text-lg font-semibold mt-4 text-white">
+            How to use LogicTrade's FD Calculator?
+          </h3>
+          <ul className="list-disc pl-5 text-gray-500 mt-2 space-y-1">
+            <li>
+              <strong>Principal Amount:</strong> Enter the amount you want to
+              invest in the FD.
+            </li>
+            <li>
+              <strong>Interest Rate:</strong> Enter the annual interest rate
+              offered by the bank or financial institution.
+            </li>
+            <li>
+              <strong>Tenure:</strong> Enter the duration of your FD investment.
+            </li>
+          </ul>
+          <p className="text-gray-500 mt-2">
+            Once you enter these values, Liquide’s FD calculator will instantly
+            display the maturity amount and total interest earned. This helps
+            you compare FD interest rates across banks and NBFCs, ensuring you
+            choose the best fixed deposit scheme for maximum returns.
+          </p>
+
+          <h3 className="text-lg font-semibold mt-4 text-white">
+            FD Maturity Formula
+          </h3>
+          <p className="text-gray-500 mt-2">
+            The maturity amount of your FD is calculated using this formula:
+            <br />
+            <strong>M = P + (P × r × t / 100)</strong>
+          </p>
+          <p className="text-gray-500 mt-1">
+            Where:
+            <br /> P = Principal amount deposited
+            <br /> r = Annual interest rate
+            <br /> t = Tenure in years
+          </p>
+
+          <p className="text-gray-500 mt-2">
+            <strong>Example:</strong> If you deposit ₹1,00,000 for 5 years at
+            10% interest:
+            <br />M = ₹1,00,000 + (1,00,000 × 10 × 5 / 100) = ₹1,50,000
+          </p>
+
+          <h3 className="text-lg font-semibold mt-4 text-white">
+            Benefits of Using a FD Calculator
+          </h3>
+          <ul className="list-disc pl-5 text-gray-500 mt-2 space-y-1">
+            <li>
+              <strong>Accurate Results:</strong> Get precise calculations
+              without errors.
+            </li>
+            <li>
+              <strong>Free & Easy to Use:</strong> Available on any device with
+              internet access.
+            </li>
+            <li>
+              <strong>Time-Saving:</strong> Quickly compare FD maturity amounts
+              from different banks.
+            </li>
+          </ul>
+
+          <h3 className="text-lg font-semibold mt-4 text-white">
+            Why Use Liquide’s FD Calculator
+          </h3>
+          <ul className="list-disc pl-5 text-gray-500 mt-2 space-y-1">
+            <li>
+              <strong>Simple & Easy to Use:</strong> No need to manually apply
+              complex FD interest calculation formulas.
+            </li>
+            <li>
+              <strong>Instant & Time-Saving:</strong> Get your FD maturity
+              amount in seconds without any hassle.
+            </li>
+            <li>
+              <strong>100% Free & Accurate:</strong> Our fixed deposit
+              calculator is completely free and ensures error-free results,
+              helping you plan your finances better.
+            </li>
+            <li>
+              <strong>Better Financial Planning:</strong> With precise
+              calculations, you can compare FD interest rates and choose the
+              best option for your investment goals.
+            </li>
+          </ul>
+
+          <h3 className="text-lg font-semibold mt-4 text-white">
+            Limitations of an FD Calculator
+          </h3>
+          <p className="text-gray-500 mt-2">
+            While an FD interest calculator provides quick estimates, it does
+            not account for tax deductions on FD interest. Always check the
+            applicable TDS (Tax Deducted at Source) on FD when planning your
+            investments.
           </p>
         </div>
       </div>

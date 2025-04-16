@@ -279,7 +279,7 @@ const ContactPage = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={`w-full py-3 px-6 rounded-lg font-medium text-white transition-all duration-300 flex items-center justify-center ${
+                className={`w-full cursor-pointer py-3 px-6 rounded-lg font-medium text-white transition-all duration-300 flex items-center justify-center ${
                   isSubmitting
                     ? "bg-gray-700"
                     : "bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 shadow-lg hover:shadow-orange-500/30"
