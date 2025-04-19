@@ -3,6 +3,14 @@ import React, { useState, useEffect } from "react";
 import Loader from "./../../components/Loader/Loader";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import {
+  FaYoutube,
+  FaTelegram,
+  FaInstagram,
+  FaFacebook,
+  FaTwitter,
+  FaLinkedin,
+} from "react-icons/fa";
 
 function About() {
   const [loading, setLoading] = useState(true);
@@ -34,125 +42,98 @@ function About() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black to-gray-900 py-20 px-4 sm:px-6 lg:px-8">
+    <div className=" bg-gradient-to-br from-black to-gray-900 py-20 px-4 sm:px-6 lg:px-8 flex items-start justify-center">
       <motion.div
         initial="hidden"
         animate="show"
         variants={container}
-        className="max-w-6xl mx-auto"
+        className="w-full max-w-4xl mx-auto"
       >
-        <motion.div variants={item} className="text-center mb-16">
-          <h1 className="text-3xl min-h-xl md:text-5xl lg:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500 mb-6">
-            About Us
-          </h1>
-          <p className="text-md md:text-2xl text-gray-300 max-w-3xl mx-auto">
-            Revolutionizing Trading with Smart Insights
-          </p>
-        </motion.div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <motion.div variants={item} className="flex justify-center">
-            <div className="relative w-full h-80 lg:h-full rounded-xl overflow-hidden border-2 border-yellow-500/30 shadow-lg shadow-yellow-500/10">
-              <img
-                src="/left_image.png  "
-                alt="Trade Logic Platform"
-                className="w-full h-full object-contain"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
-            </div>
-          </motion.div>
-
-          <div className="space-y-8">
-            <motion.div variants={item}>
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-                <span className="text-yellow-400">Smart</span> Trading Solutions
-              </h2>
-              <p className="text-gray-300">
-                At Trade Logic, we're transforming the trading landscape with
-                our AI-driven platform that provides real-time market analysis,
-                predictive analytics, and personalized trading strategies.
-              </p>
-            </motion.div>
-
-            <motion.div variants={item} className="space-y-6">
-              <div className="p-6 bg-gray-800/50 rounded-xl border border-gray-700 hover:border-yellow-400 transition-all duration-300">
-                <h3 className="text-xl font-semibold text-white mb-3 flex items-center">
-                  <span className="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center mr-3">
-                    1
-                  </span>
-                  Advanced Analytics
-                </h3>
-                <p className="text-gray-300">
-                  Our proprietary algorithms analyze market trends across
-                  multiple timeframes to identify high-probability trading
-                  opportunities.
-                </p>
-              </div>
-
-              <div className="p-6 bg-gray-800/50 rounded-xl border border-gray-700 hover:border-yellow-400 transition-all duration-300">
-                <h3 className="text-xl font-semibold text-white mb-3 flex items-center">
-                  <span className="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center mr-3">
-                    2
-                  </span>
-                  Real-time Alerts
-                </h3>
-                <p className="text-gray-300">
-                  Get instant notifications for price movements, volume spikes,
-                  and technical pattern breakouts tailored to your watchlist.
-                </p>
-              </div>
-
-              <div className="p-6 bg-gray-800/50 rounded-xl border border-gray-700 hover:border-yellow-400 transition-all duration-300">
-                <h3 className="text-xl font-semibold text-white mb-3 flex items-center">
-                  <span className="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center mr-3">
-                    3
-                  </span>
-                  Risk Management
-                </h3>
-                <p className="text-gray-300">
-                  Our dynamic risk assessment tools help you maintain optimal
-                  position sizing and stop-loss strategies.
-                </p>
-              </div>
-            </motion.div>
+        <motion.div
+          variants={item}
+          className="flex flex-col items-center justify-center w-full"
+        >
+          <div className="w-full p-6  text-center">
+            <h2 className="text-2xl md:text-3xl font-bold text-white underline decoration-amber-400  mb-2">
+              <span className="text-yellow-400">Protecting yourself</span>
+            </h2>
+            <p className="text-gray-300 text-base md:text-lg max-w-2xl mx-auto">
+              Chart Colony Research Analyst is tremendously proud of the impact
+              that we have made in helping our clients by providing quality
+              Financial services and exceptional service.
+            </p>
           </div>
-        </div>
 
-        <motion.div variants={item} className="mt-20 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Ready to Transform Your Trading?
-          </h2>
-          <Link
-            href="/"
-            className="inline-block bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-400 hover:to-orange-400 text-black font-bold px-8 py-2 rounded-lg text-lg transition-all duration-300 shadow-lg hover:shadow-yellow-500/30"
-          >
-            Download App
-          </Link>
-          <p className="text-gray-400 mt-4">
-            Join 50,000+ traders who trust Trade Logic
-          </p>
+          <div className="w-full   text-center">
+            <h2 className="text-md md:text-lg font-bold text-white mb-2 decoration-amber-400 underline">
+              <span className="text-yellow-400">Quality Results</span>
+            </h2>
+            <p className="text-gray-300 text-base md:text-lg max-w-2xl mx-auto">
+              Our aim is to build our clients' assets through Truth, Trust, and
+              Transparency by offering quality research services and exceptional
+              customer service.
+            </p>
+          </div>
         </motion.div>
 
         <motion.div
           variants={item}
-          className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16"
+          className="flex flex-wrap justify-center items-center gap-4 md:gap-6 mt-12 mb-12"
         >
-          {[
-            { value: "50K+", label: "Active Traders" },
-            { value: "24/7", label: "Market Coverage" },
-            { value: "95%", label: "Accuracy Rate" },
-            { value: "0.5s", label: "Execution Speed" },
-          ].map((stat, index) => (
-            <div
-              key={index}
-              className="bg-gray-800/50 p-6 rounded-xl border border-gray-700 text-center"
-            >
-              <p className="text-3xl font-bold text-yellow-400 mb-2">
-                {stat.value}
-              </p>
-              <p className="text-gray-300">{stat.label}</p>
-            </div>
-          ))}
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-400 hover:text-yellow-400 text-3xl transition-colors duration-300"
+            aria-label="YouTube"
+          >
+            <FaYoutube />
+          </a>
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-400 hover:text-yellow-400 text-3xl transition-colors duration-300"
+            aria-label="Telegram"
+          >
+            <FaTelegram />
+          </a>
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-400 hover:text-yellow-400 text-3xl transition-colors duration-300"
+            aria-label="Instagram"
+          >
+            <FaInstagram />
+          </a>
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-400 hover:text-yellow-400 text-3xl transition-colors duration-300"
+            aria-label="Facebook"
+          >
+            <FaFacebook />
+          </a>
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-400 hover:text-yellow-400 text-3xl transition-colors duration-300"
+            aria-label="Twitter"
+          >
+            <FaTwitter />
+          </a>
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-400 hover:text-yellow-400 text-3xl transition-colors duration-300"
+            aria-label="LinkedIn"
+          >
+            <FaLinkedin />
+          </a>
         </motion.div>
       </motion.div>
     </div>

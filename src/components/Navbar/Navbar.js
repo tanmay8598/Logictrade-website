@@ -71,23 +71,41 @@ const Navbar = () => {
               >
                 <div className="mr-3">
                   <Image
-                    src="/logo.png"
+                    src="/logotradeLogic.jpg"
                     alt="TradeLogic Logo"
                     width={40}
                     height={40}
-                    className="object-contain"
+                    className="object-contain rounded-sm"
                   />
                 </div>
-                <span className="text-2xl font-bold">
-                  <span className="text-[rgba(0,50,127,1)]">L</span>
+                <span className="text-xl font-bold">
+                  <span className="text-amber-400">L</span>
                   <span className="text-white">ogic</span>
-                  <span className="text-[rgba(0,50,127,1)]">T</span>
+                  <span className="text-amber-400">T</span>
                   <span className="text-white">rade</span>
                 </span>
               </Link>
             </div>
 
-            <div className="hidden lg:flex items-center space-x-6">
+            <div className="hidden lg:flex text-sm items-center space-x-6">
+              <Link
+                href="/services"
+                className="text-white hover:text-yellow-500 transition"
+              >
+                Service
+              </Link>
+              <Link
+                href="/investor-charter"
+                className="text-white hover:text-yellow-500 transition"
+              >
+                Investor Charter
+              </Link>
+              <Link
+                href="/complaint-board"
+                className="text-white hover:text-yellow-500 transition"
+              >
+                Complaint Board
+              </Link>
               <Link
                 href="/calculator"
                 className="text-white hover:text-yellow-500 transition"
@@ -110,12 +128,12 @@ const Navbar = () => {
 
               <Link
                 href="/"
-                className="flex items-center px-6 py-2 border-2 border-[rgba(0,50,127,1)] text-white rounded-full transition font-medium"
+                className="flex items-center px-4 py-1 border-1 border-amber-400 text-white rounded-full transition font-medium"
               >
-                <div className="bg-[rgba(0,50,127,1)] p-2 rounded-full flex items-center justify-center">
-                  <MdInstallMobile className="text-white text-xl" />
+                <div className="bg-amber-400  p-2 rounded-full flex items-center justify-center">
+                  <MdInstallMobile className="text-white text-md" />
                 </div>
-                <span className="ml-3 text-lg font-semibold">Download App</span>
+                <span className="ml-3 text-xs font-semibold">Download App</span>
               </Link>
             </div>
 
@@ -152,17 +170,17 @@ const Navbar = () => {
           >
             <div className="mr-3">
               <Image
-                src="/logo.png"
+                src="/logotradeLogic.jpg"
                 alt="TradeLogic Logo"
                 width={40}
                 height={40}
-                className="object-contain"
+                className="object-contain rounded-sm"
               />
             </div>
             <span className="text-2xl font-bold">
-              <span className="text-[rgba(0,50,127,1)]">L</span>
+              <span className="text-amber-400">L</span>
               <span className="text-white">ogic</span>
-              <span className="text-[rgba(0,50,127,1)]">T</span>
+              <span className="text-amber-400">T</span>
               <span className="text-white">rade</span>
             </span>
           </Link>
@@ -179,11 +197,32 @@ const Navbar = () => {
           <div className="flex flex-col space-y-4 p-4">
             <Link
               href="/"
-              className="text-[rgba(0,50,127,1)] hover:text-yellow-500 py-3 transition border-b border-gray-700 flex items-center gap-1"
+              className="text-amber-400 hover:text-yellow-500 py-3 transition border-b border-gray-700 flex items-center gap-1"
               onClick={closeMobileMenu}
             >
               Download App{" "}
-              <MdInstallMobile className=" text-lg text-[rgba(0,50,127,1)]" />
+              <MdInstallMobile className=" text-lg text-amber-400" />
+            </Link>
+            <Link
+              href="/services"
+              className="text-white hover:text-yellow-500 py-3 transition border-b border-gray-700"
+              onClick={closeMobileMenu}
+            >
+              Service
+            </Link>
+            <Link
+              href="/investor-charter"
+              className="text-white hover:text-yellow-500 py-3 transition border-b border-gray-700"
+              onClick={closeMobileMenu}
+            >
+              Investor Charter
+            </Link>
+            <Link
+              href="/complaint-board"
+              className="text-white hover:text-yellow-500 py-3 transition border-b border-gray-700"
+              onClick={closeMobileMenu}
+            >
+              Complaint Board
             </Link>
             <Link
               href="/calculator"

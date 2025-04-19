@@ -11,15 +11,16 @@ const Footer = () => {
         <div className="space-y-4">
           <div className="flex items-center gap-2">
             <Image
-              src="/logo.png"
+              src="/logotradeLogic.jpg"
               alt="TradeLogic Logo"
               width={60}
               height={60}
+              className="object-contain rounded-sm"
             />
             <span className="text-2xl font-bold">
-              <span className="text-[rgba(0,50,127,1)]">L</span>
+              <span className="text-amber-400">L</span>
               <span className="text-white">ogic</span>
-              <span className="text-[rgba(0,50,127,1)]">T</span>
+              <span className="text-amber-400">T</span>
               <span className="text-white">rade</span>
             </span>
           </div>
@@ -39,7 +40,7 @@ const Footer = () => {
           <div className="flex flex-col">
             <Link
               href="/about-us"
-              className="text-white hover:text-yellow-500 transition"
+              className="text-white  pb-2 hover:text-yellow-500 transition"
             >
               About Us
             </Link>
@@ -50,6 +51,12 @@ const Footer = () => {
             >
               Contact Us
             </Link>
+            <Link
+              href="/contact-us"
+              className=" py-2 text-white hover:text-yellow-500 transition"
+            >
+              Grievance Redressal
+            </Link>
           </div>
         </div>
 
@@ -58,9 +65,21 @@ const Footer = () => {
           <div className="flex flex-col">
             <Link
               href="/terms-conditions"
-              className="text-white hover:text-yellow-500 transition"
+              className="text-white  pb-2 hover:text-yellow-500 transition"
             >
               Terms & conditions
+            </Link>
+            <Link
+              href="/terms-conditions"
+              className="text-white  py-2 hover:text-yellow-500 transition"
+            >
+              Discloser
+            </Link>
+            <Link
+              href="/terms-conditions"
+              className="text-white  py-2 hover:text-yellow-500 transition"
+            >
+              Disclaimer
             </Link>
 
             <Link
