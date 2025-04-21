@@ -52,10 +52,16 @@ const Footer = () => {
               Contact Us
             </Link>
             <Link
-              href="/contact-us"
+              href="/grievance-redressal"
               className=" py-2 text-white hover:text-yellow-500 transition"
             >
               Grievance Redressal
+            </Link>
+            <Link
+              href="/refund-policy"
+              className=" py-2 text-white hover:text-yellow-500 transition"
+            >
+              Refund Policy
             </Link>
           </div>
         </div>
@@ -64,22 +70,22 @@ const Footer = () => {
           <h3 className="text-lg font-semibold">Terms Of Use</h3>
           <div className="flex flex-col">
             <Link
-              href="/terms-conditions"
-              className="text-white  pb-2 hover:text-yellow-500 transition"
-            >
-              Terms & conditions
-            </Link>
-            <Link
-              href="/terms-conditions"
+              href="/discloser"
               className="text-white  py-2 hover:text-yellow-500 transition"
             >
               Discloser
             </Link>
             <Link
-              href="/terms-conditions"
+              href="/disclaimer"
               className="text-white  py-2 hover:text-yellow-500 transition"
             >
               Disclaimer
+            </Link>
+            <Link
+              href="/terms-conditions"
+              className="text-white  pb-2 hover:text-yellow-500 transition"
+            >
+              Terms & conditions
             </Link>
 
             <Link

@@ -11,7 +11,7 @@ import {
   FaLinkedin,
 } from "react-icons/fa";
 
-function ContactPage() {
+function ComplaintBoard() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -46,74 +46,57 @@ function ContactPage() {
         initial="hidden"
         animate="show"
         variants={container}
-        className="w-full max-w-2xl mx-auto"
+        className="w-full max-w-5xl mx-auto"
       >
         <motion.div
           variants={item}
-          className="flex flex-col items-center justify-center w-full"
+          className="flex flex-col items-center justify-center w-full text-center"
         >
-          <div className="w-full p-6 sm:p-8 lg:p-10 text-center mb-10">
-            <h2 className="text-xl sm:text-2xl md:text-4xl font-bold text-white underline decoration-amber-400 mb-8 sm:mb-10">
-              <span className="text-yellow-400">Contact Details :-</span>
-            </h2>
-
-            <div className="space-y-8 text-gray-300 text-lg sm:text-xl mx-auto">
-              <div className="space-y-6 sm:space-y-8">
-                <div className="space-y-2">
-                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-1">
-                    Name:
-                  </h3>
-                  <p className="ml-4 uppercase font-bold text-xl sm:text-2xl text-amber-300">
-                    Shubham Goyal
-                  </p>
-                </div>
-
-                <div className="space-y-2">
-                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-1">
-                    Role:
-                  </h3>
-                  <p className="ml-4">Research Analyst & Compliance Officer</p>
-                  <p className="ml-6 sm:ml-8 text-sm sm:text-base">
-                    SEBI Registration No: INH000000000018
-                  </p>
-                </div>
-
-                <div className="space-y-2">
-                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-1">
-                    Support Mail:
-                  </h3>
-                  <p className="ml-4 text-amber-300">support@logictrade.com</p>
-                </div>
-
-                <div className="space-y-2">
-                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-1">
-                    Compliance Mail:
-                  </h3>
-                  <p className="ml-4 text-amber-300">
-                    compliancelogictrade@gmail.com
-                  </p>
-                </div>
-
-                <div className="space-y-2">
-                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-1">
-                    Logic Trade Services WhatsApp/Call:
-                  </h3>
-                  <p className="ml-4 text-amber-300">+91 999999 9999</p>
-                </div>
-
-                <div className="space-y-2">
-                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-1">
-                    Working Hours:
-                  </h3>
-                  <div className="ml-4 space-y-1">
-                    <p>Monday-Friday (09:00AM to 05:00 PM)</p>
-                    <p>Saturday (10:00 AM to 02:00 PM)</p>
-                    <p>Sunday/Public Holidays: OFF</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div className="mb-10">
+            <h3 className="text-2xl sm:text-3xl font-semibold underline text-amber-300  mb-4">
+              Data For The Month Ending: March , 2025
+            </h3>
+            <img
+              src="/1.png"
+              alt="Monthly Disposal Trend"
+              className="w-full h-auto rounded-lg shadow-lg"
+            />
           </div>
+
+          <div className="mb-10">
+            <h3 className="text-2xl  my-10 sm:text-3xl font-semibold underline text-amber-300  ">
+              Trend of Monthly Disposal of Complaints:
+            </h3>
+            <img
+              src="/1.png"
+              alt="Monthly Disposal Trend"
+              className="w-full h-auto rounded-lg shadow-lg"
+            />
+          </div>
+
+          <div className="mb-10">
+            <h3 className="text-2xl sm:text-3xl font-semibold underline text-amber-300  mb-4">
+              Trend of Annual Disposal of Complaints:
+            </h3>
+            <img
+              src="/3.png"
+              alt="Annual Disposal Trend"
+              className="w-full h-auto rounded-lg shadow-lg"
+            />
+          </div>
+
+          <p className="text-gray-300 text-base sm:text-lg mt-6">
+            Visit:{" "}
+            <a
+              href="https://www.logictrade.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-yellow-400 underline"
+            >
+              www.logictrade.com
+            </a>{" "}
+            for more details about Risks, Disclosures and Disclaimers.
+          </p>
         </motion.div>
 
         <motion.div
@@ -180,4 +163,4 @@ function ContactPage() {
   );
 }
 
-export default ContactPage;
+export default ComplaintBoard;
