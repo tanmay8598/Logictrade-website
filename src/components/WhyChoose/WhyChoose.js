@@ -4,48 +4,58 @@ const features = [
   {
     title: "Trade Tracker",
     description:
-      "Log your trades, analyze performance, and refine your strategy.",
+      "Stay updated with real-time trade calls and performance insights from your subscribed channels.",
     icon: "📖",
   },
   {
     title: "Trend Radar",
-    description: "Discover high-momentum stocks in real-time.",
+    description:
+      "Spot trending stocks and breakout opportunities across sectors and timeframes.",
     icon: "❤️",
   },
-  {
-    title: "Smart Money Flow",
-    description: "Track institutional (FII/DII) activity and positioning.",
-    icon: "📊",
-  },
-  {
-    title: "Stock Scanner",
-    description: "Create and track personalized stock lists.",
-    icon: "📋",
-  },
+
   {
     title: "Event Tracker",
-    description: "Anticipate market moves with key date alerts.",
+    description:
+      "Get alerts on earnings, dividends, and macroeconomic events impacting the market.",
     icon: "📅",
   },
-  {
-    title: "Risk Toolkit",
-    description: "Optimize trades with position-sizing calculators.",
-    icon: "🧮",
-  },
-  {
-    title: "Learning Hub",
-    description: "Master trading with step-by-step guides.",
-    icon: "🎥",
-  },
-  {
-    title: "Trading Simulator",
-    description: "Practice strategies in risk-free scenarios.",
-    icon: "🎮",
-  },
+
   {
     title: "Market Drivers",
-    description: "Identify stocks impacting major indices.",
+    description:
+      "Get curated insights into top movers and the reasons behind big market swings.",
     icon: "📈",
+  },
+  {
+    title: "Exclusive Channels",
+    description:
+      "Subscribe to premium expert-led channels for real-time insights, calls, and market commentary.",
+    icon: "🔒",
+  },
+  {
+    title: "Free Channel Access",
+    description:
+      "Explore a free community channel with daily updates, tips, and beginner-friendly discussions.",
+    icon: "🌐",
+  },
+  {
+    title: "Announcements & Alerts",
+    description:
+      "Never miss an update — get instant notifications for important announcements from your channels.",
+    icon: "📢",
+  },
+  {
+    title: "News Feed",
+    description:
+      "Stay informed with real-time news curated for traders, including global and domestic headlines.",
+    icon: "📰",
+  },
+  {
+    title: "Subscription Dashboard",
+    description:
+      "Manage your subscriptions easily — view active plans, renewals, and explore premium options.",
+    icon: "💳",
   },
 ];
 
@@ -56,7 +66,7 @@ const WhyChoose = () => {
   return (
     <div className="bg-black text-white py-10">
       <div className="text-center mb-8">
-        <h2 className="text-3xl font-bold">Why Traders Trust Trade Logic</h2>
+        <h2 className="text-3xl font-bold">Why Trade Logic</h2>
       </div>
 
       <div className="container mx-auto px-5">

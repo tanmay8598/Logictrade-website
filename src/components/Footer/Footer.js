@@ -11,27 +11,28 @@ const Footer = () => {
         <div className="space-y-4">
           <div className="flex items-center gap-2">
             <Image
-              src="/logotradeLogic.jpg"
+              src="/newlogo.png"
               alt="TradeLogic Logo"
-              width={60}
+              width={200}
               height={60}
               className="object-contain rounded-sm"
             />
-            <span className="text-2xl font-bold">
+            {/* <span className="text-2xl font-bold">
               <span className="text-amber-400">L</span>
               <span className="text-white">ogic</span>
               <span className="text-amber-400">T</span>
               <span className="text-white">rade</span>
-            </span>
+            </span> */}
           </div>
           <p className="flex items-start gap-2">
-            <FaMapMarkerAlt className="mt-1" /> Lucknow UP, India 229001
+            <FaMapMarkerAlt className="mt-1" /> Jaipur, Rajasthan, 302020
           </p>
           <p className="flex items-center gap-2">
-            <FaPhoneAlt /> +91 9090909090
+            <FaPhoneAlt /> +91 7611888219
           </p>
           <p className="flex items-center gap-2">
-            <FaEnvelope /> @LogicTrade9090@gmail.com
+            <FaEnvelope />
+            logictrade.co.in@gmail.com
           </p>
         </div>
 
@@ -115,10 +116,10 @@ const Footer = () => {
               <FaTelegramPlane className="text-white text-xl" />
             </a>
           </div>
-          <p className="text-gray-400 text-xs">
+          {/* <p className="text-gray-400 text-xs">
             Logic Trade now integrates TradingView's advanced charting
             technology
-          </p>
+          </p> */}
         </div>
       </div>
 

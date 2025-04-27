@@ -33,11 +33,11 @@ export default function Home() {
       <MobileHero />
       <TraderNeeds />
       <WhyChoose />
-      <Dominate />
+      {/* <Dominate /> */}
       <FrequentlyAsked />
       <WhatUserSay />
-      <OurMediaPresence />
-      <TrustedBrokers />
+      {/* <OurMediaPresence /> */}
+      {/* <TrustedBrokers /> */}
     </div>
   );
 }
