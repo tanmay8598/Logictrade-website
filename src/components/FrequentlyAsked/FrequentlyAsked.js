@@ -5,34 +5,58 @@ import { ChevronUp, ChevronDown } from "lucide-react";
 
 const faqs = [
   {
-    question: "Can I access Trade Logic on my phone or tablet?",
-    answer:
-      "Absolutely! Trade Logic is mobile-optimized and works perfectly across all devices.",
+    question: "What is included in the Premium Channel?",
+    answer: [
+      "Daily trading tips and setups (Stocks, Nifty, Banknifty, Options)",
+      "Intraday and swing trading strategies",
+      "Educational content, webinars, and live Q&A sessions",
+      "Exclusive access to premium analysis and reports",
+    ],
   },
   {
-    question: "Does Trade Logic provide learning materials for new traders?",
+    question: "How do I join the Premium Channel?",
     answer:
-      "Yes, we offer step-by-step guides, market insights, and video tutorials tailored for beginners.",
+      "Click the payment link provided. After successful payment, you’ll be added to the private Telegram group within 24 hours.",
   },
   {
-    question: "What exactly is Trade Logic?",
+    question: "What are the subscription charges?",
     answer:
-      "Trade Logic is an intelligent trading platform designed to identify and evaluate market opportunities with precision.",
+      "₹xxx/month, ₹xxx/quarterly, ₹xxx/annually. (Discounts available for long-term plans.)",
   },
   {
-    question: "Is Trade Logic suitable for all skill levels?",
+    question: "What payment methods are accepted?",
     answer:
-      "Whether you're just starting or are a seasoned trader, Trade Logic adapts to your experience level.",
+      "We accept UPI, Bank Transfer, Paytm, Google Pay, PhonePe, and Crypto (on request).",
   },
   {
-    question: "What makes Trade Logic unique compared to other platforms?",
+    question: "Is there a refund policy?",
     answer:
-      "Trade Logic combines real-time analytics, AI-powered signals, and an intuitive interface for smarter trading decisions.",
+      "Since this is a digital service, no refunds are provided after joining. Please join only if you are sure.",
   },
   {
-    question: "Are there hidden charges or subscription tiers?",
+    question: "Will I get guaranteed profits?",
     answer:
-      "Trade Logic offers a free starter plan with optional premium upgrades for advanced tools.",
+      "No. We share analysis and ideas based on market research, but the stock market carries risk. You must do your own risk management before trading.",
+  },
+  {
+    question: "Can I share the premium content with others?",
+    answer:
+      "Strictly prohibited. Sharing or forwarding paid content will result in immediate removal without any refund.",
+  },
+  {
+    question: "How can I contact support if I face any issue?",
+    answer:
+      "Message us on Telegram @SupportUsername or email us at support@yourdomain.com.",
+  },
+  {
+    question: "Are there any free trials?",
+    answer:
+      "Occasionally, we offer free trials. Stay tuned to the main channel for announcements!",
+  },
+  {
+    question: "Is this SEBI registered?",
+    answer:
+      "This channel is for educational purposes only. We are not SEBI registered advisors.",
   },
 ];
 
@@ -46,13 +70,13 @@ export default function FrequentlyAsked() {
   return (
     <section className="w-full max-w-6xl mx-auto px-4 py-10">
       <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-6">
-        Frequently Asked Questions
+        FAQ - Premium Telegram Channel
       </h2>
       <div className="space-y-4">
         {faqs.map((faq, index) => (
           <div
             key={index}
-            className="bg-gray-900 rounded-lg shadow-md overflow-hidden"
+            className="bg-gray-900 rounded-lg shadow-md overflow-hidden mb-4"
           >
             <button
               className="w-full flex justify-between items-center p-4 md:p-6 text-white font-semibold text-lg focus:outline-none text-left gap-2"
@@ -67,9 +91,18 @@ export default function FrequentlyAsked() {
                 <ChevronDown size={20} className="flex-shrink-0" />
               )}
             </button>
+
             {openIndex === index && (
               <div className="p-4 bg-gray-800 text-gray-300 border-[0.3px] rounded-sm border-gray-600 transition-all duration-300 text-left">
-                {faq.answer}
+                {Array.isArray(faq.answer) ? (
+                  <ul className="list-disc list-inside space-y-2">
+                    {faq.answer.map((point, idx) => (
+                      <li key={idx}>{point}</li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p>{faq.answer}</p>
+                )}
               </div>
             )}
           </div>

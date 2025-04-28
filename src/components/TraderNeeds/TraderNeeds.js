@@ -14,7 +14,7 @@ function TraderNeeds() {
         "Personalized trade setups",
         "Real-time news & market mood insights",
       ],
-      image: "/apex.png",
+      image: "/stock4.png",
     },
     {
       id: 2,
@@ -25,7 +25,7 @@ function TraderNeeds() {
         "Advanced annotation toolkit",
         "Historical strategy testing",
       ],
-      image: "/clock.png",
+      image: "/stock2.png",
     },
     {
       id: 3,
@@ -36,7 +36,7 @@ function TraderNeeds() {
         "Multi-channel notifications",
         "AI-driven opportunity scanner",
       ],
-      image: "/insider.png",
+      image: "/stock3.png",
     },
     {
       id: 4,
@@ -47,7 +47,7 @@ function TraderNeeds() {
         "Tax-efficient planning",
         "Cross-platform sync",
       ],
-      image: "/swing.png",
+      image: "/stock1.png",
     },
   ];
 
