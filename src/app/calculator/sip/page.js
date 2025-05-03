@@ -258,7 +258,7 @@ const CalculatorPage = () => {
                       onChange={(e) =>
                         setInvestmentAmount(parseInt(e.target.value))
                       }
-                      className="w-full h-2 bg-green-500 rounded-lg appearance-none cursor-pointer mt-2"
+                      className="w-full h-2 bg-gray-500 rounded-lg appearance-none cursor-pointer mt-2"
                     />
                   </div>
 
@@ -305,7 +305,7 @@ const CalculatorPage = () => {
                       onChange={(e) =>
                         setRateOfInterest(parseFloat(e.target.value))
                       }
-                      className="w-full h-2 bg-green-500 rounded-lg appearance-none cursor-pointer mt-2"
+                      className="w-full h-2 bg-gray-500 rounded-lg appearance-none cursor-pointer mt-2"
                     />
                   </div>
                   <div>
@@ -345,7 +345,7 @@ const CalculatorPage = () => {
                       step="1"
                       value={timePeriod}
                       onChange={(e) => setTimePeriod(parseInt(e.target.value))}
-                      className="w-full h-2 bg-green-500 rounded-lg appearance-none cursor-pointer mt-2"
+                      className="w-full h-2 bg-gray-500 rounded-lg appearance-none cursor-pointer mt-2"
                     />
                   </div>
                 </div>

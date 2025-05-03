@@ -65,18 +65,18 @@ function Page() {
 
               <ol className="list-decimal pl-5 space-y-4">
                 <li>
-                  Our Fundamental CC Services provide long-term
-                  stocks/securities recommendations based on valuations or
-                  potential opportunities. While Stop-loss and Target levels may
-                  not be provided, partial profits will be taken when necessary.
-                  It's essential to note that stocks can still decline,
-                  especially during challenging market conditions or adverse
-                  company events, in which case guidance will be given for
-                  exiting or holding those securities.
+                  Our Fundamental Services provide long-term stocks/securities
+                  recommendations based on valuations or potential
+                  opportunities. While Stop-loss and Target levels may not be
+                  provided, partial profits will be taken when necessary. It's
+                  essential to note that stocks can still decline, especially
+                  during challenging market conditions or adverse company
+                  events, in which case guidance will be given for exiting or
+                  holding those securities.
                 </li>
 
                 <li>
-                  Our Trading or Technical CC Services provide short to mid-term
+                  Our Trading or Technical Services provide short to mid-term
                   stocks/securities recommendations based on purely technical
                   view and with strict stop-loss and target order. To minimize
                   loss on securities it is strictly advised to follow stop-loss
@@ -88,8 +88,12 @@ function Page() {
 
                 <li>
                   If you are keen on our various services, kindly send an email
-                  to support@chartcolony.com to subscribe. Multiple services
-                  will only be activated upon email confirmation.
+                  to{" "}
+                  <span className="underline text-amber-400">
+                    logictrade.co.in@gmail.com
+                  </span>{" "}
+                  to subscribe. Multiple services will only be activated upon
+                  email confirmation.
                 </li>
 
                 <li>
@@ -147,7 +151,7 @@ function Page() {
 
               <p className="font-semi text-yellow-400 mt-6">
                 <span className=" text-amber-300 font-bold">NOTE:-</span>
-                The fees paid towards any CC Services are non-refundable in any
+                The fees paid towards any Services are non-refundable in any
                 circumstances.
               </p>
             </div>

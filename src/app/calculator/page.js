@@ -123,14 +123,14 @@ const Calculators = () => {
     return <Loader />;
   }
   return (
-    <section className="bg-black text-white py-12 text-center mx-4 lg:mx-0">
+    <section className="bg-black text-white py-12 text-center mx-4 lg:mx-4">
       <motion.h2
         variants={heading}
         initial="hidden"
         animate="show"
         className="text-3xl lg:text-5xl font-bold lg:pt-12 max-w-sm lg:max-w-2xl mx-auto mt-6 mb-6 lg:mt-0"
       >
-        Financial Planning Calculators
+        Plan Your Financial Goals
       </motion.h2>
 
       <CalculatorsGrid />

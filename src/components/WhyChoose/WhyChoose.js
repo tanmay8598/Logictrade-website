@@ -66,7 +66,7 @@ const WhyChoose = () => {
   return (
     <div className="bg-black text-white py-10">
       <div className="text-center mb-8">
-        <h2 className="text-3xl font-bold">Why Trade Logic</h2>
+        <h2 className="text-3xl font-bold">Why Logic Trade</h2>
       </div>
 
       <div className="container mx-auto px-5">

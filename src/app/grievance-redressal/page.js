@@ -19,7 +19,7 @@ function GrievanceRedressal() {
           <p>
             <strong className="text-amber-300">Registered Name:</strong>
             <br />
-            “LOGIC TRADE”
+            Logic Trade Enterprises
           </p>
 
           <p>
@@ -60,8 +60,8 @@ function GrievanceRedressal() {
               Registered Office Address:
             </strong>
             <br />
-            3rd Floor, Shop No A 7 and 8, Plot No 01 Scheme No 10B, Gopalpura
-            Bypass Road, JAIPUR, 302015, RAJASTHAN, INDIA
+            Office no. 401, 54/219, Heera path ,mansarovar, jaipur ,
+            Rajasthan-302020
           </p>
 
           <p>
@@ -69,16 +69,16 @@ function GrievanceRedressal() {
               Details of Principal Officer:
             </strong>
             <br />
-            Name: DEEPAK ASWANI
+            Name: Shubham Goyal
             <br />
-            Phone: +91 7395088463
+            Phone: +91 7611888219
             <br />
             Email:{" "}
             <a
-              href="mailto:support@chartcolony.com"
+              href="mailto:logictrade.co.in@gmail.com"
               className="text-blue-300 underline"
             >
-              support@chartcolony.com
+              logictrade.co.in@gmail.com
             </a>
           </p>
 
@@ -87,9 +87,9 @@ function GrievanceRedressal() {
               Details of Compliance Officer:
             </strong>
             <br />
-            Name: DEEPAK ASWANI
+            Name: Shubham Goyal
             <br />
-            Phone: +91 7737376479
+            Phone: +91 7611888219
             <br />
             Email:{" "}
             <a

@@ -6,7 +6,7 @@ const testimonials = [
     name: "Rahul Mehta",
     image:
       "https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D",
-    text: "Trade Logic simplified options trading for me. Their real-time signals help me enter trades with confidence. Stress-free trading finally exists!",
+    text: "Logic Trade simplified options trading for me. Their real-time signals help me enter trades with confidence. Stress-free trading finally exists!",
     role: "Options Trader, Mumbai",
   },
   {
@@ -20,7 +20,7 @@ const testimonials = [
     name: "Vikram Joshi",
     image:
       "https://plus.unsplash.com/premium_photo-1670071482460-5c08776521fe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHVzZXJ8ZW58MHx8MHx8fDA%3D",
-    text: "As a working professional, Trade Logic's alerts let me trade without screen time. Perfect balance between my job and trading income.",
+    text: "As a working professional, Logic Trade's alerts let me trade without screen time. Perfect balance between my job and trading income.",
     role: "Part-time Trader, Bangalore",
   },
   {
@@ -41,7 +41,7 @@ const testimonials = [
     name: "Neha Gupta",
     image:
       "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHVzZXJ8ZW58MHx8MHx8fDA%3D",
-    text: "From losing money to consistent profits - Trade Logic's risk management tools made all the difference in my trading journey.",
+    text: "From losing money to consistent profits - Logic Trade's risk management tools made all the difference in my trading journey.",
     role: "Day Trader, Chennai",
   },
 ];
@@ -54,7 +54,7 @@ export default function WhatUserSay() {
   return (
     <section className="w-full py-12 bg-black text-white overflow-hidden">
       <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-        Hear From Our Traders
+        Subscribers
       </h2>
 
       <div className="relative w-full overflow-hidden space-y-8 px-4">

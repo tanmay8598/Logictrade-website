@@ -14,17 +14,17 @@ function Discloser() {
             <strong className="text-yellow-300">
               Disclosures of all material information:
             </strong>{" "}
-            CHART COLONY ENTERPRISES: INH000018018
+            LOGIC TRADE ENTERPRISES: INH000018018
           </p>
 
           <p>
             <strong className="text-yellow-300">Business Activity:</strong>
             <br />
-            "CHART COLONY ENTERPRISES" is engaged in the business of Research
+            "LOGIC TRADE ENTERPRISES" is engaged in the business of Research
             Analyst activities by providing Buy/Sell/Hold calls or other ratings
             defined to their clients.
             <br />
-            "CHART COLONY ENTERPRISES" is registered as a Research Analyst under
+            "LOGIC TRADE ENTERPRISES" is registered as a Research Analyst under
             SEBI (Research Analyst) Regulations, 2014. SEBI Reg. No.
             INH000018018
           </p>
@@ -34,7 +34,7 @@ function Discloser() {
             <br />
             There has been no instance of any Disciplinary action, penalty, etc.
             levied/passed by any regulation/ administrative agencies against
-            CHART COLONY ENTERPRISES: INH000018018 and its Partners.
+            LOGIC TRADE ENTERPRISES: INH000018018 and its Partners.
           </p>
 
           <p>
@@ -62,7 +62,7 @@ function Discloser() {
           <p>
             <strong className="text-yellow-300">RISK Disclosures:</strong>
             <br />
-            CHART COLONY ENTERPRISES: INH000018018, its partners, employees,
+            LOGIC TRADE ENTERPRISES: INH000018018, its partners, employees,
             officers, and its affiliates are not responsible for any loss or
             damage that may arise to any person for any nonchalant error in the
             information represented in the research report or research
@@ -90,15 +90,15 @@ function Discloser() {
               interest:
             </strong>
             <br />
-            CHART COLONY ENTERPRISES: INH000018018 or its research analysts or
+            LOGIC TRADE ENTERPRISES: INH000018018 or its research analysts or
             his/her relative or associate don't have any direct or indirect
             financial interest in the subject company
             <br />
-            CHART COLONY ENTERPRISES: INH000018018 or its research analysts, or
+            LOGIC TRADE ENTERPRISES: INH000018018 or its research analysts, or
             his/her relative or associate don't have any other material conflict
             of interest at the time of publication of the research report.
             <br />
-            CHART COLONY ENTERPRISES: INH000018018 or its research analysts, or
+            LOGIC TRADE ENTERPRISES: INH000018018 or its research analysts, or
             his/her relative or associates don't have actual ownership of 1% or
             more securities of the subject company
           </p>
@@ -109,36 +109,36 @@ function Discloser() {
               interest:
             </strong>
             <br />
-            CHART COLONY ENTERPRISES: INH000018018 or its associates have
+            LOGIC TRADE ENTERPRISES: INH000018018 or its associates have
             received any compensation from the subject company in the past
             twelve months: NO
             <br />
-            CHART COLONY ENTERPRISES: INH000018018 or its associates have
-            managed or co-managed public offering of securities for the subject
-            in the past twelve months: NO
+            LOGIC TRADE ENTERPRISES: INH000018018 or its associates have managed
+            or co-managed public offering of securities for the subject in the
+            past twelve months: NO
             <br />
-            CHART COLONY ENTERPRISES: INH000018018 or its associates have
+            LOGIC TRADE ENTERPRISES: INH000018018 or its associates have
             received any compensation for investment banking or merchant banking
             or brokerage services from the subject company in the past twelve
             months: NO
             <br />
-            CHART COLONY ENTERPRISES: INH000018018 or its associates have
+            LOGIC TRADE ENTERPRISES: INH000018018 or its associates have
             received any compensation for products or services other than
             investment banking or merchant banking or brokerage services from
             the subject company in the past twelve months: NO
             <br />
-            CHART COLONY ENTERPRISES: INH000018018 or its associates have
+            LOGIC TRADE ENTERPRISES: INH000018018 or its associates have
             received any compensation or other benefits from the subject company
             or third party in connection with the research report: NO
             <br />
             The research analyst has not served as an officer, director, and
             employee of the subject company
             <br />
-            CHART COLONY ENTERPRISES: INH000018018 or its research analyst has
+            LOGIC TRADE ENTERPRISES: INH000018018 or its research analyst has
             been engaged in the market-making activity for the subject company:
             NO
             <br />
-            CHART COLONY ENTERPRISES: INH000018018 or its associates have
+            LOGIC TRADE ENTERPRISES: INH000018018 or its associates have
             received any compensation from the subject company in the past
             twelve months: NO
           </p>

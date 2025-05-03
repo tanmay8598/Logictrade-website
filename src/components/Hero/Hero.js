@@ -17,7 +17,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="hidden md:block md:mt-10 lg:mt-16">
+    <div className="hidden min-h-screen md:block md:mt-10 lg:mt-16">
       <div className="bg-black text-white pt-16 px-6 md:px-12 lg:px-24 flex flex-col md:flex-row items-center justify-evenly">
         <div className="text-center mt-2 md:text-left max-w-lg">
           <h1 className="text-4xl md:text-3xl lg:text-7xl font-bold flex items-center flex-wrap">
@@ -34,7 +34,7 @@ const Hero = () => {
                 {texts[index]}
               </motion.span>
             </AnimatePresence>{" "}
-            Trade Explorer
+            Logic Trade
           </h1>
           <ul className="mt-6 space-y-2 text-lg">
             <li className="flex items-center gap-3">
@@ -77,7 +77,7 @@ const Hero = () => {
               className="w-40 md:w-56 lg:w-64 relative z-10"
             >
               <Image
-                src="/left_image.png"
+                src="/a1.png"
                 alt="App UI"
                 width={300}
                 height={600}
@@ -99,7 +99,7 @@ const Hero = () => {
               className="w-40 md:w-56 lg:w-64 -ml-10 md:-ml-20"
             >
               <Image
-                src="/right_image.png"
+                src="/a2.png"
                 alt="App UI"
                 width={300}
                 height={600}

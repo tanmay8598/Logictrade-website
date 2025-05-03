@@ -82,7 +82,9 @@ function ContactPage() {
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-1">
                     Support Mail:
                   </h3>
-                  <p className="ml-4 text-amber-300">support@logictrade.com</p>
+                  <p className="ml-4 text-amber-300">
+                    logictrade.co.in@gmail.com
+                  </p>
                 </div>
 
                 <div className="space-y-2">
@@ -90,7 +92,7 @@ function ContactPage() {
                     Compliance Mail:
                   </h3>
                   <p className="ml-4 text-amber-300">
-                    compliancelogictrade@gmail.com
+                    logictrade.co.in@gmail.com
                   </p>
                 </div>
 
@@ -98,7 +100,7 @@ function ContactPage() {
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-1">
                     Logic Trade Services WhatsApp/Call:
                   </h3>
-                  <p className="ml-4 text-amber-300">+91 999999 9999</p>
+                  <p className="ml-4 text-amber-300">+91 7611888219</p>
                 </div>
 
                 <div className="space-y-2">

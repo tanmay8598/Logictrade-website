@@ -13,7 +13,7 @@ function RefundPolicy() {
           <p className="text-yellow-300">Effective Date: July 16, 2024</p>
 
           <p>
-            Thank you for shopping with CHART COLONY ENTERPRISES. If you are not
+            Thank you for shopping with lOGIC TRADE ENTERPRISES. If you are not
             entirely satisfied with your purchase, we encourage you to review
             our return and refund policy.
           </p>
@@ -54,8 +54,8 @@ function RefundPolicy() {
             Website.
           </p>
           <p>
-            <strong className="text-amber-300">Website</strong> refers to CHART
-            COLONY Research Analyst, accessible at{" "}
+            <strong className="text-amber-300">Website</strong> refers to LOGIC
+            TRADE Research Analyst, accessible at{" "}
             <a
               href="https://www.tradeLogic.com"
               className="text-blue-300 underline"
@@ -95,10 +95,10 @@ function RefundPolicy() {
             <li>
               Email:{" "}
               <a
-                href="mailto:support@tradeLogic.com"
+                href="mailto:logictrade.co.in@gmail.com"
                 className="text-blue-300 underline"
               >
-                support@tradeLogic.com
+                logictrade.co.in@gmail.com
               </a>
             </li>
             <li>
@@ -109,11 +109,11 @@ function RefundPolicy() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                www.tradeLogic.com
+                logictrade.co.in
               </a>
             </li>
             <li>
-              Phone: <span className="text-gray-300">7395088463</span>
+              Phone: <span className="text-gray-300">7611888219</span>
             </li>
           </ul>
 
@@ -135,25 +135,25 @@ function RefundPolicy() {
             <li>
               Email:{" "}
               <a
-                href="mailto:support@tradeLogic.com"
+                href="mailto:logictrade.co.in@gmail.com"
                 className="text-blue-300 underline"
               >
-                support@tradeLogic.com
+                logictrade.co.in@gmail.com
               </a>
             </li>
             <li>
               Website:{" "}
               <a
-                href="https://www.tradeLogic.com"
+                href="https://logictrade.co.in"
                 className="text-blue-300 underline"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                www.tradeLogic.com
+                logictrade.co.in
               </a>
             </li>
             <li>
-              Phone: <span className="text-gray-300">7395088463</span>
+              Phone: <span className="text-gray-300">7611888219</span>
             </li>
           </ul>
         </div>

@@ -27,9 +27,7 @@ const Footer = () => {
           <p className="flex items-start gap-2">
             <FaMapMarkerAlt className="mt-1" /> Jaipur, Rajasthan, 302020
           </p>
-          <p className="flex items-center gap-2">
-            <FaPhoneAlt /> +91 7611888219
-          </p>
+
           <p className="flex items-center gap-2">
             <FaEnvelope />
             logictrade.co.in@gmail.com
@@ -134,35 +132,16 @@ const Footer = () => {
 
         <div className="mt-4">
           <h3 className="font-semibold text-gray-300 mb-2">
-            Our ecosystem provides six specialized tools designed for modern
-            market participants:
+            Our ecosystem provides professional and expreinced research analyst
+            calls
           </h3>
-          <ul className="space-y-3 text-gray-400 list-disc pl-5">
-            <li>
-              <span className="font-medium">Options Analyzer:</span> Identify
-              institutional activity patterns within specific market hours to
-              align with smart money flow.
-            </li>
-          </ul>
         </div>
 
         <p className="text-gray-400">
           Logic Trade's rapid adoption stems from our community of serious
           traders who recognize our platform's cutting-edge capabilities. We
-          continuously develop proprietary tools that transform complex market
-          data into actionable insights, helping traders navigate equities and
-          derivatives with professional precision.
+          continusoly giving good research trade calls.
         </p>
-
-        <div className="mt-4 p-4 bg-gray-900 rounded-lg">
-          <p className="text-gray-300 text-sm">
-            <span className="font-semibold">Important:</span> We maintain a
-            strict no-tip policy and don't provide stock recommendations. No
-            individual or entity is authorized to offer such services
-            representing Logic Trade. Please report any such claims immediately
-            to support@logictrade.com.
-          </p>
-        </div>
       </div>
 
       <div className="container mx-auto px-6 lg:px-16">
