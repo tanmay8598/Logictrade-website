@@ -69,9 +69,9 @@ function About() {
               <span className="text-yellow-400">Quality Results</span>
             </h2>
             <p className="text-gray-300 text-base md:text-lg max-w-2xl mx-auto">
-              Our aim is to build our clients' assets through Truth, Trust, and
-              Transparency by offering quality research services and exceptional
-              customer service.
+              Our aim is to build our clients&apos; assets through Truth, Trust,
+              and Transparency by offering quality research services and
+              exceptional customer service.
             </p>
           </div>
         </motion.div>
