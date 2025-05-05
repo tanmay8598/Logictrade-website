@@ -12,6 +12,56 @@
 	}
 }
 
+@keyframes float {
+	0% {
+		transform: translateY(0px);
+	}
+
+	50% {
+		transform: translateY(-8px);
+	}
+
+	100% {
+		transform: translateY(0px);
+	}
+}
+
+.animate-float {
+	animation: float 3s ease-in-out infinite;
+}
+
+:root {
+	--font-poppins: 'Poppins', sans-serif;
+}
+
+body {
+	font-family: var(--font-poppins);
+}
+
+
+h1 {
+	font-weight: 600;
+}
+
+h2 {
+	font-weight: 500;
+}
+
+h3 {
+	font-weight: 400;
+}
+
+
+@layer utilities {
+	@media (max-width: 374px) {
+		.text-xs-mobile {
+			font-size: 1.25rem;
+			line-height: 1.75rem;
+		}
+	}
+}
+
+
 .animate-scroll {
 	display: flex;
 	white-space: nowrap;

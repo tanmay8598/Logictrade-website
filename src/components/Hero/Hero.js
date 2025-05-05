@@ -17,10 +17,10 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="hidden min-h-screen md:block md:mt-10 lg:mt-16">
+    <div className="hidden  md:block mt-10">
       <div className="bg-black text-white pt-16 px-6 md:px-12 lg:px-24 flex flex-col md:flex-row items-center justify-evenly">
         <div className="text-center mt-2 md:text-left max-w-lg">
-          <h1 className="text-4xl md:text-3xl lg:text-7xl font-bold flex items-center flex-wrap">
+          <h1 className="text-4xl md:text-3xl lg:text-6xl font-semibold flex items-center flex-wrap">
             India's{" "}
             <AnimatePresence mode="wait">
               <motion.span
@@ -61,8 +61,8 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="flex flex-col">
-          <div className="relative mt-12 md:mt-0 flex justify-center items-end h-[280px]">
+        <div className="flex flex-col justify-center items-center">
+          <div className="relative mt-12  flex justify-center items-end h-[280px]">
             <motion.div
               animate={{
                 rotate: [-3, -10, -3],
@@ -74,7 +74,7 @@ const Hero = () => {
                 duration: 3,
                 ease: "easeInOut",
               }}
-              className="w-40 md:w-56 lg:w-64 relative z-10"
+              className="w-40 md:w-56 lg:w-80 relative z-10"
             >
               <Image
                 src="/a1.png"
@@ -96,7 +96,7 @@ const Hero = () => {
                 duration: 3,
                 ease: "easeInOut",
               }}
-              className="w-40 md:w-56 lg:w-64 -ml-10 md:-ml-20"
+              className="w-40 md:w-56 lg:w-80 -ml-10 md:-ml-20"
             >
               <Image
                 src="/a2.png"
@@ -114,7 +114,7 @@ const Hero = () => {
               alt="baseImage"
               width={200}
               height={500}
-              className="w-full rounded-xl shadow-lg"
+              className="w-96 rounded-xl shadow-lg"
             />
           </div>
         </div>

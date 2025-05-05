@@ -17,12 +17,6 @@ const Footer = () => {
               height={60}
               className="object-contain rounded-sm"
             />
-            {/* <span className="text-2xl font-bold">
-              <span className="text-amber-400">L</span>
-              <span className="text-white">ogic</span>
-              <span className="text-amber-400">T</span>
-              <span className="text-white">rade</span>
-            </span> */}
           </div>
           <p className="flex items-start gap-2">
             <FaMapMarkerAlt className="mt-1" /> Jaipur, Rajasthan, 302020
@@ -35,7 +29,7 @@ const Footer = () => {
         </div>
 
         <div className="space-y-4">
-          <h3 className="text-lg font-semibold">Company</h3>
+          <h3 className="text-lg font-bold">Company</h3>
           <div className="flex flex-col">
             <Link
               href="/about-us"
@@ -96,7 +90,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="space-y-4">
+        {/* <div className="space-y-4">
           <h3 className="text-lg font-semibold">
             Grow With Our Trading Community
           </h3>
@@ -114,10 +108,49 @@ const Footer = () => {
               <FaTelegramPlane className="text-white text-xl" />
             </a>
           </div>
-          {/* <p className="text-gray-400 text-xs">
-            Logic Trade now integrates TradingView's advanced charting
-            technology
-          </p> */}
+        </div> */}
+
+        <div className="space-y-4">
+          <h3 className="text-lg font-semibold">
+            Grow With Our Trading Community
+          </h3>
+
+          <div className="flex items-center  gap-4 flex-wrap">
+            <a
+              href="#"
+              className="bg-gray-800 p-3 rounded-full hover:bg-gray-700 transition"
+            >
+              <FaInstagram className="text-white text-xl" />
+            </a>
+            <a
+              href="#"
+              className="bg-gray-800 p-3 rounded-full hover:bg-gray-700 transition"
+            >
+              <FaTelegramPlane className="text-white text-xl" />
+            </a>
+
+            <a
+              href="https://play.google.com/store/apps/details?id=your_app_id"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-row lg:flex-col items-center gap-2"
+            >
+              <Image
+                src="/googleplay.png"
+                alt="Get it on Play Store"
+                width={150}
+                height={45}
+                className="h-20 w-auto"
+              />
+              <Image
+                src="/apppstore.png"
+                alt="Get it on Play Store"
+                width={150}
+                height={30}
+                className="h-20 lg:-mt-5 w-auto "
+              />
+            </a>
+          </div>
         </div>
       </div>
 

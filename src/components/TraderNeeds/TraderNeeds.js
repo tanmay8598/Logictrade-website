@@ -18,13 +18,8 @@ function TraderNeeds() {
     },
     {
       id: 2,
-      title: "Technical Analyzer",
-      points: [
-        "150+ market indicators",
-        "Flexible charting systems",
-        "Advanced annotation toolkit",
-        "Historical strategy testing",
-      ],
+      title: "Whatsapp & Teligram integration",
+      points: ["WhatsApp facility available", "Teligram facility available"],
       image: "/stock2.jpg",
     },
     {
@@ -53,7 +48,7 @@ function TraderNeeds() {
         "realtime news of stock market",
         "ups and down nifty and banknifty levels",
       ],
-      image: "/stock4.jpg",
+      image: "/news2.jpg",
     },
   ];
 

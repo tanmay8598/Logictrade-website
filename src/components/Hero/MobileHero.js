@@ -25,14 +25,14 @@ const MobileHero = () => {
       transition={{ duration: 0.8, ease: "easeOut" }}
       className="md:hidden mt-10"
     >
-      <div className="bg-black text-white px-6 flex flex-col md:flex-row items-center justify-center">
+      <div className="bg-black text-white px-6 flex flex-col items-center justify-center md:flex-row ">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.8 }}
           className="flex flex-col"
         >
-          <div className="relative flex justify-center items-end h-[250px]">
+          <div className="relative flex justify-center items-end h-[350px]">
             <motion.div
               animate={{
                 rotate: [-5, -10, -5],
@@ -44,13 +44,13 @@ const MobileHero = () => {
                 duration: 3,
                 ease: "easeInOut",
               }}
-              className="w-40 md:w-56 lg:w-64 relative z-10"
+              className="w-60 md:w-72 lg:w-96 relative z-10"
             >
               <Image
-                src="/left_image.png"
+                src="/a1.png"
                 alt="App UI"
-                width={300}
-                height={600}
+                width={450}
+                height={900}
                 className="w-full rounded-xl shadow-lg"
                 priority
               />
@@ -67,13 +67,13 @@ const MobileHero = () => {
                 duration: 3,
                 ease: "easeInOut",
               }}
-              className="w-40 md:w-56 lg:w-64 -ml-10 md:-ml-20"
+              className="w-60 md:w-72 lg:w-96 -ml-12 md:-ml-24"
             >
               <Image
-                src="/right_image.png"
+                src="/a2.png"
                 alt="App UI"
-                width={300}
-                height={600}
+                width={450}
+                height={900}
                 className="w-full rounded-xl shadow-lg"
                 priority
               />
@@ -84,14 +84,14 @@ const MobileHero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.8 }}
-            className="base_image mt-5"
+            className="base_image mt-5 flex justify-center"
           >
             <Image
               src="/baseImage.png"
               alt="baseImage"
               width={200}
               height={500}
-              className="w-full rounded-xl shadow-lg"
+              className="w-80 rounded-xl shadow-lg"
             />
           </motion.div>
         </motion.div>
@@ -102,9 +102,9 @@ const MobileHero = () => {
           transition={{ delay: 0.8, duration: 0.8 }}
           className="text-center mt-2 md:text-left max-w-lg"
         >
-          <h1 className="text-2xl md:text-5xl lg:text-7xl font-bold flex items-center justify-center flex-wrap">
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold flex items-center justify-center flex-wrap text-xs-mobile">
             India's{" "}
-            <span className="inline-flex min-w-[110px] justify-center">
+            <span className="inline-flex min-w-[115px] justify-center">
               <AnimatePresence mode="wait">
                 <motion.span
                   key={texts[index]}

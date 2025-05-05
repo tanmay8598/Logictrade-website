@@ -75,10 +75,10 @@ export default function FrequentlyAsked() {
             className="bg-gray-900 rounded-lg shadow-md overflow-hidden mb-4"
           >
             <button
-              className="w-full flex justify-between items-center p-4 md:p-6 text-white font-semibold text-lg focus:outline-none text-left gap-2"
+              className="w-full flex justify-between items-center p-4 md:p-6 text-white font-semibold  focus:outline-none text-left gap-2"
               onClick={() => toggleFAQ(index)}
             >
-              <span className="flex-1">
+              <span className="flex-1 text-xs md:text-sm">
                 {index + 1}. {faq.question}
               </span>
               {openIndex === index ? (

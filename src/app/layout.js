@@ -1,21 +1,13 @@
 import { Geist, Geist_Mono, Poppins } from "next/font/google";
 import "./globals.css";
 import ClientOnly from "./../components/ClientsOnly/ClientsOnly";
+import TelegramPopupButton from "./../components/PopupButton/TeligramPopupButton";
 
 const poppins = Poppins({
   variable: "--font-poppins",
   subsets: ["latin"],
-  weight: ["400", "900"],
-});
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata = {
@@ -27,7 +19,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`bg-black ${poppins.variable} `}>
-        <ClientOnly>{children}</ClientOnly>
+        <ClientOnly>
+          {" "}
+          <>
+            {children}
+            <TelegramPopupButton />
+          </>
+        </ClientOnly>
       </body>
     </html>
   );
