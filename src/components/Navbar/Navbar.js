@@ -89,6 +89,12 @@ const Navbar = () => {
 
             <div className="hidden lg:flex text-sm items-center space-x-6">
               <Link
+                href="/"
+                className="text-white hover:text-yellow-500 transition"
+              >
+                Home
+              </Link>
+              <Link
                 href="/services"
                 className="text-white hover:text-yellow-500 transition"
               >
@@ -202,6 +208,13 @@ const Navbar = () => {
             >
               Download App{" "}
               <MdInstallMobile className=" text-lg text-amber-400" />
+            </Link>
+            <Link
+              href="/"
+              className="text-white hover:text-yellow-500 py-3 transition border-b border-gray-700"
+              onClick={closeMobileMenu}
+            >
+              Home
             </Link>
             <Link
               href="/services"

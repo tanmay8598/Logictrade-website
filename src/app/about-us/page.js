@@ -58,7 +58,7 @@ function About() {
               <span className="text-yellow-400">Protecting yourself</span>
             </h2>
             <p className="text-gray-300 text-base md:text-lg max-w-2xl mx-auto">
-              Chart Colony Research Analyst is tremendously proud of the impact
+              Logic Trade Research Analyst is tremendously proud of the impact
               that we have made in helping our clients by providing quality
               Financial services and exceptional service.
             </p>

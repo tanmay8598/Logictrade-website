@@ -9,7 +9,6 @@ const faqs = [
     answer: [
       "Daily trading tips and setups (Stocks, Nifty, Banknifty, Options)",
       "Intraday and swing trading strategies",
-      "Educational content, webinars, and live Q&A sessions",
       "Exclusive access to premium analysis and reports",
     ],
   },
@@ -21,12 +20,12 @@ const faqs = [
   {
     question: "What are the subscription charges?",
     answer:
-      "₹xxx/month, ₹xxx/quarterly, ₹xxx/annually. (Discounts available for long-term plans.)",
+      "subscription charges are vary time to time. if you want to see download our app now.",
   },
   {
     question: "What payment methods are accepted?",
     answer:
-      "We accept UPI, Bank Transfer, Paytm, Google Pay, PhonePe, and Crypto (on request).",
+      "We accept UPI, Bank Transfer, Paytm, Google Pay, PhonePe, etc (on request).",
   },
   {
     question: "Is there a refund policy?",
@@ -45,18 +44,15 @@ const faqs = [
   },
   {
     question: "How can I contact support if I face any issue?",
-    answer:
-      "Message us on Telegram @SupportUsername or email us at support@yourdomain.com.",
+    answer: " kindly mail us at logictrade.co.in@gmail.com",
   },
   {
     question: "Are there any free trials?",
-    answer:
-      "Occasionally, we offer free trials. Stay tuned to the main channel for announcements!",
+    answer: "stay tuned to the free channel in an app for announcememnts .",
   },
   {
     question: "Is this SEBI registered?",
-    answer:
-      "This channel is for educational purposes only. We are not SEBI registered advisors.",
+    answer: "Yes i am sebi reg. research analys",
   },
 ];
 

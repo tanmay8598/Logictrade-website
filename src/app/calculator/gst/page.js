@@ -146,8 +146,8 @@ const CalculatorPage = () => {
                       onClick={() => setCalculationType("Excluding")}
                       className={`px-4 py-2 rounded-md font-medium w-[50%] cursor-pointer ${
                         calculationType === "Excluding"
-                          ? "bg-green-600 text-white"
-                          : "bg-gray-800 text-gray-400 hover:bg-gray-700"
+                          ? "bg-gray-700 text-white"
+                          : "text-white"
                       }`}
                     >
                       Excluding GST
@@ -156,8 +156,8 @@ const CalculatorPage = () => {
                       onClick={() => setCalculationType("Including")}
                       className={`px-4 py-2 rounded-md font-medium w-[50%] cursor-pointer ${
                         calculationType === "Including"
-                          ? "bg-green-600 text-white"
-                          : "bg-gray-800 text-gray-400 hover:bg-gray-700"
+                          ? "bg-gray-700 text-white"
+                          : "text-white"
                       }`}
                     >
                       Including GST
@@ -198,7 +198,7 @@ const CalculatorPage = () => {
                       step="1000"
                       value={totalAmount}
                       onChange={(e) => setTotalAmount(parseInt(e.target.value))}
-                      className="w-full h-2 bg-green-500 rounded-lg appearance-none cursor-pointer mt-2"
+                      className="w-full h-2 bg-gray-500 rounded-lg appearance-none cursor-pointer mt-2"
                     />
                   </div>
 
@@ -234,26 +234,26 @@ const CalculatorPage = () => {
                       step="1"
                       value={taxSlab}
                       onChange={(e) => setTaxSlab(parseInt(e.target.value))}
-                      className="w-full h-2 bg-green-500 rounded-lg appearance-none cursor-pointer"
+                      className="w-full h-2 bg-gray-500 rounded-lg appearance-none cursor-pointer"
                     />
                   </div>
                 </div>
               </div>
 
               <div className="w-full lg:w-2/4 bg-gray-900 rounded-lg shadow p-4 border border-gray-700 h-fit">
-                <div className="bg-purple-900 p-4 rounded-lg border border-purple-700">
-                  <div className="text-sm text-gray-300">
+                <div className="p-4 rounded-lg  ">
+                  <div className="text-md font-semibold text-gray-300">
                     {/* Total GST */}
                     {calculationType === "Including"
                       ? "Future Cost"
                       : "Total GST"}
                   </div>
-                  <div className="text-lg lg:text-xl font-bold text-white">
+                  <div className="text-xl lg:text-2xl font-bold text-blue-400">
                     {formatCurrency(gstAmount)}
                   </div>
                 </div>
-                <div className="mt-4 grid grid-cols-2 gap-4">
-                  <div className="bg-blue-900 p-4 rounded-lg border border-blue-700">
+                <div className=" grid grid-cols-2 gap-4">
+                  <div className=" p-4 rounded-lg  ">
                     <div className="text-sm text-gray-300">
                       {calculationType === "Including"
                         ? "Pre-GST Amount"
@@ -265,13 +265,13 @@ const CalculatorPage = () => {
                         : formatCurrency(totalAmount)}
                     </div>
                   </div>
-                  <div className="bg-green-900 p-4 rounded-lg border border-green-700">
+                  <div className=" p-4  border-l-1 border-white ">
                     <div className="text-sm text-gray-300">
                       {calculationType === "Including"
                         ? "Total Amount"
                         : "Post-GST Amount"}
                     </div>
-                    <div className="text-sm lg:text-lg font-bold text-white">
+                    <div className="text-sm lg:text-lg font-bold  text-white">
                       {calculationType === "Including"
                         ? formatCurrency(totalAmount)
                         : formatCurrency(resultAmount)}

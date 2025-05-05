@@ -40,6 +40,13 @@ function ComplaintBoard() {
     show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
   };
 
+  const currentDate = new Date();
+  const month = currentDate.toLocaleString("default", {
+    month: "long",
+  });
+  const year = currentDate.getFullYear();
+  const monthYear = `${month}, ${year}`;
+
   return (
     <div className="bg-gradient-to-br from-black to-gray-900 min-h-screen py-16 px-4 sm:px-6 lg:px-8 flex items-center justify-center">
       <motion.div
@@ -54,7 +61,7 @@ function ComplaintBoard() {
         >
           <div className="mb-10">
             <h3 className="text-2xl sm:text-3xl font-semibold underline text-amber-300  mb-4">
-              Data For The Month Ending: March , 2025
+              Data For The Month Ending: {monthYear}
             </h3>
             <img
               src="/1.png"

@@ -118,7 +118,7 @@ const MobileHero = () => {
                 </motion.span>
               </AnimatePresence>
             </span>{" "}
-            Trade Explorer
+            Logic Trade
           </h1>
 
           <motion.ul

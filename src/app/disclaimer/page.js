@@ -52,7 +52,7 @@ function Disclaimer() {
               SEBI SPECIFIED MECHANISM:
             </strong>{" "}
             All fee payments for research services must be made through online
-            mode and in “CHART COLONY ENTERPRISES” Bank account. Payments made
+            mode and in “LOGIC TRADE ENTERPRISES” Bank account. Payments made
             outside this mechanism are not considered as payment for services
             under SEBI regulations. No grievances in this regard will be
             entertained by SEBI or its recognized regulatory bodies.
@@ -79,10 +79,10 @@ function Disclaimer() {
             <br />
             Email:{" "}
             <a
-              href="mailto:support@logictrade.com"
+              href="mailto:logictrade.co.in@gmail.com"
               className="text-blue-300 underline"
             >
-              support@logictrade.com
+              logictrade.co.in@gmail.com
             </a>
             <br />
             SEBI Toll-Free Numbers:{" "}
@@ -96,12 +96,12 @@ function Disclaimer() {
             If you are dissatisfied with our services, kindly raise your initial
             complaint to{" "}
             <a
-              href="mailto:support@logictrade.com"
+              href="mailto:logictrade.co.in@gmail.com"
               className="text-blue-300 underline"
             >
-              support@logictrade.com
+              logictrade.co.in@gmail.com
             </a>{" "}
-            or contact: <span className="text-gray-300">+91 700000 00000</span>
+            or contact: <span className="text-gray-300">+91 7611888219</span>
           </p>
 
           <p>

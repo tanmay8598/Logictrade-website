@@ -7,7 +7,7 @@ function TraderNeeds() {
   const features = [
     {
       id: 1,
-      title: "Options Pro",
+      title: "All channel groups",
       points: [
         "Live options market analytics",
         "Smart position sizing calculators",
@@ -34,18 +34,24 @@ function TraderNeeds() {
         "Customizable trigger settings",
         "Instant mobile alerts",
         "Multi-channel notifications",
-        "AI-driven opportunity scanner",
       ],
       image: "/stock3.jpg",
     },
     {
       id: 4,
-      title: "Wealth Manager",
+      title: "Channel Overview",
       points: [
-        "Live portfolio monitoring",
-        "Position risk assessment",
-        "Tax-efficient planning",
-        "Cross-platform sync",
+        "channel updates on real time basis",
+        "full experience like in telegram",
+      ],
+      image: "/stock4.jpg",
+    },
+    {
+      id: 5,
+      title: " News",
+      points: [
+        "realtime news of stock market",
+        "ups and down nifty and banknifty levels",
       ],
       image: "/stock4.jpg",
     },
