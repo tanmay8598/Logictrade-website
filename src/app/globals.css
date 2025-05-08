@@ -1,69 +1,91 @@
 @import "tailwindcss";
 
-
-
 @keyframes scroll {
-	from {
-		transform: translateX(0);
-	}
+  from {
+    transform: translateX(0);
+  }
 
-	to {
-		transform: translateX(-100%);
-	}
+  to {
+    transform: translateX(-100%);
+  }
 }
 
 @keyframes float {
-	0% {
-		transform: translateY(0px);
-	}
+  0% {
+    transform: translateY(0px);
+  }
 
-	50% {
-		transform: translateY(-8px);
-	}
+  50% {
+    transform: translateY(-8px);
+  }
 
-	100% {
-		transform: translateY(0px);
-	}
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 .animate-float {
-	animation: float 3s ease-in-out infinite;
+  animation: float 3s ease-in-out infinite;
 }
 
 :root {
-	--font-poppins: 'Poppins', sans-serif;
+  --font-poppins: "Poppins", sans-serif;
 }
 
 body {
-	font-family: var(--font-poppins);
+  font-family: var(--font-poppins);
 }
 
-
 h1 {
-	font-weight: 600;
+  font-weight: 600;
 }
 
 h2 {
-	font-weight: 500;
+  font-weight: 500;
 }
 
 h3 {
-	font-weight: 400;
+  font-weight: 400;
 }
-
 
 @layer utilities {
-	@media (max-width: 374px) {
-		.text-xs-mobile {
-			font-size: 1.25rem;
-			line-height: 1.75rem;
-		}
-	}
+  @media (max-width: 374px) {
+    .text-xs-mobile {
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+    }
+  }
 }
 
-
 .animate-scroll {
-	display: flex;
-	white-space: nowrap;
-	animation: scroll 20s linear infinite;
+  display: flex;
+  white-space: nowrap;
+  animation: scroll 20s linear infinite;
+}
+
+/* calculator page slider css  */
+
+.custom-range::-webkit-slider-thumb {
+  appearance: none;
+  height: 20px;
+  width: 20px;
+  background-color: white; /* Tailwind's blue-500 */
+  border-radius: 0; /* Makes it square */
+  cursor: pointer;
+  border: none;
+  margin-top: -2px; /* Aligns thumb vertically */
+}
+
+.custom-range::-moz-range-thumb {
+  height: 20px;
+  width: 20px;
+  background-color: white;
+  border-radius: 0;
+  cursor: pointer;
+  border: none;
+}
+
+.custom-range::-webkit-slider-runnable-track {
+  border-radius: 999px;
+  background: transparent;
 }

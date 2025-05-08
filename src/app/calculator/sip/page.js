@@ -296,6 +296,7 @@ const CalculatorPage = () => {
                         <span className="text-white text-md ml-1">%</span>
                       </div>
                     </div>
+                    {/* //check this code @ashish  */}
                     <input
                       type="range"
                       min="1"
@@ -305,7 +306,14 @@ const CalculatorPage = () => {
                       onChange={(e) =>
                         setRateOfInterest(parseFloat(e.target.value))
                       }
-                      className="w-full h-2 bg-gray-500 rounded-lg appearance-none cursor-pointer mt-2"
+                      className="w-full h-2 appearance-none cursor-pointer mt-2 rounded-lg custom-range"
+                      style={{
+                        background: `linear-gradient(to right, #3b82f6 ${
+                          ((rateOfInterest - 1) / (30 - 1)) * 100
+                        }%, #d1d5db ${
+                          ((rateOfInterest - 1) / (30 - 1)) * 100
+                        }%)`,
+                      }}
                     />
                   </div>
                   <div>
