@@ -112,7 +112,7 @@ const MobileHero = () => {
                   animate={{ y: 0, opacity: 1 }}
                   exit={{ y: -20, opacity: 0 }}
                   transition={{ duration: 0.5, ease: "easeInOut" }}
-                  className="text-amber-400 inline-block px-2"
+                  className="inline-block px-2 bg-gradient-to-r from-yellow-200 via-yellow-400 to-amber-500 bg-clip-text text-transparent"
                 >
                   {texts[index]}
                 </motion.span>
@@ -133,8 +133,13 @@ const MobileHero = () => {
               transition={{ delay: 1.1 }}
               className="flex items-center gap-3"
             >
-              <span className="text-yellow-400">🏅</span> Discover Top Trades in
-              Real-Time
+              <Image
+                src="/badge1.png"
+                alt="Discover Icon"
+                width={25}
+                height={25}
+              />{" "}
+              Discover Top Trades in Real-Time
             </motion.li>
             <motion.li
               initial={{ x: -20 }}
@@ -142,8 +147,13 @@ const MobileHero = () => {
               transition={{ delay: 1.2 }}
               className="flex items-center gap-3"
             >
-              <span className="text-red-400">🎯</span> Precision Trade Entry &
-              Exit
+              <Image
+                src="/target3d.png"
+                alt="Discover Icon"
+                width={25}
+                height={25}
+              />{" "}
+              Precision Trade Entry & Exit
             </motion.li>
             <motion.li
               initial={{ x: -20 }}
@@ -151,8 +161,13 @@ const MobileHero = () => {
               transition={{ delay: 1.3 }}
               className="flex items-center gap-3"
             >
-              <span className="text-blue-400">✔️</span> Maximize Small Capital
-              Gains
+              <Image
+                src="/tick1.png"
+                alt="Discover Icon"
+                width={25}
+                height={25}
+              />{" "}
+              Maximize Small Capital Gains
             </motion.li>
           </motion.ul>
 
@@ -169,8 +184,8 @@ const MobileHero = () => {
               <div className="bg-yellow-500 p-2 rounded-full flex items-center justify-center">
                 <MdInstallMobile className="text-white text-xl" />
               </div>
-              <span className="ml-3 text-lg font-semibold">
-                Download App Now
+              <span className="ml-3 text-sm font-semibold">
+                Download Logic Trade App Now
               </span>
             </Link>
           </motion.div>

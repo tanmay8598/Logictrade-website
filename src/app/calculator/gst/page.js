@@ -198,7 +198,12 @@ const CalculatorPage = () => {
                       step="1000"
                       value={totalAmount}
                       onChange={(e) => setTotalAmount(parseInt(e.target.value))}
-                      className="w-full h-2 bg-gray-500 rounded-lg appearance-none cursor-pointer mt-2"
+                      className="w-full h-2 appearance-none cursor-pointer mt-2 rounded-lg custom-range"
+                      style={{
+                        background: `linear-gradient(to right, #3b82f6 ${
+                          (totalAmount / 500000) * 100
+                        }%, #d1d5db ${(totalAmount / 500000) * 100}%)`,
+                      }}
                     />
                   </div>
 
@@ -234,7 +239,12 @@ const CalculatorPage = () => {
                       step="1"
                       value={taxSlab}
                       onChange={(e) => setTaxSlab(parseInt(e.target.value))}
-                      className="w-full h-2 bg-gray-500 rounded-lg appearance-none cursor-pointer"
+                      className="w-full h-2 appearance-none cursor-pointer mt-2 rounded-lg custom-range"
+                      style={{
+                        background: `linear-gradient(to right, #3b82f6 ${
+                          ((taxSlab - 5) / (28 - 5)) * 100
+                        }%, #d1d5db ${((taxSlab - 5) / (28 - 5)) * 100}%)`,
+                      }}
                     />
                   </div>
                 </div>

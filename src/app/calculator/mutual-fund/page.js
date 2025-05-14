@@ -234,7 +234,14 @@ const CalculatorPage = () => {
                       onChange={(e) =>
                         setInvestmentAmount(parseInt(e.target.value))
                       }
-                      className="w-full h-2 bg-gray-500 rounded-lg appearance-none cursor-pointer mt-2"
+                      className="w-full h-2 appearance-none cursor-pointer mt-2 rounded-lg custom-range"
+                      style={{
+                        background: `linear-gradient(to right, #3b82f6 ${
+                          ((investmentAmount - 5000) / (10000000 - 5000)) * 100
+                        }%, #d1d5db ${
+                          ((investmentAmount - 5000) / (10000000 - 5000)) * 100
+                        }%)`,
+                      }}
                     />
                   </div>
 
@@ -279,7 +286,14 @@ const CalculatorPage = () => {
                       onChange={(e) =>
                         setRateOfInterest(parseFloat(e.target.value))
                       }
-                      className="w-full h-2 bg-gray-500 rounded-lg appearance-none cursor-pointer mt-2"
+                      className="w-full h-2 appearance-none cursor-pointer mt-2 rounded-lg custom-range"
+                      style={{
+                        background: `linear-gradient(to right, #3b82f6 ${
+                          ((rateOfInterest - 1) / (50 - 1)) * 100
+                        }%, #d1d5db ${
+                          ((rateOfInterest - 1) / (50 - 1)) * 100
+                        }%)`,
+                      }}
                     />
                   </div>
                   <div>
@@ -316,7 +330,12 @@ const CalculatorPage = () => {
                       step="1"
                       value={timePeriod}
                       onChange={(e) => setTimePeriod(parseInt(e.target.value))}
-                      className="w-full h-2 bg-gray-500 rounded-lg appearance-none cursor-pointer mt-2"
+                      className="w-full h-2 appearance-none cursor-pointer mt-2 rounded-lg custom-range"
+                      style={{
+                        background: `linear-gradient(to right, #3b82f6 ${
+                          ((timePeriod - 1) / (40 - 1)) * 100
+                        }%, #d1d5db ${((timePeriod - 1) / (40 - 1)) * 100}%)`,
+                      }}
                     />
                   </div>
                 </div>

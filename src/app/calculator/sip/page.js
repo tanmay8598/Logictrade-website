@@ -258,7 +258,14 @@ const CalculatorPage = () => {
                       onChange={(e) =>
                         setInvestmentAmount(parseInt(e.target.value))
                       }
-                      className="w-full h-2 bg-gray-500 rounded-lg appearance-none cursor-pointer mt-2"
+                      className="w-full h-2 appearance-none cursor-pointer mt-2 rounded-lg custom-range"
+                      style={{
+                        background: `linear-gradient(to right, #3b82f6 ${
+                          ((investmentAmount - 100) / (1000000 - 100)) * 100
+                        }%, #d1d5db ${
+                          ((investmentAmount - 100) / (1000000 - 100)) * 100
+                        }%)`,
+                      }}
                     />
                   </div>
 
@@ -353,21 +360,26 @@ const CalculatorPage = () => {
                       step="1"
                       value={timePeriod}
                       onChange={(e) => setTimePeriod(parseInt(e.target.value))}
-                      className="w-full h-2 bg-gray-500 rounded-lg appearance-none cursor-pointer mt-2"
+                      className="w-full h-2 appearance-none cursor-pointer mt-2 rounded-lg custom-range"
+                      style={{
+                        background: `linear-gradient(to right, #3b82f6 ${
+                          ((timePeriod - 1) / (40 - 1)) * 100
+                        }%, #d1d5db ${((timePeriod - 1) / (40 - 1)) * 100}%)`,
+                      }}
                     />
                   </div>
                 </div>
               </div>
 
               <div className="w-full lg:w-2/4 bg-gray-900 rounded-lg shadow p-4 border border-gray-700 h-fit">
-                <div className="bg-purple-900 p-4 rounded-lg border border-purple-700">
+                <div className=" p-4 rounded-lg ">
                   <div className="text-sm text-gray-300">Total Value</div>
-                  <div className="text-lg lg:text-2xl font-bold text-white">
+                  <div className="text-lg lg:text-2xl font-extrabold text-blue-400">
                     {formatCurrency(totalValue)}
                   </div>
                 </div>
                 <div className="mt-4 grid grid-cols-2 gap-4">
-                  <div className="bg-blue-900 p-4 rounded-lg border border-blue-700">
+                  <div className=" p-4 rounded-lg ">
                     <div className="text-sm text-gray-300">Invested Amount</div>
                     <div className="text-sm lg:text-xl font-bold text-white">
                       {formatCurrency(
@@ -377,7 +389,7 @@ const CalculatorPage = () => {
                       )}
                     </div>
                   </div>
-                  <div className="bg-green-900 p-4 rounded-lg border border-green-700">
+                  <div className="p-4  border-l border-white">
                     <div className="text-sm text-gray-300">Est. Returns</div>
                     <div className="text-sm lg:text-xl font-bold text-white">
                       {formatCurrency(totalReturn)}

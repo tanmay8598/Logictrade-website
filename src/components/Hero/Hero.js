@@ -17,7 +17,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="hidden  md:block mt-10">
+    <div className="hidden  md:block ">
       <div className="bg-black text-white pt-16 px-6 md:px-12 lg:px-24 flex flex-col md:flex-row items-center justify-evenly">
         <div className="text-center mt-2 md:text-left max-w-lg">
           <h1 className="text-4xl md:text-3xl lg:text-6xl font-semibold flex items-center flex-wrap">
@@ -29,7 +29,8 @@ const Hero = () => {
                 animate={{ y: 0, opacity: 1 }}
                 exit={{ y: -20, opacity: 0 }}
                 transition={{ duration: 0.3, ease: "easeInOut" }}
-                className="text-amber-400 inline-block px-2"
+                // >
+                className="inline-block px-2 bg-gradient-to-r lg:h-16 from-yellow-200 via-yellow-400 to-amber-500 bg-clip-text text-transparent"
               >
                 {texts[index]}
               </motion.span>
@@ -37,23 +38,40 @@ const Hero = () => {
             Logic Trade
           </h1>
           <ul className="mt-6 space-y-2 text-lg">
-            <li className="flex items-center gap-3">
-              <span className="text-yellow-400">🏅</span> Discover Top Trades in
-              Real-Time
+            <li className="flex items-center gap-1">
+              <Image
+                src="/badge1.png"
+                alt="Discover Icon"
+                width={25}
+                height={25}
+              />
+              Discover Top Trades in Real-Time
             </li>
-            <li className="flex items-center gap-3">
-              <span className="text-red-400">🎯</span> Precision Trade Entry &
-              Exit
+
+            <li className="flex items-center gap-1">
+              <Image
+                src="/target3d.png"
+                alt="Discover Icon"
+                width={25}
+                height={25}
+              />
+              Precision Trade Entry & Exit
             </li>
-            <li className="flex items-center gap-3">
-              <span className="text-blue-400">✔️</span> Maximize Small Capital
-              Gains
+
+            <li className="flex items-center gap-1">
+              <Image
+                src="/tick1.png"
+                alt="Discover Icon"
+                width={25}
+                height={25}
+              />
+              Maximize Small Capital Gains
             </li>
           </ul>
           <div className="mt-8 flex justify-center md:justify-start gap-4">
             <button
-              className="bg-transparent cursor-pointer text-white font-bold px-6 py-3 rounded-lg flex items-center 
-                    border-2 border-gray-300 hover:border-amber-400 hover:text-amber-400
+              className="bg-transparent text-sm lg:text-lg cursor-pointer text-amber-300 font-bold px-6 py-3 rounded-lg flex items-center 
+                    border-2 border-amber-300 hover:border-amber-400 hover:text-amber-400
                     transition-all duration-300 transform hover:scale-105"
             >
               Download Logic Trade App Now
@@ -77,7 +95,7 @@ const Hero = () => {
               className="w-40 md:w-56 lg:w-80 relative z-10"
             >
               <Image
-                src="/a1.png"
+                src="/left_image.png"
                 alt="App UI"
                 width={300}
                 height={600}
@@ -99,7 +117,7 @@ const Hero = () => {
               className="w-40 md:w-56 lg:w-80 -ml-10 md:-ml-20"
             >
               <Image
-                src="/a2.png"
+                src="/right_image.png"
                 alt="App UI"
                 width={300}
                 height={600}

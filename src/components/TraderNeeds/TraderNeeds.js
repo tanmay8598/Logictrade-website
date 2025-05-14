@@ -18,8 +18,8 @@ function TraderNeeds() {
     },
     {
       id: 2,
-      title: "Whatsapp & Teligram integration",
-      points: ["WhatsApp facility available", "Teligram facility available"],
+      title: "Social integration",
+      points: ["WhatsApp facility available", "Telegram facility available"],
       image: "/stock2.jpg",
     },
     {
@@ -64,8 +64,8 @@ function TraderNeeds() {
 
   return (
     <div className="py-16 px-4 sm:px-6 lg:px-8 bg-black ">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-2xl md:text-3xl font-extrabold text-center text-white sm:text-4xl mb-12">
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-2xl md:text-5xl font-extrabold text-center text-white sm:text-4xl mb-12">
           All a Trader Requires
         </h2>
 
@@ -109,9 +109,10 @@ function TraderNeeds() {
                 } ${index % 2 !== 0 ? "lg:items-center" : "lg:items-end"}`}
               >
                 <div className="max-w-md text-center lg:text-left">
-                  <h3 className="text-3xl font-bold text-yellow-400 mb-6">
+                  <h1 className="text-3xl lg:text-4xl font-semibold bg-gradient-to-r from-yellow-200 to-amber-500 bg-clip-text text-transparent mb-6">
                     {feature.title}
-                  </h3>
+                  </h1>
+
                   <ul className="space-y-4">
                     {feature.points.map((point, pointIndex) => (
                       <motion.li

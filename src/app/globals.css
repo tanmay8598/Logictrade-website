@@ -36,6 +36,9 @@ body {
   font-family: var(--font-poppins);
 }
 
+
+
+
 h1 {
   font-weight: 600;
 }
@@ -69,11 +72,14 @@ h3 {
   appearance: none;
   height: 20px;
   width: 20px;
-  background-color: white; /* Tailwind's blue-500 */
-  border-radius: 0; /* Makes it square */
+  background-color: white;
+  /* Tailwind's blue-500 */
+  border-radius: 0;
+  /* Makes it square */
   cursor: pointer;
   border: none;
-  margin-top: -2px; /* Aligns thumb vertically */
+  margin-top: -2px;
+  /* Aligns thumb vertically */
 }
 
 .custom-range::-moz-range-thumb {

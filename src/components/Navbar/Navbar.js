@@ -61,7 +61,7 @@ const Navbar = () => {
           scrolled ? "bg-[#0d0c0c] shadow-md py-2" : "bg-black py-4"
         } ${visible ? "translate-y-0" : "-translate-y-full"}`}
       >
-        <div className="container mx-auto px-4">
+        <div className="container md:min-w-lg mx-auto px-4">
           <div className="flex justify-between items-center">
             <div className="flex items-center">
               <Link
