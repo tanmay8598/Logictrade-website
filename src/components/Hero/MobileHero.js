@@ -32,7 +32,7 @@ const MobileHero = () => {
           transition={{ delay: 0.2, duration: 0.8 }}
           className="flex flex-col"
         >
-          <div className="relative flex justify-center items-end h-[350px]">
+          <div className="relative flex justify-center items-end h-[320px]">
             <motion.div
               animate={{
                 rotate: [-5, -10, -5],
@@ -47,7 +47,7 @@ const MobileHero = () => {
               className="w-60 md:w-72 lg:w-96 relative z-10"
             >
               <Image
-                src="/a1.png"
+                src="/merawala4.png"
                 alt="App UI"
                 width={450}
                 height={900}
@@ -70,7 +70,7 @@ const MobileHero = () => {
               className="w-60 md:w-72 lg:w-96 -ml-12 md:-ml-24"
             >
               <Image
-                src="/a2.png"
+                src="/tata1.jpg"
                 alt="App UI"
                 width={450}
                 height={900}

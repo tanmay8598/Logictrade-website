@@ -80,7 +80,7 @@ const Hero = () => {
         </div>
 
         <div className="flex flex-col justify-center items-center">
-          <div className="relative mt-12  flex justify-center items-end h-[280px]">
+          <div className="relative mt-10 lg:mt-20  flex justify-center items-end h-[280px]">
             <motion.div
               animate={{
                 rotate: [-3, -10, -3],
@@ -92,10 +92,10 @@ const Hero = () => {
                 duration: 3,
                 ease: "easeInOut",
               }}
-              className="w-40 md:w-56 lg:w-80 relative z-10"
+              className="w-40 md:w-56 lg:w-[340px] relative z-10"
             >
               <Image
-                src="/left_image.png"
+                src="/merawala4.png"
                 alt="App UI"
                 width={300}
                 height={600}
@@ -114,10 +114,10 @@ const Hero = () => {
                 duration: 3,
                 ease: "easeInOut",
               }}
-              className="w-40 md:w-56 lg:w-80 -ml-10 md:-ml-20"
+              className="w-40 md:w-56 lg:w-[340px] -ml-10 md:-ml-20"
             >
               <Image
-                src="/right_image.png"
+                src="/tata1.jpg"
                 alt="App UI"
                 width={300}
                 height={600}
