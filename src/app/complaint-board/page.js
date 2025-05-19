@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import Loader from "./../../components/Loader/Loader";
 import { motion } from "framer-motion";
+import apiClient from "./../../api/client";
 import {
   FaYoutube,
   FaTelegram,
@@ -13,8 +14,18 @@ import {
 
 function ComplaintBoard() {
   const [loading, setLoading] = useState(true);
+  const [siteImage, setSiteImage] = useState([]);
+
+  const getImages = async () => {
+    const response = await apiClient.get("/siteimage/get-image");
+
+    if (response.ok) {
+      setSiteImage(response.data.siteImage);
+    }
+  };
 
   useEffect(() => {
+    getImages();
     const timer = setTimeout(() => {
       setLoading(false);
     }, 1000);
@@ -64,7 +75,7 @@ function ComplaintBoard() {
               Data For The Month Ending: {monthYear}
             </h3>
             <img
-              src="/1.png"
+              src={siteImage?.monthEndingImage || "/1.png"}
               alt="Monthly Disposal Trend"
               className="w-full h-auto rounded-lg shadow-lg"
             />
@@ -75,7 +86,7 @@ function ComplaintBoard() {
               Trend of Monthly Disposal of Complaints:
             </h3>
             <img
-              src="/1.png"
+              src={siteImage?.monthlyDisposableComplaintsImage || "/1.png"}
               alt="Monthly Disposal Trend"
               className="w-full h-auto rounded-lg shadow-lg"
             />
@@ -86,7 +97,7 @@ function ComplaintBoard() {
               Trend of Annual Disposal of Complaints:
             </h3>
             <img
-              src="/3.png"
+              src={siteImage?.annualDisposableComplaintsImage || "/3.png"}
               alt="Annual Disposal Trend"
               className="w-full h-auto rounded-lg shadow-lg"
             />
