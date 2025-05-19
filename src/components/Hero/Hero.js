@@ -79,8 +79,8 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="flex flex-col justify-center items-center">
-          <div className="relative mt-10 lg:mt-20  flex justify-center items-end h-[280px]">
+        <div className="flex flex-col justify-center items-center lg:mt-22 ">
+          <div className="relative mt-10  flex justify-center items-end h-[280px]">
             <motion.div
               animate={{
                 rotate: [-3, -10, -3],

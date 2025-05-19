@@ -102,7 +102,7 @@ const MobileHero = () => {
           transition={{ delay: 0.8, duration: 0.8 }}
           className="text-center mt-2 md:text-left max-w-lg"
         >
-          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold flex items-center justify-center flex-wrap text-xs-mobile">
+          <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold flex items-center justify-center flex-wrap text-xs-mobile">
             India's{" "}
             <span className="inline-flex min-w-[115px] justify-center">
               <AnimatePresence mode="wait">
@@ -125,7 +125,7 @@ const MobileHero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1, duration: 0.8 }}
-            className="mt-6 space-y-2 text-lg"
+            className="mt-6 space-y-2 text-md sm:text-md"
           >
             <motion.li
               initial={{ x: -20 }}

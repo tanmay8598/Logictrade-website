@@ -234,7 +234,7 @@ const CalculatorPage = () => {
                       }
                       className="w-full h-2 appearance-none cursor-pointer mt-2 rounded-lg custom-range"
                       style={{
-                        background: `linear-gradient(to right, #3b82f6 ${
+                        background: `linear-gradient(to right, #facc15 ${
                           ((monthlyDeposit - 5000) / (1000000 - 5000)) * 100
                         }%, #d1d5db ${
                           ((monthlyDeposit - 5000) / (1000000 - 5000)) * 100
@@ -286,7 +286,7 @@ const CalculatorPage = () => {
                       }
                       className="w-full h-2 appearance-none cursor-pointer mt-2 rounded-lg custom-range"
                       style={{
-                        background: `linear-gradient(to right, #3b82f6 ${
+                        background: `linear-gradient(to right, #facc15 ${
                           ((rateOfInterest - 1) / (15 - 1)) * 100
                         }%, #d1d5db ${
                           ((rateOfInterest - 1) / (15 - 1)) * 100
@@ -330,7 +330,7 @@ const CalculatorPage = () => {
                       onChange={(e) => setTimePeriod(parseInt(e.target.value))}
                       className="w-full h-2 appearance-none cursor-pointer mt-2 rounded-lg custom-range"
                       style={{
-                        background: `linear-gradient(to right, #3b82f6 ${
+                        background: `linear-gradient(to right, #facc15 ${
                           ((timePeriod - 1) / (10 - 1)) * 100
                         }%, #d1d5db ${((timePeriod - 1) / (10 - 1)) * 100}%)`,
                       }}
@@ -344,7 +344,7 @@ const CalculatorPage = () => {
                   <div className="text-sm text-gray-300 font-bold">
                     Maturity Value
                   </div>
-                  <div className="text-lg lg:text-2xl font-extrabold text-blue-400">
+                  <div className="text-lg lg:text-2xl font-extrabold text-yellow-400">
                     {formatCurrency(totalValue)}
                   </div>
                 </div>

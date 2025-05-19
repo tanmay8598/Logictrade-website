@@ -90,44 +90,26 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* <div className="space-y-4">
-          <h3 className="text-lg font-semibold">
-            Grow With Our Trading Community
-          </h3>
-          <div className="flex gap-4">
-            <a
-              href="#"
-              className="bg-gray-800 p-3 rounded-full hover:bg-gray-700 transition"
-            >
-              <FaInstagram className="text-white text-xl" />
-            </a>
-            <a
-              href="#"
-              className="bg-gray-800 p-3 rounded-full hover:bg-gray-700 transition"
-            >
-              <FaTelegramPlane className="text-white text-xl" />
-            </a>
-          </div>
-        </div> */}
-
         <div className="space-y-4">
           <h3 className="text-lg font-semibold">
             Grow With Our Trading Community
           </h3>
 
-          <div className="flex items-center  gap-4 flex-wrap">
-            <a
-              href="#"
-              className="bg-gray-800 p-3 rounded-full hover:bg-gray-700 transition"
-            >
-              <FaInstagram className="text-white text-xl" />
-            </a>
-            <a
-              href="#"
-              className="bg-gray-800 p-3 rounded-full hover:bg-gray-700 transition"
-            >
-              <FaTelegramPlane className="text-white text-xl" />
-            </a>
+          <div className="flex flex-col items-start  gap-2 flex-wrap">
+            <div className="flex flex-row gap-5">
+              <a
+                href="#"
+                className="bg-gray-800 p-3 rounded-full hover:bg-gray-700 transition"
+              >
+                <FaInstagram className="text-white text-xl" />
+              </a>
+              <a
+                href="#"
+                className="bg-gray-800 p-3 rounded-full hover:bg-gray-700 transition"
+              >
+                <FaTelegramPlane className="text-white text-xl" />
+              </a>
+            </div>
 
             <a
               href="https://play.google.com/store/apps/details?id=your_app_id"

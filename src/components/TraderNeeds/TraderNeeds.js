@@ -14,13 +14,13 @@ function TraderNeeds() {
         "Personalized trade setups",
         "Real-time news & market mood insights",
       ],
-      image: "/stock1.jpg",
+      image: "/trade11.jpg",
     },
     {
       id: 2,
       title: "Social integration",
       points: ["WhatsApp facility available", "Telegram facility available"],
-      image: "/stock2.jpg",
+      image: "/trade15.jpg",
     },
     {
       id: 3,
@@ -30,25 +30,25 @@ function TraderNeeds() {
         "Instant mobile alerts",
         "Multi-channel notifications",
       ],
-      image: "/stock3.jpg",
+      image: "/trade12.jpg",
     },
     {
       id: 4,
       title: "Channel Overview",
       points: [
-        "channel updates on real time basis",
-        "full experience like in telegram",
+        "Channel updates on real time basis",
+        "Full experience like in telegram",
       ],
-      image: "/stock4.jpg",
+      image: "/trade14.jpg",
     },
     {
       id: 5,
       title: " News",
       points: [
-        "realtime news of stock market",
-        "ups and down nifty and banknifty levels",
+        "Realtime news of stock market",
+        "Ups and down nifty and banknifty levels",
       ],
-      image: "/news2.jpg",
+      image: "/trade13.jpg",
     },
   ];
 
@@ -66,7 +66,7 @@ function TraderNeeds() {
     <div className="py-16 px-4 sm:px-6 lg:px-8 bg-black ">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-2xl md:text-5xl font-extrabold text-center text-white sm:text-4xl mb-12">
-          All a Trader Requires
+          What a Trader Needs
         </h2>
 
         <div className="space-y-16" ref={ref}>
@@ -109,7 +109,7 @@ function TraderNeeds() {
                 } ${index % 2 !== 0 ? "lg:items-center" : "lg:items-end"}`}
               >
                 <div className="max-w-md text-center lg:text-left">
-                  <h1 className="text-3xl lg:text-4xl font-semibold bg-gradient-to-r from-yellow-200 to-amber-500 bg-clip-text text-transparent mb-6">
+                  <h1 className="text-3xl lg:text-4xl font-semibold bg-gradient-to-r from-yellow-200 to-amber-500 bg-clip-text text-transparent mb-6 pb-1">
                     {feature.title}
                   </h1>
 

@@ -168,7 +168,7 @@ const CalculatorPage = () => {
                       }
                       className="w-full h-2 appearance-none cursor-pointer mt-2 rounded-lg custom-range"
                       style={{
-                        background: `linear-gradient(to right, #3b82f6 ${
+                        background: `linear-gradient(to right, #facc15 ${
                           (monthlySalary / 1000000) * 100
                         }%, #d1d5db ${(monthlySalary / 1000000) * 100}%)`,
                       }}
@@ -213,7 +213,7 @@ const CalculatorPage = () => {
                       }
                       className="w-full h-2 appearance-none cursor-pointer mt-2 rounded-lg custom-range"
                       style={{
-                        background: `linear-gradient(to right, #3b82f6 ${
+                        background: `linear-gradient(to right, #facc15 ${
                           (yearsOfService / 50) * 100
                         }%, #d1d5db ${(yearsOfService / 50) * 100}%)`,
                       }}
@@ -227,7 +227,7 @@ const CalculatorPage = () => {
                   <div className="text-sm lg:font-bold  text-gray-300">
                     Gratuity Maturity Value
                   </div>
-                  <div className="text-lg lg:text-2xl font-extrabold text-blue-400">
+                  <div className="text-lg lg:text-2xl font-extrabold text-yellow-400">
                     {formatCurrency(gratuityAmount)}
                   </div>
                 </div>

@@ -200,7 +200,7 @@ const CalculatorPage = () => {
                       onChange={(e) => setTotalAmount(parseInt(e.target.value))}
                       className="w-full h-2 appearance-none cursor-pointer mt-2 rounded-lg custom-range"
                       style={{
-                        background: `linear-gradient(to right, #3b82f6 ${
+                        background: `linear-gradient(to right, #facc15 ${
                           (totalAmount / 500000) * 100
                         }%, #d1d5db ${(totalAmount / 500000) * 100}%)`,
                       }}
@@ -241,7 +241,7 @@ const CalculatorPage = () => {
                       onChange={(e) => setTaxSlab(parseInt(e.target.value))}
                       className="w-full h-2 appearance-none cursor-pointer mt-2 rounded-lg custom-range"
                       style={{
-                        background: `linear-gradient(to right, #3b82f6 ${
+                        background: `linear-gradient(to right, #facc15 ${
                           ((taxSlab - 5) / (28 - 5)) * 100
                         }%, #d1d5db ${((taxSlab - 5) / (28 - 5)) * 100}%)`,
                       }}
@@ -258,7 +258,7 @@ const CalculatorPage = () => {
                       ? "Future Cost"
                       : "Total GST"}
                   </div>
-                  <div className="text-xl lg:text-2xl font-bold text-blue-400">
+                  <div className="text-xl lg:text-2xl font-bold text-yellow-400">
                     {formatCurrency(gstAmount)}
                   </div>
                 </div>

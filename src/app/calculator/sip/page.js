@@ -260,7 +260,7 @@ const CalculatorPage = () => {
                       }
                       className="w-full h-2 appearance-none cursor-pointer mt-2 rounded-lg custom-range"
                       style={{
-                        background: `linear-gradient(to right, #3b82f6 ${
+                        background: `linear-gradient(to right, #facc15 ${
                           ((investmentAmount - 100) / (1000000 - 100)) * 100
                         }%, #d1d5db ${
                           ((investmentAmount - 100) / (1000000 - 100)) * 100
@@ -315,7 +315,7 @@ const CalculatorPage = () => {
                       }
                       className="w-full h-2 appearance-none cursor-pointer mt-2 rounded-lg custom-range"
                       style={{
-                        background: `linear-gradient(to right, #3b82f6 ${
+                        background: `linear-gradient(to right, #facc15 ${
                           ((rateOfInterest - 1) / (30 - 1)) * 100
                         }%, #d1d5db ${
                           ((rateOfInterest - 1) / (30 - 1)) * 100
@@ -362,7 +362,7 @@ const CalculatorPage = () => {
                       onChange={(e) => setTimePeriod(parseInt(e.target.value))}
                       className="w-full h-2 appearance-none cursor-pointer mt-2 rounded-lg custom-range"
                       style={{
-                        background: `linear-gradient(to right, #3b82f6 ${
+                        background: `linear-gradient(to right, #facc15 ${
                           ((timePeriod - 1) / (40 - 1)) * 100
                         }%, #d1d5db ${((timePeriod - 1) / (40 - 1)) * 100}%)`,
                       }}
@@ -374,7 +374,7 @@ const CalculatorPage = () => {
               <div className="w-full lg:w-2/4 bg-gray-900 rounded-lg shadow p-4 border border-gray-700 h-fit">
                 <div className=" p-4 rounded-lg ">
                   <div className="text-sm text-gray-300">Total Value</div>
-                  <div className="text-lg lg:text-2xl font-extrabold text-blue-400">
+                  <div className="text-lg lg:text-2xl font-extrabold text-yellow-400">
                     {formatCurrency(totalValue)}
                   </div>
                 </div>

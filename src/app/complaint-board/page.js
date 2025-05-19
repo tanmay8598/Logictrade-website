@@ -48,7 +48,7 @@ function ComplaintBoard() {
   const monthYear = `${month}, ${year}`;
 
   return (
-    <div className="bg-gradient-to-br from-black to-gray-900 min-h-screen py-16 px-4 sm:px-6 lg:px-8 flex items-center justify-center">
+    <div className="bg-gradient-to-br from-black to-gray-900 min-h-screen py-28 px-4 sm:px-6 lg:px-8 flex items-center justify-center">
       <motion.div
         initial="hidden"
         animate="show"

@@ -213,7 +213,7 @@ const CalculatorPage = () => {
                       onChange={(e) => setCurrentCost(parseInt(e.target.value))}
                       className="w-full h-2 appearance-none cursor-pointer mt-2 rounded-lg custom-range"
                       style={{
-                        background: `linear-gradient(to right, #3b82f6 ${
+                        background: `linear-gradient(to right, #facc15 ${
                           ((currentCost - 1000) / (10000000 - 1000)) * 100
                         }%, #d1d5db ${
                           ((currentCost - 1000) / (10000000 - 1000)) * 100
@@ -263,7 +263,7 @@ const CalculatorPage = () => {
                       }
                       className="w-full h-2 appearance-none cursor-pointer mt-2 rounded-lg custom-range"
                       style={{
-                        background: `linear-gradient(to right, #3b82f6 ${
+                        background: `linear-gradient(to right, #facc15 ${
                           ((inflationRate - 1) / (50 - 1)) * 100
                         }%, #d1d5db ${
                           ((inflationRate - 1) / (50 - 1)) * 100
@@ -308,7 +308,7 @@ const CalculatorPage = () => {
                       onChange={(e) => setTimePeriod(parseInt(e.target.value))}
                       className="w-full h-2 appearance-none cursor-pointer mt-2 rounded-lg custom-range"
                       style={{
-                        background: `linear-gradient(to right, #3b82f6 ${
+                        background: `linear-gradient(to right, #facc15 ${
                           ((timePeriod - 1) / (30 - 1)) * 100
                         }%, #d1d5db ${((timePeriod - 1) / (30 - 1)) * 100}%)`,
                       }}
@@ -322,7 +322,7 @@ const CalculatorPage = () => {
                   <div className="text-sm font-bold text-gray-300">
                     Future Cost
                   </div>
-                  <div className="text-lg lg:text-2xl font-bold text-blue-400">
+                  <div className="text-lg lg:text-2xl font-bold text-yellow-400">
                     {formatCurrency(futureCost)}
                   </div>
                 </div>
