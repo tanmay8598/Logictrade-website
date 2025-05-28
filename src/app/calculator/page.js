@@ -3,6 +3,7 @@ import CalculatorTypesCard from "@/components/Cards/CalculatorTypesCard";
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Loader from "./../../components/Loader/Loader";
+import Head from "next/head";
 
 const calculators = [
   {
@@ -124,18 +125,39 @@ const Calculators = () => {
     return <Loader />;
   }
   return (
-    <section className="bg-black text-white py-12 text-center mx-4 lg:mx-4">
-      <motion.h1
-        variants={heading}
-        initial="hidden"
-        animate="show"
-        className="text-3xl lg:text-5xl font-bold lg:pt-12 max-w-sm lg:max-w-xl mx-auto mt-6 mb-6 lg:mt-0"
-      >
-        Plan Your Financial Goals
-      </motion.h1>
+    <>
+      <Head>
+        <title>Financial Calculators | Plan Your Future</title>
+        <meta
+          name="description"
+          content="Use our free financial calculators like SIP, FD, RD, GST, and more to plan your savings and investments easily."
+        />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content="Financial Calculators" />
+        <meta
+          property="og:description"
+          content="Explore various calculators to help you plan your finances—Fixed Deposit, SIP, Mutual Funds, Gratuity, and more."
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://logictrade.co.in/calculators"
+        />
+      </Head>
 
-      <CalculatorsGrid />
-    </section>
+      <section className="bg-black text-white py-12 text-center mx-4 lg:mx-4">
+        <motion.h1
+          variants={heading}
+          initial="hidden"
+          animate="show"
+          className="text-3xl lg:text-5xl font-bold lg:pt-12 max-w-sm lg:max-w-xl mx-auto mt-6 mb-6 lg:mt-0"
+        >
+          Plan Your Financial Goals
+        </motion.h1>
+
+        <CalculatorsGrid />
+      </section>
+    </>
   );
 };
 
