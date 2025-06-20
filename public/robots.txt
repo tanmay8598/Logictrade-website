@@ -1,0 +1,10 @@
+# *
+User-agent: *
+Allow: /
+Disallow: /admin
+
+# Host
+Host: https://logictrade.co.in
+
+# Sitemaps
+Sitemap: https://logictrade.co.in/sitemap.xml
