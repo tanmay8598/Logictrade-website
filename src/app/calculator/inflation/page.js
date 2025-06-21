@@ -187,17 +187,24 @@ const CalculatorPage = () => {
                         Current Cost
                       </label>
                       <div className="flex items-center space-x-2">
-                        <span className="text-white">₹</span>
                         <input
                           type="text"
                           value={currentCost.toLocaleString("en-IN")}
                           onChange={(e) => {
-                            const rawValue = e.target.value.replace(/,/g, "");
+                            const rawValue = e.target.value
+                              .replace(/,/g, "")
+                              .replace(/\D/g, "");
+
+                            if (rawValue === "") {
+                              setCurrentCost(0);
+                              return;
+                            }
+
                             const numericValue = parseInt(rawValue, 10);
+
                             if (!isNaN(numericValue)) {
-                              setCurrentCost(
-                                Math.min(10000000, Math.max(1000, numericValue))
-                              );
+                              const clamped = Math.min(numericValue, 10000000);
+                              setCurrentCost(clamped);
                             }
                           }}
                           className="bg-gray-800 text-white px-2 py-1 w-32 text-right rounded border border-gray-600 focus:outline-none"
@@ -237,7 +244,7 @@ const CalculatorPage = () => {
                               ""
                             );
                             if (value === "") {
-                              setInflationRate(1);
+                              setInflationRate(0);
                             } else {
                               const numValue = parseFloat(value);
                               if (!isNaN(numValue)) {
@@ -284,7 +291,7 @@ const CalculatorPage = () => {
                           onChange={(e) => {
                             const value = e.target.value.replace(/\D/g, "");
                             if (value === "") {
-                              setTimePeriod(1);
+                              setTimePeriod(0);
                             } else {
                               const numValue = parseInt(value, 10);
                               if (!isNaN(numValue)) {

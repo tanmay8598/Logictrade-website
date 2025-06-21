@@ -30,7 +30,7 @@ const Hero = () => {
                 exit={{ y: -20, opacity: 0 }}
                 transition={{ duration: 0.3, ease: "easeInOut" }}
                 // >
-                className="inline-block px-2 bg-gradient-to-r lg:h-16 from-yellow-200 via-yellow-400 to-amber-500 bg-clip-text text-transparent"
+                className="inline-block px-2 bg-gradient-to-r lg:h-17 from-yellow-200 via-yellow-400 to-amber-500 bg-clip-text text-transparent"
               >
                 {texts[index]}
               </motion.span>
@@ -65,7 +65,7 @@ const Hero = () => {
                 width={25}
                 height={25}
               />
-              Maximize Small Capital Gains
+              Get Trades with Logic Trade
             </li>
           </ul>
           <div className="mt-8 flex justify-center md:justify-start gap-4">

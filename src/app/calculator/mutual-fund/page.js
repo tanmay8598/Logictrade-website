@@ -24,7 +24,6 @@ ChartJS.register(
 );
 
 const CalculatorPage = () => {
-  // const [loading, setLoading] = useState(true);
   const router = useRouter();
   const [calculatorType, setCalculatorType] = useState("Mutual Fund Returns");
   const [calculatorIcon, setCalculatorIcon] = useState("💵");
@@ -80,14 +79,6 @@ const CalculatorPage = () => {
       icon: "📊",
     },
   ];
-
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     setLoading(false);
-  //   }, 1000);
-
-  //   return () => clearTimeout(timer);
-  // }, []);
 
   useEffect(() => {
     calculateReturns();
@@ -146,10 +137,6 @@ const CalculatorPage = () => {
     const slug = type.name.toLowerCase().replace(/\s+/g, "-");
     router.push(`/calculator/${encodeURIComponent(slug)}`);
   };
-
-  // if (loading) {
-  //   return <Loader />;
-  // }
 
   return (
     <div className="min-h-screen bg-black p-4 md:p-8">
@@ -212,12 +199,17 @@ const CalculatorPage = () => {
                               /[^0-9]/g,
                               ""
                             );
-                            if (rawValue === "" || !isNaN(rawValue)) {
-                              const numValue =
-                                rawValue === "" ? 0 : parseInt(rawValue, 10);
-                              if (numValue >= 100 && numValue <= 1000000) {
-                                setInvestmentAmount(numValue);
-                              }
+
+                            if (rawValue === "") {
+                              setInvestmentAmount(0);
+                              return;
+                            }
+
+                            const numValue = parseInt(rawValue, 10);
+
+                            if (!isNaN(numValue)) {
+                              const clamped = Math.min(numValue, 10000000);
+                              setInvestmentAmount(clamped);
                             }
                           }}
                           className="bg-gray-800 text-white px-2 py-1 w-28 text-right rounded border border-gray-600 focus:outline-none"
@@ -269,7 +261,7 @@ const CalculatorPage = () => {
                                 setRateOfInterest(numValue);
                               }
                             } else if (value === "") {
-                              setRateOfInterest(1);
+                              setRateOfInterest(0);
                             }
                           }}
                           className="bg-gray-800 text-white px-2 py-1 w-16 text-right rounded border border-gray-600 focus:outline-none"
@@ -304,22 +296,32 @@ const CalculatorPage = () => {
                       <div className="flex items-center space-x-2">
                         <input
                           type="text"
-                          value={timePeriod}
+                          value={timePeriod === 0 ? "" : timePeriod}
                           onChange={(e) => {
                             const digitsOnly = e.target.value.replace(
                               /\D/g,
                               ""
                             );
-                            let numValue =
-                              digitsOnly === "" ? 1 : parseInt(digitsOnly, 10);
-                            numValue = Math.max(1, Math.min(40, numValue));
-                            setTimePeriod(numValue);
+
+                            if (digitsOnly === "") {
+                              setTimePeriod(0);
+                              return;
+                            }
+
+                            const numValue = parseInt(digitsOnly, 10);
+
+                            if (!isNaN(numValue)) {
+                              setTimePeriod(Math.min(numValue, 40));
+                            }
                           }}
                           onBlur={() => {
-                            if (timePeriod < 1) setTimePeriod(1);
+                            if (timePeriod < 1) {
+                              setTimePeriod(1);
+                            }
                           }}
                           className="bg-gray-800 text-white px-2 py-1 w-16 text-right rounded border border-gray-600 focus:outline-none"
                         />
+
                         <span className="text-white">Y</span>
                       </div>
                     </div>

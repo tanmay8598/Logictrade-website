@@ -100,8 +100,8 @@ function ComplaintBoard() {
             className="flex flex-col items-center justify-center w-full text-center"
           >
             <div className="mb-10">
-              <h3 className="text-2xl sm:text-3xl font-semibold underline text-amber-300 mb-4">
-                Data For The Month Ending: {monthYear}
+              <h3 className="text-2xl sm:text-3xl font-semibold  text-amber-300 mb-4">
+                Data For The Month Ending
               </h3>
               <img
                 src={siteImage?.monthEndingImage || "/1.png"}
@@ -111,8 +111,8 @@ function ComplaintBoard() {
             </div>
 
             <div className="mb-10">
-              <h3 className="text-2xl my-10 sm:text-3xl font-semibold underline text-amber-300">
-                Trend of Monthly Disposal of Complaints:
+              <h3 className="text-2xl my-10 sm:text-3xl font-semibold  text-amber-300">
+                Trend of Monthly Disposal of Complaints
               </h3>
               <img
                 src={siteImage?.monthlyDisposableComplaintsImage || "/1.png"}
@@ -122,8 +122,8 @@ function ComplaintBoard() {
             </div>
 
             <div className="mb-10">
-              <h3 className="text-2xl sm:text-3xl font-semibold underline text-amber-300 mb-4">
-                Trend of Annual Disposal of Complaints:
+              <h3 className="text-2xl sm:text-3xl font-semibold  text-amber-300 mb-4">
+                Trend of Annual Disposal of Complaints
               </h3>
               <img
                 src={siteImage?.annualDisposableComplaintsImage || "/3.png"}
@@ -135,12 +135,12 @@ function ComplaintBoard() {
             <p className="text-gray-300 text-base sm:text-lg mt-6">
               Visit:{" "}
               <a
-                href="https://www.logictrade.com"
+                href="https://logictrade.co.in/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-yellow-400 underline"
               >
-                www.logictrade.com
+                www.logictrade.co.in
               </a>{" "}
               for more details about Risks, Disclosures and Disclaimers.
             </p>
@@ -151,46 +151,49 @@ function ComplaintBoard() {
             className="flex flex-wrap justify-center items-center gap-6 sm:gap-8 mt-16 mb-16"
           >
             <a
-              href="#"
+              href="https://www.youtube.com/@Logictradeofficial"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-yellow-400 text-4xl transition-colors duration-300"
               aria-label="YouTube"
-              className="text-gray-400 hover:text-yellow-400 text-4xl"
             >
               <FaYoutube />
             </a>
             <a
-              href="#"
+              href="https://t.me/logictradeOfficial"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-yellow-400 text-4xl transition-colors duration-300"
               aria-label="Telegram"
-              className="text-gray-400 hover:text-yellow-400 text-4xl"
             >
               <FaTelegram />
             </a>
             <a
-              href="#"
+              href="https://www.instagram.com/logictradeofficial/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-yellow-400 text-4xl transition-colors duration-300"
               aria-label="Instagram"
-              className="text-gray-400 hover:text-yellow-400 text-4xl"
             >
               <FaInstagram />
             </a>
             <a
-              href="#"
+              href="https://www.facebook.com/logictradeofficial"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-yellow-400 text-4xl transition-colors duration-300"
               aria-label="Facebook"
-              className="text-gray-400 hover:text-yellow-400 text-4xl"
             >
               <FaFacebook />
             </a>
             <a
-              href="#"
+              href="https://x.com/Logictradeswing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-yellow-400 text-4xl transition-colors duration-300"
               aria-label="Twitter"
-              className="text-gray-400 hover:text-yellow-400 text-4xl"
             >
               <FaTwitter />
-            </a>
-            <a
-              href="#"
-              aria-label="LinkedIn"
-              className="text-gray-400 hover:text-yellow-400 text-4xl"
-            >
-              <FaLinkedin />
             </a>
           </motion.div>
         </motion.div>

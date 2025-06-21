@@ -10,14 +10,14 @@ const testimonials = [
     role: "Options Trader, Mumbai",
   },
   {
-    name: "Priya Sharma",
+    name: "Vikram Joshi",
     image:
       "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D",
     text: "The AI-powered scanner is game-changing! I've doubled my win rate in just 3 months using their momentum indicators.",
     role: "Swing Trader, Delhi",
   },
   {
-    name: "Vikram Joshi",
+    name: "Priya Sharma",
     image:
       "https://plus.unsplash.com/premium_photo-1670071482460-5c08776521fe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHVzZXJ8ZW58MHx8MHx8fDA%3D",
     text: "As a working professional, Logic Trade's alerts let me trade without screen time. Perfect balance between my job and trading income.",
@@ -26,7 +26,7 @@ const testimonials = [
   {
     name: "Ananya Patel",
     image:
-      "https://plus.unsplash.com/premium_photo-1664541336896-b3d5f7dec9a3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D",
+      "https://plus.unsplash.com/premium_photo-1688350808212-4e6908a03925?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8bGFkeXxlbnwwfHwwfHx8MA%3D%3D",
     text: "Finally a platform that explains complex strategies simply. Their educational content helped me transition from stocks to options safely.",
     role: "Beginner Trader, Pune",
   },

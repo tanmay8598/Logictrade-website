@@ -71,19 +71,19 @@ const Navbar = () => {
               >
                 <div className="mr-3">
                   <Image
-                    src="/newlogo.png"
+                    src="/newOnelogo.png"
                     alt="TradeLogic Logo"
-                    width={100}
+                    width={40}
                     height={40}
                     className="object-contain rounded-sm"
                   />
                 </div>
-                {/* <span className="text-xl font-bold">
+                <span className=" text-3xl lg:text-3xl font-bold lg:font-extrabold">
                   <span className="text-amber-400">L</span>
                   <span className="text-white">ogic</span>
                   <span className="text-amber-400">T</span>
                   <span className="text-white">rade</span>
-                </span> */}
+                </span>
               </Link>
             </div>
 

@@ -10,16 +10,33 @@ const Footer = () => {
       <div className="container mx-auto px-6 lg:px-16 py-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         <div className="space-y-4">
           <div className="flex items-center gap-2">
-            <Image
-              src="/newlogo.png"
-              alt="TradeLogic Logo"
-              width={200}
-              height={60}
-              className="object-contain rounded-sm"
-            />
+            <div className="flex items-center">
+              <Link
+                href="/"
+                className="flex items-center"
+                // onClick={closeMobileMenu}
+              >
+                <div className="mr-3">
+                  <Image
+                    src="/newOnelogo.png"
+                    alt="TradeLogic Logo"
+                    width={40}
+                    height={40}
+                    className="object-contain rounded-sm"
+                  />
+                </div>
+                <span className="text-xl lg:text-3xl font-bold lg:font-extrabold">
+                  <span className="text-amber-400">L</span>
+                  <span className="text-white">ogic</span>
+                  <span className="text-amber-400">T</span>
+                  <span className="text-white">rade</span>
+                </span>
+              </Link>
+            </div>
           </div>
           <p className="flex items-start gap-2">
-            <FaMapMarkerAlt className="mt-1" /> Jaipur, Rajasthan, 302020
+            <FaMapMarkerAlt className="mt-1" /> Mansarovar Jaipur, Rajasthan,
+            302020
           </p>
 
           <p className="flex items-center gap-2">
@@ -63,16 +80,10 @@ const Footer = () => {
           <h3 className="text-lg font-semibold">Terms Of Use</h3>
           <div className="flex flex-col">
             <Link
-              href="/discloser"
-              className="text-white  py-2 hover:text-yellow-500 transition"
+              href="/disclaimer-disclosure"
+              className="text-white pb-4 hover:text-yellow-500 transition"
             >
-              Discloser
-            </Link>
-            <Link
-              href="/disclaimer"
-              className="text-white  py-2 hover:text-yellow-500 transition"
-            >
-              Disclaimer
+              Disclaimer & Disclosure
             </Link>
             <Link
               href="/terms-conditions"
@@ -98,13 +109,13 @@ const Footer = () => {
           <div className="flex flex-col items-start  gap-2 flex-wrap">
             <div className="flex flex-row gap-5">
               <a
-                href="#"
+                href="https://www.instagram.com/logictradeofficial/"
                 className="bg-gray-800 p-3 rounded-full hover:bg-gray-700 transition"
               >
                 <FaInstagram className="text-white text-xl" />
               </a>
               <a
-                href="#"
+                href="https://t.me/logictradeOfficial"
                 className="bg-gray-800 p-3 rounded-full hover:bg-gray-700 transition"
               >
                 <FaTelegramPlane className="text-white text-xl" />

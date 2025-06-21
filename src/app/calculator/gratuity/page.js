@@ -144,12 +144,17 @@ const CalculatorPage = () => {
                               /[^0-9]/g,
                               ""
                             );
-                            if (rawValue === "" || !isNaN(rawValue)) {
-                              const numValue =
-                                rawValue === "" ? 0 : parseInt(rawValue, 10);
-                              if (numValue >= 0 && numValue <= 1000000) {
-                                setMonthlySalary(numValue);
-                              }
+
+                            if (rawValue === "") {
+                              setMonthlySalary(0);
+                              return;
+                            }
+
+                            const numValue = parseInt(rawValue, 10);
+
+                            if (!isNaN(numValue)) {
+                              const clamped = Math.min(numValue, 1000000);
+                              setMonthlySalary(clamped);
                             }
                           }}
                           className="bg-gray-800 text-white px-2 py-1 w-28 text-right rounded border border-gray-600 focus:outline-none"
@@ -183,22 +188,32 @@ const CalculatorPage = () => {
                       <div className="flex items-center space-x-2">
                         <input
                           type="text"
-                          value={yearsOfService}
+                          value={yearsOfService === 0 ? "" : yearsOfService}
                           onChange={(e) => {
                             const digitsOnly = e.target.value.replace(
                               /\D/g,
                               ""
                             );
-                            let numValue =
-                              digitsOnly === "" ? 1 : parseInt(digitsOnly, 10);
-                            numValue = Math.max(0, Math.min(50, numValue));
-                            setYearsOfService(numValue);
+
+                            if (digitsOnly === "") {
+                              setYearsOfService(0);
+                              return;
+                            }
+
+                            const numValue = parseInt(digitsOnly, 10);
+
+                            if (!isNaN(numValue)) {
+                              setYearsOfService(Math.min(numValue, 50));
+                            }
                           }}
                           onBlur={() => {
-                            if (yearsOfService < 0) setYearsOfService(0);
+                            if (yearsOfService < 0) {
+                              setYearsOfService(0);
+                            }
                           }}
                           className="bg-gray-800 text-white px-2 py-1 w-16 text-right rounded border border-gray-600 focus:outline-none"
                         />
+
                         <span className="text-white">Y</span>
                       </div>
                     </div>

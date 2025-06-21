@@ -10,8 +10,6 @@ function RefundPolicy() {
         </h1>
 
         <div className="space-y-6 text-left text-sm sm:text-base leading-relaxed">
-          <p className="text-yellow-300">Effective Date: July 16, 2024</p>
-
           <p>
             Thank you for shopping with lOGIC TRADE ENTERPRISES. If you are not
             entirely satisfied with your purchase, we encourage you to review

@@ -13,7 +13,15 @@ function PrivacyPolicy() {
           <p className="text-yellow-300">
             Date of Last Update: APR 21, 2025
             <br />
-            Website Covered: www.logictrade.com
+            Website Covered:{" "}
+            <a
+              href="https://logictrade.co.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-yellow-400 "
+            >
+              www.logictrade.co.in
+            </a>{" "}
           </p>
 
           <p>
@@ -59,14 +67,13 @@ function PrivacyPolicy() {
             other managing authority.
           </p>
           <p>
-            <strong>Application:</strong> Refers to CHART COLONY Research
+            <strong>Application:</strong> Refers to LOGIC TRADE Research
             Analyst, the software program provided by the Company.
           </p>
           <p>
             <strong>Company</strong> (also referred to as "the Company", "We",
-            "Us", or "Our" in this Agreement): Refers to CHART COLONY
-            ENTERPRISES, 3rd Floor, Shop No A 7 and 8, Plot No 01 Scheme No 10B,
-            Gopalpura Bypass Road JAIPUR, 302015, RAJASTHAN, INDIA
+            "Us", or "Our" in this Agreement): Refers to LOGIC TRADE
+            ENTERPRISES, Mansarovar, Jaipur, Rajasthan, 302020
           </p>
           <p>
             <strong>Cookies:</strong> Small files placed on your computer,
@@ -548,8 +555,18 @@ function PrivacyPolicy() {
             reach out to us:
           </p>
           <ul className="list-disc pl-6 space-y-2">
-            <li>Via email: support@logictrade.com</li>
-            <li>By visiting our website: https://www.logictrade.com</li>
+            <li>Via email: logictrade.co.in@gmail.com</li>
+            <li>
+              By visiting our website:{" "}
+              <a
+                href="https://logictrade.co.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-yellow-400 underline"
+              >
+                www.logictrade.co.in
+              </a>{" "}
+            </li>
           </ul>
         </div>
       </div>

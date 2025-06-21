@@ -194,15 +194,15 @@ const CalculatorPage = () => {
                     <input
                       type="range"
                       min="0"
-                      max="500000"
+                      max="10000000"
                       step="1000"
                       value={totalAmount}
                       onChange={(e) => setTotalAmount(parseInt(e.target.value))}
                       className="w-full h-2 appearance-none cursor-pointer mt-2 rounded-lg custom-range"
                       style={{
                         background: `linear-gradient(to right, #facc15 ${
-                          (totalAmount / 500000) * 100
-                        }%, #d1d5db ${(totalAmount / 500000) * 100}%)`,
+                          (totalAmount / 10000000) * 100
+                        }%, #d1d5db ${(totalAmount / 10000000) * 100}%)`,
                       }}
                     />
                   </div>
@@ -215,20 +215,29 @@ const CalculatorPage = () => {
                       <div className="flex items-center space-x-2">
                         <input
                           type="text"
-                          value={taxSlab}
+                          value={taxSlab === 0 ? "" : taxSlab}
                           onChange={(e) => {
                             const value = e.target.value.replace(/[^0-9]/g, "");
+
                             if (value === "") {
+                              setTaxSlab(0);
+                              return;
+                            }
+
+                            const numValue = parseInt(value, 10);
+
+                            if (!isNaN(numValue)) {
+                              setTaxSlab(numValue > 28 ? 28 : numValue);
+                            }
+                          }}
+                          onBlur={() => {
+                            if (taxSlab < 5) {
                               setTaxSlab(5);
-                            } else {
-                              const numValue = parseInt(value, 10);
-                              if (!isNaN(numValue)) {
-                                setTaxSlab(Math.min(28, Math.max(5, numValue)));
-                              }
                             }
                           }}
                           className="bg-gray-800 text-white px-2 py-1 w-16 text-right rounded border border-gray-600 focus:outline-none"
                         />
+
                         <span className="text-white">%</span>
                       </div>
                     </div>

@@ -167,7 +167,7 @@ const MobileHero = () => {
                 width={25}
                 height={25}
               />{" "}
-              Maximize Small Capital Gains
+              Get Trades with Logic Trade
             </motion.li>
           </motion.ul>
 

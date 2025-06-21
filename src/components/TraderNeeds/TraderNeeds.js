@@ -7,7 +7,7 @@ function TraderNeeds() {
   const features = [
     {
       id: 1,
-      title: "All channel groups",
+      title: "All trade guide",
       points: [
         "Live options market analytics",
         "Smart position sizing calculators",
@@ -66,7 +66,7 @@ function TraderNeeds() {
     <div className="py-16 px-4 sm:px-6 lg:px-8 bg-black ">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-2xl md:text-5xl font-extrabold text-center text-white sm:text-4xl mb-12">
-          What a Trader Needs
+          What you need ...?
         </h2>
 
         <div className="space-y-16" ref={ref}>
@@ -105,7 +105,7 @@ function TraderNeeds() {
 
               <div
                 className={`w-full lg:w-1/2 flex flex-col items-center  ${
-                  index % 2 !== 0 ? "lg:pl-20" : "lg:pr-44"
+                  index % 2 !== 0 ? "lg:pl-20" : "lg:pr-30"
                 } ${index % 2 !== 0 ? "lg:items-center" : "lg:items-end"}`}
               >
                 <div className="max-w-md text-center lg:text-left">
@@ -113,18 +113,18 @@ function TraderNeeds() {
                     {feature.title}
                   </h1>
 
-                  <ul className="space-y-4">
+                  <ul className="space-y-5 ">
                     {feature.points.map((point, pointIndex) => (
                       <motion.li
                         key={pointIndex}
-                        className="flex items-start"
+                        className="flex items-start "
                         initial={{ opacity: 0, x: 20 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.1 * pointIndex, duration: 0.5 }}
                       >
-                        <div className="bg-yellow-400 rounded-full p-1 mr-3 flex-shrink-0">
+                        <div className="bg-gradient-to-b from-yellow-200 to-yellow-700 rounded-full p-1.5 mr-3 shadow-md relative w-8 h-8 flex items-center justify-center">
                           <svg
-                            className="h-5 w-5 text-black"
+                            className="h-4 w-4 text-white"
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke="currentColor"
@@ -136,7 +136,11 @@ function TraderNeeds() {
                               d="M5 13l4 4L19 7"
                             />
                           </svg>
+
+                          {/* Inner light/glossy overlay */}
+                          <div className="absolute top-0 left-0 w-full h-full rounded-full bg-white opacity-10 pointer-events-none" />
                         </div>
+
                         <span className="text-white text-md md:text-lg">
                           {point}
                         </span>

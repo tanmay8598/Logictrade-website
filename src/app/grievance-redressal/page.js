@@ -60,8 +60,7 @@ function GrievanceRedressal() {
               Registered Office Address:
             </strong>
             <br />
-            Office no. 401, 54/219, Heera path ,mansarovar, jaipur ,
-            Rajasthan-302020
+            Office 54/219, Heera path ,mansarovar, jaipur , Rajasthan-302020
           </p>
 
           <p>
@@ -71,7 +70,7 @@ function GrievanceRedressal() {
             <br />
             Name: Shubham Goyal
             <br />
-            Phone: +91 7611888219
+            Phone: +91 6350655660
             <br />
             Email:{" "}
             <a
@@ -87,16 +86,16 @@ function GrievanceRedressal() {
               Details of Compliance Officer:
             </strong>
             <br />
-            Name: Shubham Goyal
+            Name: Adharsh Singh
             <br />
-            Phone: +91 7611888219
+            Phone: +91 7007626362
             <br />
             Email:{" "}
             <a
-              href="mailto:compliancechartcolony@gmail.com"
+              href="mailto:logictradenew@gmail.com"
               className="text-blue-300 underline"
             >
-              compliancechartcolony@gmail.com
+              logictradenew@gmail.com
             </a>
           </p>
 
@@ -106,12 +105,12 @@ function GrievanceRedressal() {
             If you are dissatisfied with our services (as promised but not
             delivered), kindly raise your initial complaint to{" "}
             <a
-              href="mailto:compliancechartcolony@gmail.com"
+              href="mailto:logictrade.co.in@gmail.com"
               className="text-blue-300 underline"
             >
-              compliancechartcolony@gmail.com
+              logictrade.co.in@gmail.com
             </a>{" "}
-            or contact <span className="text-gray-300">+91 7395088463</span>.
+            or contact <span className="text-gray-300">+91 6350655660</span>.
           </p>
 
           <p>

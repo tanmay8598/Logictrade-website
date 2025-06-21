@@ -13,7 +13,6 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
-import Loader from "./../../../components/Loader/Loader";
 
 ChartJS.register(
   CategoryScale,
@@ -82,16 +81,6 @@ const CalculatorPage = () => {
     },
   ];
 
-  // const [loading, setLoading] = useState(true);
-
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     setLoading(false);
-  //   }, 1000);
-
-  //   return () => clearTimeout(timer);
-  // }, []);
-
   useEffect(() => {
     calculateReturns();
   }, [investmentAmount, rateOfInterest, timePeriod, calculatorType]);
@@ -150,10 +139,6 @@ const CalculatorPage = () => {
     router.push(`/calculator/${encodeURIComponent(slug)}`);
   };
 
-  // if (loading) {
-  //   return <Loader />;
-  // }
-
   return (
     <div className="min-h-screen bg-black p-4 md:p-8">
       <div className="max-w-7xl mx-auto">
@@ -210,20 +195,33 @@ const CalculatorPage = () => {
                       </label>
                       <div className="flex items-center space-x-2">
                         <span className="text-white">₹</span>
+
                         <input
                           type="text"
-                          value={investmentAmount.toLocaleString("en-IN")}
+                          value={investmentAmount.toLocaleString("en-IN", {
+                            maximumFractionDigits: 2,
+                            minimumFractionDigits:
+                              investmentAmount % 1 !== 0 ? 2 : 0,
+                          })}
                           onChange={(e) => {
-                            const value = e.target.value.replace(/\D/g, "");
-                            if (value === "") {
-                              setInvestmentAmount(0);
-                            } else {
-                              const numValue = parseInt(value, 10);
-                              if (!isNaN(numValue)) {
-                                setInvestmentAmount(
-                                  Math.min(10000000, Math.max(5000, numValue))
-                                );
-                              }
+                            const value = e.target.value.replace(
+                              /[^0-9.]/g,
+                              ""
+                            );
+
+                            const parts = value.split(".");
+                            if (parts.length > 2) return;
+
+                            if (parts.length === 2 && parts[1].length > 2)
+                              return;
+
+                            const numValue =
+                              value === "" ? 0 : parseFloat(value);
+
+                            if (!isNaN(numValue)) {
+                              setInvestmentAmount(
+                                Math.min(10000000, Math.max(0, numValue))
+                              );
                             }
                           }}
                           className="bg-gray-800 text-white px-2 py-1 w-32 text-right rounded border border-gray-600 focus:outline-none"
@@ -265,7 +263,7 @@ const CalculatorPage = () => {
                               ""
                             );
                             if (value === "") {
-                              setRateOfInterest(1);
+                              setRateOfInterest(0);
                             } else {
                               const numValue = parseFloat(value);
                               if (!isNaN(numValue)) {
@@ -312,7 +310,7 @@ const CalculatorPage = () => {
                           onChange={(e) => {
                             const value = e.target.value.replace(/\D/g, "");
                             if (value === "") {
-                              setTimePeriod(1);
+                              setTimePeriod(0);
                             } else {
                               const numValue = parseInt(value, 10);
                               if (!isNaN(numValue)) {

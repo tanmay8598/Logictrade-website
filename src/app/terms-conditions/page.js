@@ -13,19 +13,27 @@ function Terms() {
           <p className="text-yellow-300">
             Effective Date: APR 21, 2025
             <br />
-            Website Covered: www.logictrade.com
+            Website Covered: www.logictrade.co.in
           </p>
 
           <p>
             <strong className="text-yellow-300">THE AGREEMENT:</strong> The use
-            of this website and services on this website provided by DEEPAK
-            ASWANI (hereinafter referred to as "Owner") are subject to the
+            of this website and services on this website provided by SHUBHAM
+            GOYAL (hereinafter referred to as "Owner") are subject to the
             following Terms & Conditions (hereinafter the "Terms of Service"),
             all parts and sub-parts of which are specifically incorporated by
             reference here together with the Privacy Policy. Following are the
-            Terms of Service governing your use of www.logictrade.com (the
-            "Website"), all pages on the Website, and any services provided by
-            or on this Website ("Services").
+            Terms of Service governing your use of{" "}
+            <a
+              href="https://logictrade.co.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-yellow-400 underline"
+            >
+              www.logictrade.co.in
+            </a>{" "}
+            (the "Website"), all pages on the Website, and any services provided
+            by or on this Website ("Services").
           </p>
 
           <p>
@@ -51,7 +59,7 @@ function Terms() {
           <p>
             <strong>a) Owner, Us, We:</strong> The Owner, as the creator,
             operator, and publisher of the Website, makes the Website, and
-            certain Services on it, available to users. DEEPAK ASWANI, Owner,
+            certain Services on it, available to users. SHUBHAM GOYAL, Owner,
             Us, We, Our, Ours and other first-person pronouns will refer to the
             Owner, as well as all employees and affiliates of the Owner.
           </p>
@@ -72,15 +80,23 @@ function Terms() {
             2) ASSENT & ACCEPTANCE
           </h2>
           <p>
-            By using the Website www.logictrade.com, You warrant that You have
-            read and reviewed these Terms of Service and that You agree to be
-            bound by it. If You do not agree to be bound by these Terms of
-            Service, please leave the Website immediately. The Owner only agrees
-            to provide use of this Website and Services to You if You assent to
-            these Terms of Service. Further, based on the Services obtained by a
-            User, additional terms and conditions in respect of the specific
-            Services may apply, which shall be deemed an agreement between the
-            Users and the Owner.
+            By using the Website{" "}
+            <a
+              href="https://logictrade.co.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-yellow-400 underline"
+            >
+              www.logictrade.co.in
+            </a>{" "}
+            , You warrant that You have read and reviewed these Terms of Service
+            and that You agree to be bound by it. If You do not agree to be
+            bound by these Terms of Service, please leave the Website
+            immediately. The Owner only agrees to provide use of this Website
+            and Services to You if You assent to these Terms of Service.
+            Further, based on the Services obtained by a User, additional terms
+            and conditions in respect of the specific Services may apply, which
+            shall be deemed an agreement between the Users and the Owner.
           </p>
 
           <h2 className="text-xl font-bold text-yellow-300 mt-8 mb-4">
@@ -825,7 +841,13 @@ function Terms() {
             <strong>i) ELECTRONIC COMMUNICATIONS PERMITTED:</strong> Electronic
             communications are permitted to both Parties under these Terms of
             Service, including e-mail or fax. For any questions or concerns,
-            please email Us at the following address: support@logictrade.com
+            please email Us at the following address:{" "}
+            <a
+              href="mailto:logictrade.co.in@gmail.com"
+              className="text-blue-300 underline"
+            >
+              logictrade.co.in@gmail.com
+            </a>
           </p>
 
           <p>

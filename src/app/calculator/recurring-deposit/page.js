@@ -210,12 +210,17 @@ const CalculatorPage = () => {
                               /[^0-9]/g,
                               ""
                             );
-                            if (rawValue === "" || !isNaN(rawValue)) {
-                              const numValue =
-                                rawValue === "" ? 0 : parseInt(rawValue, 10);
-                              if (numValue >= 100 && numValue <= 1000000) {
-                                setMonthlyDeposit(numValue);
-                              }
+
+                            if (rawValue === "") {
+                              setMonthlyDeposit(0);
+                              return;
+                            }
+
+                            const numValue = parseInt(rawValue, 10);
+
+                            if (!isNaN(numValue)) {
+                              const clampedValue = Math.min(numValue, 10000000);
+                              setMonthlyDeposit(clampedValue);
                             }
                           }}
                           className="bg-gray-800 text-white px-2 py-1 w-28 text-right rounded border border-gray-600 focus:outline-none"
@@ -267,7 +272,7 @@ const CalculatorPage = () => {
                                 setRateOfInterest(numValue);
                               }
                             } else if (value === "") {
-                              setRateOfInterest(1);
+                              setRateOfInterest(0);
                             }
                           }}
                           className="bg-gray-800 text-white px-2 py-1 w-16 text-right rounded border border-gray-600 focus:outline-none"
@@ -302,22 +307,32 @@ const CalculatorPage = () => {
                       <div className="flex items-center space-x-2">
                         <input
                           type="text"
-                          value={timePeriod}
+                          value={timePeriod === 0 ? "" : timePeriod}
                           onChange={(e) => {
                             const digitsOnly = e.target.value.replace(
                               /\D/g,
                               ""
                             );
-                            let numValue =
-                              digitsOnly === "" ? 1 : parseInt(digitsOnly, 10);
-                            numValue = Math.max(1, Math.min(10, numValue));
-                            setTimePeriod(numValue);
+
+                            if (digitsOnly === "") {
+                              setTimePeriod(0);
+                              return;
+                            }
+
+                            const numValue = parseInt(digitsOnly, 10);
+
+                            if (!isNaN(numValue)) {
+                              setTimePeriod(Math.min(numValue, 10));
+                            }
                           }}
                           onBlur={() => {
-                            if (timePeriod < 1) setTimePeriod(1);
+                            if (timePeriod < 1) {
+                              setTimePeriod(1);
+                            }
                           }}
                           className="bg-gray-800 text-white px-2 py-1 w-16 text-right rounded border border-gray-600 focus:outline-none"
                         />
+
                         <span className="text-white">Y</span>
                       </div>
                     </div>

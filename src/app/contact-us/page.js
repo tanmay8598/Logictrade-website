@@ -87,9 +87,7 @@ function ContactPage() {
                     <h3 className="text-xl sm:text-2xl font-bold text-white mb-1">
                       Role:
                     </h3>
-                    <p className="ml-4">
-                      Research Analyst & Compliance Officer
-                    </p>
+                    <p className="ml-4">Research Analyst & Principal Officer</p>
                     <p className="ml-6 sm:ml-8 text-sm sm:text-base">
                       SEBI Registration No: INH000000000018
                     </p>
@@ -117,7 +115,7 @@ function ContactPage() {
                     <h3 className="text-xl sm:text-2xl font-bold text-white mb-1">
                       Logic Trade Services WhatsApp/Call:
                     </h3>
-                    <p className="ml-4 text-amber-300">+91 7611888219</p>
+                    <p className="ml-4 text-amber-300">+91 6350655660</p>
                   </div>
 
                   <div className="space-y-2">
@@ -140,7 +138,7 @@ function ContactPage() {
             className="flex flex-wrap justify-center items-center gap-6 sm:gap-8 mt-16 mb-16"
           >
             <a
-              href="#"
+              href="https://www.youtube.com/@Logictradeofficial"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-yellow-400 text-4xl transition-colors duration-300"
@@ -149,7 +147,7 @@ function ContactPage() {
               <FaYoutube />
             </a>
             <a
-              href="#"
+              href="https://t.me/logictradeOfficial"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-yellow-400 text-4xl transition-colors duration-300"
@@ -158,7 +156,7 @@ function ContactPage() {
               <FaTelegram />
             </a>
             <a
-              href="#"
+              href="https://www.instagram.com/logictradeofficial/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-yellow-400 text-4xl transition-colors duration-300"
@@ -167,7 +165,7 @@ function ContactPage() {
               <FaInstagram />
             </a>
             <a
-              href="#"
+              href="https://www.facebook.com/logictradeofficial"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-yellow-400 text-4xl transition-colors duration-300"
@@ -176,22 +174,13 @@ function ContactPage() {
               <FaFacebook />
             </a>
             <a
-              href="#"
+              href="https://x.com/Logictradeswing"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-yellow-400 text-4xl transition-colors duration-300"
               aria-label="Twitter"
             >
               <FaTwitter />
-            </a>
-            <a
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-yellow-400 text-4xl transition-colors duration-300"
-              aria-label="LinkedIn"
-            >
-              <FaLinkedin />
             </a>
           </motion.div>
         </motion.div>

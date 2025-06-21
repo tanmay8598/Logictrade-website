@@ -150,7 +150,7 @@ const Calculators = () => {
           variants={heading}
           initial="hidden"
           animate="show"
-          className="text-3xl lg:text-5xl font-bold lg:pt-12 max-w-sm lg:max-w-xl mx-auto mt-6 mb-6 lg:mt-0"
+          className="text-3xl lg:text-5xl font-bold lg:pt-12 max-w-sm lg:max-w-2xl mx-auto mt-6 mb-6 lg:mt-0"
         >
           Plan Your Financial Goals
         </motion.h1>

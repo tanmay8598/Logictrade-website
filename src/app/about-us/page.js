@@ -101,61 +101,52 @@ function About() {
 
           <motion.div
             variants={item}
-            className="flex flex-wrap justify-center items-center gap-4 md:gap-6 mt-12 mb-12"
+            className="flex flex-wrap justify-center items-center gap-6 sm:gap-8 mt-16 mb-16"
           >
             <a
-              href="#"
+              href="https://www.youtube.com/@Logictradeofficial"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-yellow-400 text-3xl transition-colors duration-300"
+              className="text-gray-400 hover:text-yellow-400 text-4xl transition-colors duration-300"
               aria-label="YouTube"
             >
               <FaYoutube />
             </a>
             <a
-              href="#"
+              href="https://t.me/logictradeOfficial"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-yellow-400 text-3xl transition-colors duration-300"
+              className="text-gray-400 hover:text-yellow-400 text-4xl transition-colors duration-300"
               aria-label="Telegram"
             >
               <FaTelegram />
             </a>
             <a
-              href="#"
+              href="https://www.instagram.com/logictradeofficial/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-yellow-400 text-3xl transition-colors duration-300"
+              className="text-gray-400 hover:text-yellow-400 text-4xl transition-colors duration-300"
               aria-label="Instagram"
             >
               <FaInstagram />
             </a>
             <a
-              href="#"
+              href="https://www.facebook.com/logictradeofficial"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-yellow-400 text-3xl transition-colors duration-300"
+              className="text-gray-400 hover:text-yellow-400 text-4xl transition-colors duration-300"
               aria-label="Facebook"
             >
               <FaFacebook />
             </a>
             <a
-              href="#"
+              href="https://x.com/Logictradeswing"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-yellow-400 text-3xl transition-colors duration-300"
+              className="text-gray-400 hover:text-yellow-400 text-4xl transition-colors duration-300"
               aria-label="Twitter"
             >
               <FaTwitter />
-            </a>
-            <a
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-yellow-400 text-3xl transition-colors duration-300"
-              aria-label="LinkedIn"
-            >
-              <FaLinkedin />
             </a>
           </motion.div>
         </motion.div>
