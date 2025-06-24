@@ -98,6 +98,12 @@ const Footer = () => {
             >
               Privacy Policy
             </Link>
+            <Link
+              href="/account-deletion"
+              className=" py-2 text-white hover:text-yellow-500 transition"
+            >
+              Accout Deletion
+            </Link>
           </div>
         </div>
 
